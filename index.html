@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Portal Home</title>
-    <script>
-        let LastModif = new Date(document.lastModified);
-        let outputStatement = "Last Modified " + LastModif;
-        document.getElementById('lastMod').innerHTML = outputStatement;
-    </script>
 </head>
 <body>
     
@@ -26,7 +21,7 @@
     <footer>
 
         <p>&#169; | Jessie Mangum | Utah | <a href="https://www.byui.edu/online">BYUI Online Learning</a></p>
-        <script>document.write(document.lastModified);</script>
+        <p>Last Modified: <script>document.write(document.lastModified);</script></p>
 
     </footer>
     
