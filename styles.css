@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
 
 #title{
     background-color: #10B7AF;
@@ -6,6 +6,7 @@
     text-align: center;
     padding: 40px 0;
     width: 100%;
+    font-family: 'Gabriela', serif;
 }
 #photo-me{
     float: right;
