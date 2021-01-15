@@ -1,0 +1,54 @@
+/* Phone or base line view */
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    font-size: 0.8rem;
+    padding: 20px;
+}
+
+.boxes{
+    background-color: #cccccc;
+    border-radius: 10px;
+    border-style: double;
+    border-color: #10B7AF;
+    min-height: 50px;
+}
+.boxes h2, h3{
+    padding-left: 20px;
+}
+.boxes p{
+    padding: 0 20px 0 20px;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-style: double;
+    border-color: #10B7AF;
+}
+/* Tablet view */
+@media only screen and (min-width: 37.5em){
+
+    main{
+        grid-template-columns: 1fr 1fr;
+        font-size: 1rem;
+    }
+    #box-3{
+        grid-column: span 2;
+    }
+
+}
+/* desktop view */
+@media only screen and (min-width: 60em){
+
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 1rem;
+    }
+    #box-3{
+        grid-column: span 1;
+    }
+    
+}
