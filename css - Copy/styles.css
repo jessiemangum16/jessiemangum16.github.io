@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+
+#title{
+    background-color: #10B7AF;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    font-family: 'Gabriela', serif;
+}
+#return-home{
+    float: left;
+    padding-left: 20px;
+}
+#photo-me{
+    margin-right: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px 0px;
+}
+
+footer{
+    background-color: #10B7AF;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0;
+}
+#mod{
+    color: #480476;
+}
