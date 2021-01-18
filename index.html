@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="css/medium.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="js/script.js"></script>
     <title>CIT 230: Assignment Portal</title>
 </head>
-<body>
+<body onload="lastModified()" onload="currentYear()">
     
     
     <img id="photo-me" src="images/Me.jpg" alt="Jessie Mangum photo">
@@ -29,8 +30,8 @@
     </main>
     
     <footer>
-        <p id="copyright">&#169; | Jessie Mangum | Utah | <a href="https://www.byui.edu/online">BYUI Online Learning</a></p>
-        <p id="mod">Last Modified: <script>document.write(document.lastModified);</script></p>
+        <div id="cYear"></div>
+        <div id="mod"></div>
     </footer>
     
 

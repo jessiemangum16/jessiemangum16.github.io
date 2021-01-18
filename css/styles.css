@@ -9,6 +9,9 @@ header{
 h1, h2, h3{
     font-family: 'Gabriela', serif;
 }
+a{
+    color: #480476;
+}
 #return-home{
     float: left;
     padding-left: 20px;
@@ -18,11 +21,10 @@ h1, h2, h3{
     margin-top: 20px;
     box-shadow: 0px 0px 10px 0px;
 }
-
 footer{
     background-color: #10B7AF;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 #mod{
     color: #480476;
