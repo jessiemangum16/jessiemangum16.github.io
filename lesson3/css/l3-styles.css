@@ -28,7 +28,7 @@ Dark Blue: #304C89
   }
 
 header{
-    background-color: var(--color3);
+    background-color: var(--color4);
     text-align: center;
     padding: 20px 0;
     width: 100%;
@@ -60,16 +60,32 @@ nav ul li a {
 	text-decoration: none;
 }
 nav a:hover {
-	background-color: var(--color4);
+	background-color: var(--color3);
 	color: var(--color2);
 }
 nav .active {
 	color: var(--color4);
 }
-footer{
+body{
     background-color: var(--color3);
+    position: relative;
+    min-height: 100vh;
+}
+main{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
+    padding-bottom: 100px;
+}
+footer{
+    background-color: var(--color4);
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px; 
 }
 #mod{
     color: var(--links);
