@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Design Principles">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="css/l4-styles.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <script src="js/scripts.js"></script>
+    <title>24/7 Weather Site</title>
+</head>
+<body onload="lastModified()" onload="currentYear()">
+
+    <header>
+        <img id="logo" src="images/logo3.png" alt="24/7Weather logo">
+        <div class="headings">
+            <h1 id="page-title">24/7 Weather Site</h1>
+            <h4>24/7 weather site catch phrase/motto</h4>
+        </div>
+    </header>
+
+    <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="top-menu" class="hide">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="#">Storm Center</a></li>
+            <li><a href="#">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="placeholder">Hero w/ weather summary</div>
+        <div class="placeholder">5 Day Forecast</div>
+        <div class="placeholder">Articles</div>
+        <div class="placeholder">Contact Information</div>
+    </main>
+
+    <footer>
+        <a id="return-home" href="../index.html">Assignment Portal</a>
+        <div id="cYear"></div>
+        <div id="mod"></div>
+    </footer>
+</body>
+</html>

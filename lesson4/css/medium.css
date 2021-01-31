@@ -1,0 +1,39 @@
+/* Tablet Views ******************************/
+@media only screen and (min-width: 37.5em) {
+    h1{
+        font-size: 24pt;
+    }
+    h2{
+        font-size: 18pt;
+    }
+    h3{
+        font-size: 14pt;
+    }
+    h4{
+        font-family: var(--paragraph-font);
+        font-size: 14pt;
+    }
+    #logo{
+        height: 110px;
+        padding-right: 30px;
+    }
+    nav ul{
+        display: flex;
+        width: 100%;
+    }
+    nav ul.hide{
+        display: flex;
+        width: 100%;
+    }
+    nav button{
+        display: none;
+    }
+    nav li{
+        flex: 3;
+        text-align: center;
+    }
+    nav ul li a{
+        padding: 15px 10px 15px 10px;
+    }
+    
+}
