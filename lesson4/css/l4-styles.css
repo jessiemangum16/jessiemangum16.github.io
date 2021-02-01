@@ -13,6 +13,7 @@ Alabaster: #E8E5DA
 Light blue: #9EB7E5
 Medium blue: #648DE5
 Dark Blue: #304C89
+Darker blue: #1e2e52
 */
 :root {
     /* change the values below to your colors from your palette */
@@ -21,7 +22,7 @@ Dark Blue: #304C89
     --color3: #9EB7E5;
     --color4: #648DE5;
     --color5: #304C89;
-    --links: #304C89;
+    --links: #1e2e52;
   
     /* change the values below to your chosen font(s) */
     --heading-font: 'Merienda One', cursive;
