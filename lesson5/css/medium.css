@@ -35,5 +35,7 @@
     nav ul li a{
         padding: 15px 10px 15px 10px;
     }
-    
+    .mobile-hide{
+        display: block;
+    }
 }

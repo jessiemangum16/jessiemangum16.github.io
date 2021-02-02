@@ -22,6 +22,7 @@ Darker blue: #1e2e52
     --color3: #9EB7E5;
     --color4: #648DE5;
     --color5: #304C89;
+    --color6: #1e2e52;
     --links: #1e2e52;
   
     /* change the values below to your chosen font(s) */
@@ -65,8 +66,8 @@ header{
     padding: 20px 0;
     width: 100%;
     display: flex;
-    align-items:center;
-	justify-content:center;
+    align-items: center;
+	justify-content: center; 
 }
 
 #logo{
@@ -112,20 +113,6 @@ nav .active {
 nav ul.hide{
     display: none;
 }
-#hero{
-    margin: 10px auto;
-    position: relative;
-}
-.weatherSummary{
-    position: absolute;
-	top: 25px;
-	right: 50px;
-	background: radial-gradient(#eee, #4567aa);
-	border: 1px solid #000;
-	padding: 1.5rem;
-	box-shadow: 0 0 30px #111;
-	opacity: .8;
-}
 body{
     background-color: var(--color2);
     position: relative;
@@ -136,6 +123,119 @@ main{
     margin: 0 auto;
     padding: 20px;
     padding-bottom: 140px;
+}
+.pageTitle{
+    text-align: center;
+}
+#hero{
+    margin: 10px auto;
+    position: relative;
+    max-width: 960px;
+}
+#hero img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    width: 100%;
+    height: auto;
+}
+.weatherSummary hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.weatherSummary{
+    position: absolute;
+	top: 25px;
+	right: 50px;
+	background: rgba(158,183,229,.8);
+	padding: 25px;
+	box-shadow: 0 0 30px #111;
+    opacity: .8;
+}
+.weatherSummary h3{
+    margin: 0;
+}
+.weatherSummary p{
+    line-height: 20px;
+    margin: 0;
+}
+.mobile-hide{
+    display: none;
+}
+.forecast{
+    text-align: center;
+}
+.forecast_table{
+    margin: 0 auto;
+}
+.forecast_table th {
+    padding: 10px 25px 10px 25px;
+    background-color: var(--color5);
+    color: var(--color2);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.forecast_table, .forecast_table td {
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 8px;
+    border-collapse: collapse;
+    background-color: white;
+}
+.forecast .fas{
+    font-size: 70px;
+    padding: 10px;
+}
+.fa-cloud-sun-rain{
+    color: var(--color5);
+}
+.fa-cloud-sun{
+    color: var(--color4);
+}
+.fa-sun{
+    color: orange;
+}
+.articles{
+    margin-top: 30px;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+.articles img{
+    float: right;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    margin: 30px;
+}
+.byLine{
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.6)
+}
+.articles p{
+    line-height: 20px;
+}
+.contact{
+    margin-top: 30px;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    height: 360px;
+}
+.contact-text{
+    display: inline-block;
+    text-align: left;
+}
+.contact img{
+    float: left;
+}
+.contact .fas{
+    padding-right: 10px;
+}
+.contact .fab{
+    padding-right: 10px;
+    font-size: 30px;
 }
 footer{
     background-color: var(--color3);
