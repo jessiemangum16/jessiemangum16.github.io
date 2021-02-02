@@ -38,4 +38,10 @@
     .mobile-hide{
         display: block;
     }
-}
+    .contact img{
+        height: 300px;
+    }
+    .contact{
+        height:300px;
+    }
+}   

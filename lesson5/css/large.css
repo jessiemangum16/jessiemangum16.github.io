@@ -20,4 +20,7 @@
     nav li{
         flex: 3;
     }
+    .contact img{
+        width: 449px;
+    }
 }
