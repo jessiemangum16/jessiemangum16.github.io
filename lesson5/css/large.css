@@ -23,7 +23,11 @@
     .articles img{
         float: right;
     }
+    .contact{
+        padding: 30px;
+        height: 360px;
+    }
     .contact img{
-        width: 449px;
+        height: 360px;
     }
 }
