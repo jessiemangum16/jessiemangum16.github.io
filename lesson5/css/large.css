@@ -20,6 +20,9 @@
     nav li{
         flex: 3;
     }
+    .articles img{
+        float: right;
+    }
     .contact img{
         width: 449px;
     }
