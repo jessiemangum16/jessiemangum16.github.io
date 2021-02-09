@@ -13,8 +13,8 @@
         font-family: var(--paragraph-font);
         font-size: 14pt;
     }
-    #logo{
-        height: 110px;
+    .logo{
+        width: 110px;
         padding-right: 30px;
     }
     nav ul{

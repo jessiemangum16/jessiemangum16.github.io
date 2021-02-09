@@ -70,8 +70,8 @@ header{
 	justify-content: center; 
 }
 
-#logo{
-    height: 90px;
+.logo{
+    width: 90px;
     padding-right: 30px;
 }
 

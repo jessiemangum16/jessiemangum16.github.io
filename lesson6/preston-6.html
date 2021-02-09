@@ -10,13 +10,18 @@
     <link rel="stylesheet" href="css/large.css">
     <script src="js/scripts.js"></script>
     <link rel="shortcut icon" href="images/favicon.ico">
-    <script src="https://kit.fontawesome.com/7eb786be84.js" crossorigin="anonymous"></script>
+    
     <title>24/7 Weather Site</title>
 </head>
 <body onload="lastModified(); currentYear();">
 
     <header>
-        <img id="logo" src="images/logo150.png" alt="24/7Weather logo">
+        <picture class="logo">
+            <source media="(max-width: 37.5em)" srcset="images/logo90.png">
+            <source media="(max-width: 60em)" srcset="images/logo110.png">
+            <img src="images/logo150.png" alt="24/7Weather logo">
+        </picture>
+
         <div class="headings">
             <h1 id="page-title">24/7 Weather Site</h1>
             <h4>24/7 weather site catch phrase/motto</h4>
@@ -112,5 +117,8 @@
         <div id="cYear"></div>
         <div id="mod"></div>
     </footer>
+    
+    
+    <script src="https://kit.fontawesome.com/7eb786be84.js" crossorigin="anonymous"></script>
 </body>
 </html>
