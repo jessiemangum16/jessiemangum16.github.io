@@ -46,7 +46,11 @@
         <h2 class="pageTitle">Preston Idaho</h2>
 
         <section id="hero">
-            <img id="hero-img" src="images/banner2_2s.jpg" alt="city skyline">
+            <picture class="hero-img">
+                <source media="(max-width: 37.5em)" srcset="images/head600.jpeg">
+                <source media="(max-width: 60em)" srcset="images/head960.jpeg">
+                <img src="images/head1100.jpeg" alt="hero image">
+            </picture>
             <div class="weatherSummary">
                 <h3>Weather Summary</h3>
                 <hr>
