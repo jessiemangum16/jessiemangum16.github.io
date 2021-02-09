@@ -1,0 +1,33 @@
+/* Desktop Views ****************************/
+@media only screen and (min-width: 60em) {
+    h1{
+        font-size: 28pt;
+    }
+    h2{
+        font-size: 20pt;
+    }
+    h3{
+        font-size: 16pt;
+    }
+    h4{
+        font-family: var(--paragraph-font);
+        font-size: 16pt;
+    }
+    #logo{
+        height: 150px;
+        padding-right: 30px;
+    }    
+    nav li{
+        flex: 3;
+    }
+    .articles img{
+        float: right;
+    }
+    .contact{
+        padding: 30px;
+        height: 360px;
+    }
+    .contact img{
+        height: 360px;
+    }
+}

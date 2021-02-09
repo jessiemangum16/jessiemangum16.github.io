@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Design Principles">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <script src="js/scripts.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script src="https://kit.fontawesome.com/7eb786be84.js" crossorigin="anonymous"></script>
+    <title>24/7 Weather Site</title>
+</head>
+<body onload="lastModified(); currentYear();">
+
+    <header>
+        <img id="logo" src="images/logo3.png" alt="24/7Weather logo">
+        <div class="headings">
+            <h1 id="page-title">24/7 Weather Site</h1>
+            <h4>24/7 weather site catch phrase/motto</h4>
+        </div>
+    </header>
+
+    <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="top-menu" class="hide">
+            <li><a href="#" >Home</a></li>
+            <li><a href="preston-5.html" class="active">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="#">Storm Center</a></li>
+            <li><a href="#">Gallery</a></li>
+        </ul>
+    </nav>
+
+    
+
+    <main>
+        <h2 class="pageTitle">Preston Idaho</h2>
+
+        <section id="hero">
+            <img id="hero-img" src="images/banner2_2.jpg" alt="city skyline">
+            <div class="weatherSummary">
+                <h3>Weather Summary</h3>
+                <hr>
+                <p>Currently: Sunny</p>
+                <p>High: 76&#176; F</p>
+                <p>Wind Chill: 12&#176; F</p>
+                <p>Humidity: 69%</p>
+                <p>Wind Speed: 5 mph</p>
+            </div>
+        </section>
+
+        <section class="forecast mobile-hide">
+            <h3>5 Day Forecast</h3>
+            <table class="forecast_table">
+                <tr>
+                    <th>Wed</th>
+                    <th>Thur</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-sun"></i><br>76&#176; F</td>
+                    <td><i class="fas fa-cloud-sun-rain"></i><br>84&#176; F</td>
+                    <td><i class="fas fa-cloud-sun" ></i><br>72&#176; F</td>
+                    <td><i class="fas fa-sun"></i><br>92&#176; F</td>
+                    <td><i class="fas fa-cloud-sun-rain"></i><br>64&#176; F</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="articles">
+            <img id="article-img" src="images/traffic.jfif" alt="highway traffic">
+            <h3>Tuesday's Weather Preview</h3>
+            <p class="byLine">By WeatherBug Sr. Meteorologist, James West</p>
+            <p>The East and West coasts remain action-packed Tuesday while large swaths of the southern and central and midwestern U.S. will be quiet.
+                <br><br>
+                A slow-moving nor’easter will bring heavy snow to the big cities of the Northeast Tuesday, causing a travel nightmare along the I-95 corridor from Philadelphia into Boston. The heaviest snow will fall around New York City and areas just to the city’s north and west early in the day before the threat shifts northward into New England and Maine.
+                <br><br>
+                There will be spots of northeastern Pennsylvania and northwestern New Jersey digging out from several feet of snow by the time the snow ends on Wednesday. Along the immediate seaboard, temperatures will be right on cusp of freezing, so a wintry mix of snow, sleet and freezing rain will accompany high winds. Power outages and coastal flooding will be possible. Temperatures will be in the 20s and 30s while the nor’easter spins nearby.
+                <br><br>
+                The Mid-Atlantic and central Appalachians will see a few pockets of snow showers especially early in the day before conditions improve and pockets of sunshine help melt some of the snow. Afternoon highs will struggle to climb into the middle 30s, so melting will be slow. The Carolinas and Southeast will also struggle to warm up too, with highs only being in the 40s across the Tennessee Valley, Mid-South and Southeast. Florida will be in the 50s and low 60s. 
+                
+                <a href="https://www.weatherbug.com/news/Today-s-Weather-Outlook">View Full Article</a></p>
+        </section>
+
+        <section class="contact">
+            <img id="contact-map" class="mobile-hide" src="images/prestonMapS.png" alt="preston map">
+            <div class="contact-text">
+                <h4>24-7 Weather</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 30 N 1st E</p>
+                <p>Preston, ID 83263</p>
+                <br>
+                <p><i class="fas fa-phone"></i> (999) 999-9999</p>
+                <p><i class="fas fa-envelope"></i> contact@24-7weather.com</p>
+                <br>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-google-plus-g"></i>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <a id="return-home" href="../index.html">Assignment Portal</a>
+        <div id="cYear"></div>
+        <div id="mod"></div>
+    </footer>
+</body>
+</html>
