@@ -29,12 +29,6 @@ Darker blue: #1e2e52
     --heading-font: 'Merienda One', cursive;
     --paragraph-font: 'Roboto Condensed', sans-serif;
 }
-.placeholder{
-    background-color: rgb(0,0,0,.2);
-    border: 1px dashed #000;
-    padding: 20px;
-    margin: 10px;
-}
 h1, h2, h3{
     font-family: var(--heading-font);
     color: var(--color5);
@@ -60,6 +54,14 @@ a{
     color: var(--links);
     font-family: var(--paragraph-font);
     font-size: 11pt;
+}
+#top-text{
+    text-align: center;
+    background-color: var(--color2);
+    padding: 30px;
+}
+#top-text h2{
+    margin: 0;
 }
 header{
     background-color: var(--color3);

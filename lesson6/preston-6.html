@@ -12,6 +12,10 @@
     <title>24/7 Weather Site</title>
 </head>
 <body onload="lastModified(); windChill();">
+    <section id="top-text" class="show-sat">
+        <h2>Preston Pancakes in the Park</h2>
+        <h2>9:00 a.m. Saturday at the City Park</h2>
+    </section>
 
     <header>
         <picture class="logo">
@@ -47,33 +51,16 @@
             <picture class="hero-img">
                 <source media="(max-width: 37.5em)" srcset="images/head600.jpeg">
                 <source media="(max-width: 60em)" srcset="images/head960.jpeg">
-                <img src="images/head1100.jpeg" alt="hero image">
+                <img src="images/head1100.jpeg" alt="sunny day">
             </picture>
             <div class="weatherSummary">
                 <h3>Weather Summary</h3>
                 <hr>
-                <table class="summary_table">
-                    <tr>
-                        <td>Currently: </td>
-                        <td>Sunny </td>
-                    </tr>
-                    <tr>
-                        <td>Temperature: </td>
-                        <td><span id="temp"></span>&#176; F</td>
-                    </tr>
-                    <tr>
-                        <td>Wind Chill: </td>
-                        <td><span id="windChill"></span>&#176; F</td>
-                    </tr>
-                    <tr>
-                        <td>Humidity: </td>
-                        <td>69%</td>
-                    </tr>
-                    <tr>
-                        <td>Wind Speed: </td>
-                        <td><span id="windSpeed"></span> mph</td>
-                    </tr>
-                </table>
+                <p>Currently: Sunny</p>
+                <p>Temperature: <span id="temp"></span>&#176; F</p>
+                <p>Wind Chill: <span id="windChill"></span>&#176; F</p>
+                <p>Humidity: 69%</p>
+                <p>Wind Speed: <span id="windSpeed"></span> mph</p>
             </div>
         </section>
 
