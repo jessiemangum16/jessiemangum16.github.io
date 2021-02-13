@@ -30,3 +30,12 @@ function windChill(){
     document.getElementById('temp').innerHTML = tempF;
     document.getElementById('windSpeed').innerHTML = speed;
 }
+function showFri() {
+    var d = new Date();
+
+    if (d.getDay()==5){
+        document.getElementById("show-fri").style.display = "block";
+    }else{
+        document.getElementById("show-fri").style.display = "none";
+    }
+}

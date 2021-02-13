@@ -6,13 +6,15 @@
     <meta name="description" content="Design Principles">
     
     <link rel="stylesheet" href="css/styles.css">
-    
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="shortcut icon" href="images/favicon.ico">
     <script src="js/scripts.js"></script>
     <title>24/7 Weather Site</title>
 </head>
-<body onload="lastModified(); windChill();">
-    <section id="top-text" class="show-sat">
+<body onload="lastModified(); windChill(); showFri();">
+    <section id="show-fri" class="top-text">
         <h2>Preston Pancakes in the Park</h2>
         <h2>9:00 a.m. Saturday at the City Park</h2>
     </section>
@@ -124,9 +126,7 @@
         <div id="mod"></div>
     </footer>
     
-    <link rel="stylesheet" href="css/medium.css">
-    <link rel="stylesheet" href="css/large.css">
-    <link rel="stylesheet" href="../css/normalize.css">
+    
     <script src="https://kit.fontawesome.com/7eb786be84.js" crossorigin="anonymous"></script>
 </body>
 </html>

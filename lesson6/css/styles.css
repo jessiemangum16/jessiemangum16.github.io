@@ -55,13 +55,15 @@ a{
     font-family: var(--paragraph-font);
     font-size: 11pt;
 }
-#top-text{
+.top-text{
     text-align: center;
-    background-color: var(--color2);
+    background-color: var(--color5);
+    
     padding: 30px;
 }
-#top-text h2{
+.top-text h2{
     margin: 0;
+    color: var(--color1);
 }
 header{
     background-color: var(--color3);
