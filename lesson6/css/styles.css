@@ -188,18 +188,8 @@ main{
     border-collapse: collapse;
     background-color: white;
 }
-.forecast .fas{
-    font-size: 70px;
-    padding: 10px;
-}
-.fa-cloud-sun-rain{
-    color: var(--color5);
-}
-.fa-cloud-sun{
-    color: var(--color4);
-}
-.fa-sun{
-    color: orange;
+.weather{
+    width: 70px;
 }
 .articles{
     margin-top: 30px;
@@ -231,15 +221,15 @@ main{
     display: inline-block;
     text-align: left;
 }
-.contact img{
+#contact-map{
     float: left;
 }
-.contact .fas{
-    padding-right: 10px;
+.contact-icon{
+    height: 13px;
+    margin: 0 auto;
 }
-.contact .fab{
-    padding-right: 10px;
-    font-size: 30px;
+.social-icon{
+    height: 40px;
 }
 footer{
     background-color: var(--color3);

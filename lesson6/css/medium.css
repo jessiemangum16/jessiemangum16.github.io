@@ -41,7 +41,7 @@
     .mobile-hide{
         display: block;
     }
-    .contact img{
+    #contact-map{
         height: 270px;
     }
     .contact{
