@@ -209,7 +209,7 @@ main{
 }
 .articles img{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-    max-width: 490px;
+    max-width: 350px;
     width: 100%;
 }
 .byLine{
