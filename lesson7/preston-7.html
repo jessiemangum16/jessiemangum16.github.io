@@ -100,7 +100,11 @@
         </section>
 
         <section class="contact">
-            <img id="contact-map" class="mobile-hide" src="images/prestonMapS-1.jpg" alt="preston map">
+
+            <picture class="mobile-hide">
+                <source media="(max-width: 37.5em)" srcset="images/prestonMapS270-1.jpg">
+                <img id="contact-map" src="images/prestonMapS-1.jpg" alt="preston map">
+            </picture>
             <div class="contact-text">
                 <h4>24-7 Weather</h4>
                 <p><img class="contact-icon" src="images/location70.png" alt="location icon"> 30 N 1st E</p>
