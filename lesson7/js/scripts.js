@@ -30,6 +30,7 @@ function windChill(){
     document.getElementById('temp').innerHTML = tempF;
     document.getElementById('windSpeed').innerHTML = speed;
 }
+
 function showFri() {
     var d = new Date();
 
