@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gallery">
+    
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/medium.css" media="screen and (min-width:37.5em)">
+    <link rel="stylesheet" href="css/large.css" media="screen and (min-width:60em)">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script src="js/scripts.js" defer></script>
+    <script src="js/lazy.js" defer></script>
+    <title>Gallery</title>
+</head>
+<body onload="lastModified(); windChill(); showFri();">
+
+    <header>
+        <picture class="logo">
+            <source media="(max-width: 37.5em)" srcset="images/logo90-1.png">
+            <source media="(max-width: 60em)" srcset="images/logo110-1.png">
+            <img src="images/logo150-1.png" alt="24/7Weather logo">
+        </picture>
+
+        <div class="headings">
+            <h1 id="page-title">24/7 Weather Site</h1>
+            <h4>24/7 weather site catch phrase/motto</h4>
+        </div>
+    </header>
+
+    <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="top-menu" class="hide">
+            <li><a href="#" >Home</a></li>
+            <li><a href="preston-7.html">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="#">Storm Center</a></li>
+            <li><a href="lazyload.html" class="active">Gallery</a></li>
+        </ul>
+    </nav>
+
+    
+
+    <main>
+        <h2 class="pageTitle">Gallery</h2>
+
+        <section class=photo-gallery>
+            <picture id="gallery1" class="gallery-imgs">
+                <img src="images/weather-gallery/placeholder300-400.jpg" data-src="images/weather-gallery/gallery1.jpg" alt="gallery image 1">
+            </picture>
+            <picture id="gallery2" class="gallery-imgs">
+                <img src="images/weather-gallery/placeholder300-400.jpg" data-src="images/weather-gallery/gallery2.jpg" alt="gallery image 1">
+            </picture>
+            <picture id="gallery3" class="gallery-imgs">
+                <img src="images/weather-gallery/placeholder300-400.jpg" data-src="images/weather-gallery/gallery3.jpg" alt="gallery image 1">
+            </picture>
+            <picture id="gallery4" class="gallery-imgs">
+                <img src="images/weather-gallery/placeholder300-400.jpg" data-src="images/weather-gallery/gallery4.jpg" alt="gallery image 1">
+            </picture>
+            <picture id="gallery5" class="gallery-imgs">
+                <img src="images/weather-gallery/placeholder300-400.jpg" data-src="images/weather-gallery/gallery5.jpg" alt="gallery image 1">
+            </picture>
+            <picture id="gallery6" class="gallery-imgs">
+                <img src="images/weather-gallery/placeholder300-400.jpg" data-src="images/weather-gallery/gallery6.jpg" alt="gallery image 1">
+            </picture>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <a id="return-home" href="../index.html">Assignment Portal</a>
+        <div id="cYear"></div>
+        <div id="mod"></div>
+    </footer>
+    
+    
+    <link rel="stylesheet" href="../css/normalize.css" media="all">
+</body>
+</html>
