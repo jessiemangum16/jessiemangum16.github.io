@@ -46,7 +46,7 @@ h4{
     font-family: var(--paragraph-font);
     font-size: 13pt;
 }
-p{
+p, figcaption{
     font-family: var(--paragraph-font);
     font-size: 11pt;
 }
@@ -166,9 +166,8 @@ main{
     box-shadow: 0 0 8px #111;
     transition: 0.3s;
 }
-.gallery-imgs:hover{
-    box-shadow: 0 0 20px #111;
-    transition: 0.3s;
+.gallery-imgs figcaption{
+    padding: 10px;
 }
 .photo-gallery img{
     width: 100%;

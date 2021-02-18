@@ -24,6 +24,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .gallery-imgs:hover{
+        box-shadow: 0 0 20px #111;
+        transition: 0.3s;
+    }
     .articles img{
         float: right;
     }
