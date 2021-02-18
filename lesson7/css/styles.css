@@ -138,18 +138,42 @@ main{
 .pageTitle{
     text-align: center;
 }
-/********************************** GALLERY **********************************/
-.gallery-imgs img{
+/********************************** LAZY LOAD **********************************/
+.lazy-gallery-imgs img{
     display: block;
     margin: 0 auto;
     padding: 20px;
     filter: blur(0em);
     transition: filter 0.5s;
 }
-.gallery-imgs img[data-src]{
+.lazy-gallery-imgs img[data-src]{
     filter: blur(0.2em);
     
 }
+/********************************** GALLERY **********************************/
+.photo-gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    max-width: 960px;
+    
+}
+.gallery-imgs{
+    background-color: white;
+    margin: 0;
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0 0 8px #111;
+    transition: 0.3s;
+}
+.gallery-imgs:hover{
+    box-shadow: 0 0 20px #111;
+    transition: 0.3s;
+}
+.photo-gallery img{
+    width: 100%;
+}
+
 /********************************** HERO **********************************/
 #hero{
     margin: 10px auto;

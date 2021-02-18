@@ -35,6 +35,10 @@
     nav ul li a{
         padding: 15px 10px 15px 10px;
     }
+    .photo-gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
     .articles img{
         float: none;
     }
