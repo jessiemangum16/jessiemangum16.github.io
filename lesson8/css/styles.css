@@ -172,7 +172,51 @@ main{
 .photo-gallery img{
     width: 100%;
 }
-
+/********************************** STORM CENTER **********************************/
+form fieldset{
+    margin: 2rem 0;
+    border-radius: 10px;
+    padding: .5rem 2%; 
+    font-family: var(--paragraph-font);
+}
+form legend{
+    margin: 0 1rem;
+    padding: 0 .5rem;
+}
+form label.top, form div{
+    display: block;
+    padding-top: 1rem;
+}
+form label.top input, form label.top select, form label.top textarea{
+    display: block;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: .75rem;
+    width: 96%;
+    max-width: 20rem;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+form label.sbs{
+    display: block;
+    padding: .75rem 0;
+}
+form input.submitB{
+    border: none;
+    background-color: var(--color5);
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 0 0 2rem 2%;
+    width: 96%;
+    max-width: 20rem;
+    font-family: var(--paragraph-font);
+}
+form label.top input:required {
+    border-left: red solid 6px;
+}
+form label.top input:required:valid{
+    border-left: green solid 6px;
+}
 /********************************** HERO **********************************/
 #hero{
     margin: 10px auto;
