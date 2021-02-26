@@ -43,10 +43,10 @@
     
 
     <main>
-        <h2 class="pageTitle">Storm Center</h2>
+        
 
         <section>
-            
+            <h2 class="pageTitle">Storm Center</h2> 
             <form id="storm-form" method="get" action="thanks.html">
                 <fieldset>
                     <legend>Personal Information</legend>
@@ -68,7 +68,7 @@
                         </datalist>
                     </label>
 
-                    <label class="top">Storm Severity <input type="range" name="storm-severity" value="5" min="1" max="10"step="1" list="tickmarks" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)"><span id="ratingvalue">5</span></label>
+                    <label class="top">Storm Severity <input type="range" name="storm-severity" value="5" min="1" max="10" step="1" list="tickmarks" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)"><span id="ratingvalue">5</span></label>
                     <datalist id="tickmarks">
                         <option value="0">
                         <option value="1">
