@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+:root {
+    /* change the values below to your colors from your palette */
+    --color1: #CDC392;
+    --color2: #E8E5DA;
+    --color3: #9EB7E5;
+    --color4: #648DE5;
+    --color5: #304C89;
+    --color6: #1e2e52;
+    --links: #1e2e52;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: 'Merienda One', cursive;
+    --paragraph-font: 'Roboto Condensed', sans-serif;
+}
+
+
+body{
+    text-align: center;
+}
+main{
+    max-width: 100%;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+.cards section{
+    background-color: var(--color3);
+    border: solid 1px var(--color5);
+    padding: 15px;
+}
+.cards section img{
+    box-shadow: 0 0 12px #111;
+    max-width: 100%;
+}
+
+/****** TABLET VIEW ******/
+@media only screen and (min-width: 37.5em) {
+    .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/****** DESKTOP VIEW ******/
+@media only screen and (min-width: 60em) {
+    .cards{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
