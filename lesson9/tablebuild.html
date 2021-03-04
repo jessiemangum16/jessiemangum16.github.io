@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Table Build">
+    
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/medium.css" media="screen and (min-width:37.5em)">
+    <link rel="stylesheet" href="css/large.css" media="screen and (min-width:60em)">
+    <link rel="stylesheet" href="css/tablebuild.css" media="all">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script src="js/scripts.js" defer></script>
+    <title>Table Build</title>
+</head>
+<body onload="lastModified(); windChill();">
+
+    <header>
+        <picture class="logo">
+            <source media="(max-width: 37.5em)" srcset="images/logo90-1.png">
+            <source media="(max-width: 60em)" srcset="images/logo110-1.png">
+            <img src="images/logo150-1.png" alt="24/7Weather logo">
+        </picture>
+
+        <div class="headings">
+            <h1 id="page-title">24/7 Weather Site</h1>
+            <h4>24/7 weather site catch phrase/motto</h4>
+        </div>
+    </header>
+
+    <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="top-menu" class="hide">
+            <li><a href="../index.html" >Home</a></li>
+            <li><a href="preston.html">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    
+
+    <main>
+        <h2 class="pageTitle">Table Build</h2>
+         
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">ACME Wildwest</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Period</th>
+                    <th>Sales</th>
+                    <th>Sales Goal</th>
+                </tr>
+                <tr>
+                    <td>August</td>
+                    <td>$3,590</td>
+                    <td>$4,000</td>
+                </tr>
+                <tr>
+                    <td>September</td>
+                    <td>$4,420</td>
+                    <td>$5,000</td>
+                </tr>
+                <tr>
+                    <td>October</td>
+                    <td>$4,870</td>
+                    <td>$5,000</td>
+                </tr>
+                <tr>
+                    <td>November</td>
+                    <td>$8,610</td>
+                    <td class="acheived">$7,500</td>
+                </tr>
+                <tr>
+                    <td>Black Friday</td>
+                    <td colspan="2">$3,200</td>
+                </tr>
+                <tr>
+                    <td>December</td>
+                    <td>$6,820</td>
+                    <td>$7,500</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Compiled 12.20.2020 by bRauls</td>
+                </tr>
+            </tfoot>
+        </table>
+            
+    </main>
+
+    <footer>
+        <a id="return-home" href="../index.html">Assignment Portal</a>
+        <div id="cYear"></div>
+        <div id="mod"></div>
+    </footer>
+    
+    
+    <link rel="stylesheet" href="../css/normalize.css" media="all">
+</body>
+</html>
