@@ -55,6 +55,9 @@ a{
     font-family: var(--paragraph-font);
     font-size: 11pt;
 }
+img{
+    max-width: 100%;
+}
 
 /********************************** TOP TEXT **********************************/
 .top-text{

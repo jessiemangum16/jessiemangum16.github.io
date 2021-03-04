@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Home">
     
+    <link rel="stylesheet" href="css/home.css" media="all">
     <link rel="stylesheet" href="css/styles.css" media="all">
     <link rel="stylesheet" href="css/medium.css" media="screen and (min-width:37.5em)">
     <link rel="stylesheet" href="css/large.css" media="screen and (min-width:60em)">
@@ -31,7 +32,7 @@
     <nav class="clearfix">
         <button onclick="toggleMenu()">&#9776; Menu</button>
         <ul id="top-menu" class="hide">
-            <li><a href="index.html" >Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="preston.html">Preston</a></li>
             <li><a href="#">Soda Springs</a></li>
             <li><a href="#">Fish Haven</a></li>
@@ -44,6 +45,71 @@
 
     <main>
         <h2 class="pageTitle">Home</h2>
+
+        <section id="hero">
+            <picture class="hero-img">
+                <source media="(max-width: 37.5em)" srcset="images/head600-1.jpeg">
+                <source media="(max-width: 60em)" srcset="images/head960-1.jpeg">
+                <img src="images/head1100-1.jpeg" alt="sunny day">
+            </picture>
+        </section>
+
+        <section class="town-data">
+            <article class="towns">
+                <div class="data">
+                    <h2>Town 1</h2>
+                </div>
+                <img src="images/ph/ph-350x233.jpg" alt="placeholder">
+            </article>
+            <article class="towns">
+                <div class="data">
+                    <h2>Town 2</h2>
+                </div>
+                <img src="images/ph/ph-350x233.jpg" alt="placeholder">
+            </article>
+            <article class="towns">
+                <div class="data">
+                    <h2>Town 3</h2>
+                </div>
+                <img src="images/ph/ph-350x233.jpg" alt="placeholder">
+            </article>
+        </section>
+
+        <section class="articles">
+            <img id="article-img" src="images/ph/ph-350x233.jpg" data-src="images/traffic-1.jpg" alt="highway traffic">
+            <h3>Tuesday's Weather Preview</h3>
+            <p class="byLine">By WeatherBug Sr. Meteorologist, James West</p>
+            <p>The East and West coasts remain action-packed Tuesday while large swaths of the southern and central and midwestern U.S. will be quiet.
+                <br><br>
+                A slow-moving nor’easter will bring heavy snow to the big cities of the Northeast Tuesday, causing a travel nightmare along the I-95 corridor from Philadelphia into Boston. The heaviest snow will fall around New York City and areas just to the city’s north and west early in the day before the threat shifts northward into New England and Maine.
+                <br><br>
+                There will be spots of northeastern Pennsylvania and northwestern New Jersey digging out from several feet of snow by the time the snow ends on Wednesday. Along the immediate seaboard, temperatures will be right on cusp of freezing, so a wintry mix of snow, sleet and freezing rain will accompany high winds. Power outages and coastal flooding will be possible. Temperatures will be in the 20s and 30s while the nor’easter spins nearby.
+                <br><br>
+                The Mid-Atlantic and central Appalachians will see a few pockets of snow showers especially early in the day before conditions improve and pockets of sunshine help melt some of the snow. Afternoon highs will struggle to climb into the middle 30s, so melting will be slow. The Carolinas and Southeast will also struggle to warm up too, with highs only being in the 40s across the Tennessee Valley, Mid-South and Southeast. Florida will be in the 50s and low 60s. 
+                
+                <a href="https://www.weatherbug.com/news/Today-s-Weather-Outlook">View Full Article</a></p>
+        </section>
+
+        <section class="contact">
+
+            <picture class="mobile-hide">
+                <img id="contact-map" src="images/ph/ph-361x360.jpg" data-src="images/prestonMapS-1.jpg" alt="preston map">
+            </picture>
+            <div class="contact-text">
+                <h4>24-7 Weather</h4>
+                <p><img class="contact-icon" src="images/ph/ph-71x71.jpg" data-src="images/location70.png" alt="location icon"> 30 N 1st E</p>
+                <p>Preston, ID 83263</p>
+                <br>
+                <p><img class="contact-icon" src="images/ph/ph-71x71.jpg" data-src="images/phone70.png" alt="phone icon"> (999) 999-9999</p>
+                <p><img class="contact-icon" src="images/ph/ph-71x71.jpg" data-src="images/mail70.png" alt="email icon"> contact@24-7weather.com</p>
+                <br>
+
+                <img class="social-icon" src="images/ph/ph-40x40.jpg" data-src="images/fb40.png" alt="facebook icon">
+                <img class="social-icon" src="images/ph/ph-40x40.jpg" data-src="images/twitter40.png" alt="twitter icon">
+                <img class="social-icon" src="images/ph/ph-40x40.jpg" data-src="images/insta40.png" alt="instagram icon">
+                <img class="social-icon" src="images/ph/ph-40x40.jpg" data-src="images/youTube40.png" alt="youtube icon">
+            </div>
+        </section>
 
     </main>
 
