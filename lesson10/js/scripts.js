@@ -19,18 +19,6 @@ function lastModified() {
     document.getElementById('mod').innerHTML = date;
 }
 
-/*************************** WIND CHILL ***************************/
-function windChill(){
-
-    var tempF = document.getElementById('current').innerHTML;
-    var speed = document.getElementById('windChill').innerHTML;
-    var chill = 35.74 + (0.6215 * tempF) - (35.75 * Math.pow(speed,0.16)) + (0.4275 * tempF * Math.pow(speed,0.16));
-
-    chill = Math.round(chill * 1) / 1;
-
-    document.getElementById('windSpeed').innerHTML = speed;
-}
-
 /*************************** SHOW TOP TEXT ON FRIDAY ***************************/
 function showFri() {
     var d = new Date();

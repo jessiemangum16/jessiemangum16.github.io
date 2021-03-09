@@ -6,18 +6,16 @@ fetch(apiURL)
 
     // TEST SITE
     let prestonTemp = (jsObject.main.temp - 273.15) * (9/5) + 32;
-    
-    document.getElementById('current-temp').textContent = prestonTemp.toFixed(0);
-
-    const imagesrc = 'https://openweathermap.org/img/w/' + jsObject.weather[0].icon + '.png';  // note the concatenation
-    const desc = jsObject.weather[0].description;  // note how we reference the weather array
-    document.getElementById('imagesrc').textContent = imagesrc;  // informational specification only
-    document.getElementById('icon').setAttribute('src', imagesrc);  // focus on the setAttribute() method
-    document.getElementById('icon').setAttribute('alt', desc);
+    let prestonHigh = (jsObject.main.temp_max - 273.15) * (9/5) + 32;
 
     //WEATHER SITE
-    document.getElementById('current').textContent = jsObject.main.temp;
-    document.getElementById('high').textContent = jsObject.main.temp_max;
+    document.getElementById('current').textContent = prestonTemp.toFixed(0);
+    document.getElementById('high').textContent = prestonHigh.toFixed(0);
+
+    var speed = jsObject.wind.speed;
+    var chill = 35.74 + (0.6215 * prestonTemp) - (35.75 * Math.pow(speed,0.16)) + (0.4275 * prestonTemp * Math.pow(speed,0.16));
+
+    document.getElementById('windChill').textContent = chill.toFixed(0);
     document.getElementById('humidity').textContent = jsObject.main.humidity;
     document.getElementById('windSpeed').textContent = jsObject.wind.speed;
   });
