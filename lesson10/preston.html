@@ -11,7 +11,8 @@
 
     <link rel="shortcut icon" href="images/favicon.ico">
     <script src="js/scripts.js" defer></script>
-    <title>2Preston Town</title>
+    
+    <title>Preston Town</title>
 </head>
 <body onload="lastModified(); windChill(); showFri();">
     <section id="show-fri" class="top-text">
@@ -55,13 +56,13 @@
                 <source media="(max-width: 60em)" srcset="images/head960-1.jpeg">
                 <img src="images/head1100-1.jpeg" alt="sunny day">
             </picture>
-            <div class="weatherSummary">
+            <div class="weatherSummary"><script src="js/weatherapi.js"></script>
                 <h3>Weather Summary</h3>
                 <hr>
-                <p>Currently: Sunny</p>
-                <p>Temperature: <span id="temp"></span>&#176; F</p>
+                <p>Currently: <span id="current"></span>&#176; F</p>
+                <p>High: <span id="high"></span>&#176; F</p>
                 <p>Wind Chill: <span id="windChill"></span>&#176; F</p>
-                <p>Humidity: 69%</p>
+                <p>Humidity: <span id="humidity"></span>%</p>
                 <p>Wind Speed: <span id="windSpeed"></span> mph</p>
             </div>
         </section>
