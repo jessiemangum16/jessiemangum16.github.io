@@ -17,6 +17,20 @@ function lastModified() {
 
     document.getElementById('cYear').innerHTML = yearOutput;
     document.getElementById('mod').innerHTML = date;
+
+    var dOfWeek_abrev = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+    for(let i=1; i<6; i++){
+      let day = "today" + i;
+      let weekday = d.getDay()+i;
+
+      if(weekday > 6){
+        weekday = weekday - 7;
+        document.getElementById(day).innerHTML = dOfWeek_abrev[weekday];
+      }else{
+        document.getElementById(day).innerHTML = dOfWeek_abrev[weekday];
+      }
+    }
 }
 
 /*************************** SHOW TOP TEXT ON FRIDAY ***************************/

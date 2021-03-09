@@ -48,18 +48,19 @@
     
 
     <main>
-        <h2 class="pageTitle">Preston Idaho</h2>
+        <h2 class="pageTitle">Preston, Idaho</h2>
 
         <section id="hero">
             <picture class="hero-img">
-                <source media="(max-width: 37.5em)" srcset="images/head600-1.jpeg">
-                <source media="(max-width: 60em)" srcset="images/head960-1.jpeg">
-                <img src="images/head1100-1.jpeg" alt="sunny day">
+                <img src="images/preston-banner-S.jpg" alt="preston">
             </picture>
+            
+            
+            
             <div class="weatherSummary">
                 <h3>Weather Summary</h3>
                 <hr>
-                <p>Currently: <span id="current"></span>&#176; F</p>
+                <p>Currently: <span id="current-desc"></span> <span id="current"></span>&#176; F</p>
                 <p>High: <span id="high"></span>&#176; F</p>
                 <p>Wind Chill: <span id="windChill"></span>&#176; F</p>
                 <p>Humidity: <span id="humidity"></span>%</p>
@@ -73,14 +74,14 @@
             <h3>5 Day Forecast</h3>
             <table class="forecast_table">
                 <tr>
-                    <th>Wed</th>
-                    <th>Thur</th>
-                    <th>Fri</th>
-                    <th>Sat</th>
-                    <th>Sun</th>
+                    <th><div id="today1"></div></th>
+                    <th><div id="today2"></div></th>
+                    <th><div id="today3"></div></th>
+                    <th><div id="today4"></div></th>
+                    <th><div id="today5"></div></th>
                 </tr>
                 <tr>
-                    <td><img class="weather" src="images/ph/ph-71x71.jpg" data-src="images/sun70.png" alt="sun icon"><br>52&#176; F</td>
+                    <td><div class="forecast-icon"></div><span class="forecast-temp"></span>&#176; F</td>
                     <td><img class="weather" src="images/ph/ph-71x71.jpg" data-src="images/rain70.png" alt="rain icon"><br>43&#176; F</td>
                     <td><img class="weather" src="images/ph/ph-71x71.jpg" data-src="images/cloud70.png" alt="cloud icon"><br>56&#176; F</td>
                     <td><img class="weather" src="images/ph/ph-71x71.jpg" data-src="images/sun70.png" alt="sun icon"><br>38&#176; F</td>
