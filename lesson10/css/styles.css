@@ -135,7 +135,7 @@ body{
 main{
     max-width: 960px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     padding-bottom: 140px;
 }
 .pageTitle{
@@ -222,15 +222,14 @@ form label.top input:required:valid{
 }
 /********************************** HERO **********************************/
 #hero{
-    margin: 10px auto;
+    margin: 0;
     position: relative;
-    max-width: 960px;
+    width: 100%;
 }
 #hero img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 960px;
     width: 100%;
     height: auto;
 }
