@@ -20,7 +20,6 @@ fetch(currentApiURL)
     document.getElementById('humidity').textContent = jsObject.main.humidity;
     document.getElementById('windSpeed').textContent = jsObject.wind.speed;
 
-    //5 DAY FORECAST
   
   });
 

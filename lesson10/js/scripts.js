@@ -17,7 +17,10 @@ function lastModified() {
 
     document.getElementById('cYear').innerHTML = yearOutput;
     document.getElementById('mod').innerHTML = date;
+}
 
+function fiveWeekDays(){
+    var d = new Date();
     var dOfWeek_abrev = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 
     for(let i=1; i<6; i++){
@@ -90,46 +93,6 @@ function selectResponse() {
 	
 }
 
-/*************************** HOME PAGE TOWN DATA ***************************/
-const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
 
-fetch(requestURL)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (jsonObject) {
-    console.table(jsonObject);  // temporary checking for valid response and data parsing
-    const towns = jsonObject['towns'];
-    const townsA = [5, 1, 6]
-    for (let i = 0; i < townsA.length; i++ ) {
-        let card = document.createElement('section');
-        let h2 = document.createElement('h2');
-        let h4 = document.createElement('h4');
-        let h3_1 = document.createElement('p');
-        let h3_2 = document.createElement('p');
-        let h3_3 = document.createElement('p');
-        let img = document.createElement('img');
-
-        h2.textContent = towns[townsA[i]].name;
-        h4.textContent = '"' + towns[townsA[i]].motto + '"';
-        h3_1.textContent = 'Year Founded: ' + towns[townsA[i]].yearFounded;
-        h3_2.textContent = 'Population: ' + towns[townsA[i]].currentPopulation;
-        h3_3.textContent = 'Annual Rainfall: ' + towns[townsA[i]].averageRainfall + '"';
-        img.setAttribute('src', 'images/' + towns[townsA[i]].photo);
-        img.setAttribute('alt', towns[townsA[i]].name + 'photo');
-
-        card.appendChild(h2);
-        card.appendChild(h4);
-        card.appendChild(h3_1);
-        card.appendChild(h3_2);
-        card.appendChild(h3_3);
-        card.appendChild(img);
-
-        document.querySelector('div.towns').appendChild(card);
-        
-
-        
-    }
-  });
 
 

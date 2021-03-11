@@ -46,6 +46,11 @@ h4{
     font-family: var(--paragraph-font);
     font-size: 13pt;
 }
+h5{
+    font-family: var(--paragraph-font);
+    font-size: 12pt;
+    color: var(--color5);
+}
 p, figcaption{
     font-family: var(--paragraph-font);
     font-size: 11pt;
