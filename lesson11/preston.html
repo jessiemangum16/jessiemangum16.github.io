@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preston Town">
+    
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/medium.css" media="screen and (min-width:37.5em)">
+    <link rel="stylesheet" href="css/large.css" media="screen and (min-width:60em)">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script src="js/scripts.js" defer></script>
+    
+    <title>Preston Town</title>
+</head>
+<body onload="lastModified(); showFri(); fiveWeekDays();">
+    <section id="show-fri" class="top-text">
+        <h2>Preston Pancakes in the Park</h2>
+        <h2>9:00 a.m. Saturday at the City Park</h2>
+    </section>
+
+    <header>
+        <picture class="logo">
+            <source media="(max-width: 37.5em)" srcset="images/logo90-1.png">
+            <source media="(max-width: 60em)" srcset="images/logo110-1.png">
+            <img src="images/logo150-1.png" alt="24/7Weather logo">
+        </picture>
+
+        <div class="headings">
+            <h1 id="page-title">24/7 Weather Site</h1>
+            <h4>24/7 weather site catch phrase/motto</h4>
+        </div>
+    </header>
+
+    <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="top-menu" class="hide">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="preston.html" class="active">Preston</a></li>
+            <li><a href="soda-springs.html">Soda Springs</a></li>
+            <li><a href="fish-haven.html">Fish Haven</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <picture class="hero-img">
+            <source media="(max-width: 60em)" srcset="images/preston-banner-600.jpg">
+            <source media="(max-width: 60em)" srcset="images/preston-banner-960.jpg">
+            <img src="images/preston-banner-full.jpg" alt="preston">
+        </picture>
+        
+        
+        
+        <div class="weatherSummary">
+            <h3>Weather Summary</h3>
+            <hr>
+            <p>Currently: <span id="current-desc"></span> <span id="current"></span>&#176; F</p>
+            <p>High: <span id="high"></span>&#176; F</p>
+            <p>Wind Chill: <span id="windChill"></span>&#176; F</p>
+            <p>Humidity: <span id="humidity"></span>%</p>
+            <p>Wind Speed: <span id="windSpeed"></span> mph</p>
+
+            <script src="js/weatherapi-preston.js"></script>
+        </div>
+    </section>
+
+    <main>
+        <h2 class="pageTitle">Preston, Idaho</h2>
+
+        
+
+        <section class="forecast mobile-hide">
+            <h3>5 Day Forecast</h3>
+            <table class="forecast_table">
+                <tr>
+                    <th><div id="today1"></div></th>
+                    <th><div id="today2"></div></th>
+                    <th><div id="today3"></div></th>
+                    <th><div id="today4"></div></th>
+                    <th><div id="today5"></div></th>
+                </tr>
+                <tr>
+                    <td><img src="" alt="" id="forecast-icon1" class="f-icons"><br><span id="forecast-temp1"></span>&#176; F</td>
+                    <td><img src="" alt="" id="forecast-icon2" class="f-icons"><br><span id="forecast-temp2"></span>&#176; F</td>
+                    <td><img src="" alt="" id="forecast-icon3" class="f-icons"><br><span id="forecast-temp3"></span>&#176; F</td>
+                    <td><img src="" alt="" id="forecast-icon4" class="f-icons"><br><span id="forecast-temp4"></span>&#176; F</td>
+                    <td><img src="" alt="" id="forecast-icon5" class="f-icons"><br><span id="forecast-temp5"></span>&#176; F</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="articles">
+            <img id="article-img" src="images/ph/ph-350x233.jpg" data-src="images/traffic-1.jpg" alt="highway traffic">
+            <h3>Tuesday's Weather Preview</h3>
+            <p class="byLine">By WeatherBug Sr. Meteorologist, James West</p>
+            <p>The East and West coasts remain action-packed Tuesday while large swaths of the southern and central and midwestern U.S. will be quiet.
+                <br><br>
+                A slow-moving nor’easter will bring heavy snow to the big cities of the Northeast Tuesday, causing a travel nightmare along the I-95 corridor from Philadelphia into Boston. The heaviest snow will fall around New York City and areas just to the city’s north and west early in the day before the threat shifts northward into New England and Maine.
+                <br><br>
+                There will be spots of northeastern Pennsylvania and northwestern New Jersey digging out from several feet of snow by the time the snow ends on Wednesday. Along the immediate seaboard, temperatures will be right on cusp of freezing, so a wintry mix of snow, sleet and freezing rain will accompany high winds. Power outages and coastal flooding will be possible. Temperatures will be in the 20s and 30s while the nor’easter spins nearby.
+                <br><br>
+                The Mid-Atlantic and central Appalachians will see a few pockets of snow showers especially early in the day before conditions improve and pockets of sunshine help melt some of the snow. Afternoon highs will struggle to climb into the middle 30s, so melting will be slow. The Carolinas and Southeast will also struggle to warm up too, with highs only being in the 40s across the Tennessee Valley, Mid-South and Southeast. Florida will be in the 50s and low 60s. 
+                
+                <a href="https://www.weatherbug.com/news/Today-s-Weather-Outlook">View Full Article</a></p>
+        </section>
+
+        <section class="contact">
+
+            <picture class="mobile-hide">
+                <img id="contact-map" src="images/ph/ph-361x360.jpg" data-src="images/prestonMapS-1.jpg" alt="preston map">
+            </picture>
+            <div class="contact-text">
+                <h4>24-7 Weather</h4>
+                <p><img class="contact-icon" src="images/ph/ph-71x71.jpg" data-src="images/location70.png" alt="location icon"> 30 N 1st E</p>
+                <p>Preston, ID 83263</p>
+                <br>
+                <p><img class="contact-icon" src="images/ph/ph-71x71.jpg" data-src="images/phone70.png" alt="phone icon"> (999) 999-9999</p>
+                <p><img class="contact-icon" src="images/ph/ph-71x71.jpg" data-src="images/mail70.png" alt="email icon"> contact@24-7weather.com</p>
+                <br>
+
+                <img class="social-icon" src="images/ph/ph-40x40.jpg" data-src="images/fb40.png" alt="facebook icon">
+                <img class="social-icon" src="images/ph/ph-40x40.jpg" data-src="images/twitter40.png" alt="twitter icon">
+                <img class="social-icon" src="images/ph/ph-40x40.jpg" data-src="images/insta40.png" alt="instagram icon">
+                <img class="social-icon" src="images/ph/ph-40x40.jpg" data-src="images/youTube40.png" alt="youtube icon">
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <a id="return-home" href="../index.html">Assignment Portal</a>
+        <div id="cYear"></div>
+        <div id="mod"></div>
+    </footer>
+    
+    
+    <link rel="stylesheet" href="../css/normalize.css" media="all">
+</body>
+</html>
