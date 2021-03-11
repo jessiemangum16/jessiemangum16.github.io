@@ -7,6 +7,8 @@ fetch(currentApiURL)
     let currentPreston = "Currently: " + jsObject.main.temp.toFixed(0) + "\xB0 F " + jsObject.weather[0].description;
 
     document.getElementById('current-Preston').textContent = currentPreston;
+    document.getElementById('current-Fish Haven').textContent = "Currently: 55\xB0 F cloudy";
+    document.getElementById('current-Soda Springs').textContent = "Currently: 55\xB0 F cloudy";
 
 
   
