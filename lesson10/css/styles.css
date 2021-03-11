@@ -282,9 +282,6 @@ form label.top input:required:valid{
     border-collapse: collapse;
     background-color: white;
 }
-.weather{
-    width: 70px;
-}
 
 /********************************** ARTICLE **********************************/
 .articles{

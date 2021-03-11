@@ -31,10 +31,31 @@ fetch(forecastApiURL)
     console.log(jsForecast);
 
     //5 DAY FORECAST
-    document.getElementById('forecast-temp').textContent = jsForecast.list[6].main.temp;
+    var i = 1;
+    for(var x=0; x<jsForecast.list.length; x++){
+      var temp = "forecast-temp" + i;
+      var icon = "forecast-icon" + i;
+      if(jsForecast.list[x].dt_txt.includes("18:00:00")){
+        document.getElementById(temp).textContent = jsForecast.list[x].main.temp;
 
+        const imagesrc = 'https://openweathermap.org/img/w/' + jsForecast.list[x].weather[0].icon + '.png';  // note the concatenation
+        const desc = jsForecast.list[x].weather.description;  // note how we reference the weather array
+        document.getElementById(icon).setAttribute('src', imagesrc);  // focus on the setAttribute() method
+        document.getElementById(icon).setAttribute('alt', desc);
+
+        i++; 
+      }
+      
+    }
+    
+    
+    
+    
     
 
-    //document.getElementById('forecast-icon').textContent = jsForecast.list[6].weather.icon;
-    console.log(jsForecast.city.name);
+    const imagesrc = 'https://openweathermap.org/img/w/' + jsForecast.list[6].weather[0].icon + '.png';  // note the concatenation
+    const desc = jsForecast.list[6].weather.description;  // note how we reference the weather array
+    document.getElementById('forecast-icon1').setAttribute('src', imagesrc);  // focus on the setAttribute() method
+    document.getElementById('forecast-icon1').setAttribute('alt', desc);
+
   });
