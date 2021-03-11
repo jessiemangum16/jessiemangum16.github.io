@@ -38,10 +38,10 @@ fetch(forecastApiURL)
         document.getElementById(temp).textContent = jsForecast.list[x].main.temp;
 
         const imagesrc = 'https://openweathermap.org/img/w/' + jsForecast.list[x].weather[0].icon + '.png';  // note the concatenation
-        const desc = jsForecast.list[x].weather.description;  // note how we reference the weather array
+        const desc = jsForecast.list[x].weather[0].description;  // note how we reference the weather array
         document.getElementById(icon).setAttribute('src', imagesrc);  // focus on the setAttribute() method
         document.getElementById(icon).setAttribute('alt', desc);
-
+        
         i++; 
       }
       
