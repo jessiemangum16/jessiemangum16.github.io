@@ -286,6 +286,14 @@ form label.top input:required:valid{
     border-collapse: collapse;
     background-color: white;
 }
+/********************************** EVENTS **********************************/
+.town-events{
+    margin-top: 30px;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
 
 /********************************** ARTICLE **********************************/
 .articles{
