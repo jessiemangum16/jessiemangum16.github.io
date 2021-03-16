@@ -64,7 +64,7 @@ fetch(requestURL)
         let p_2 = document.createElement('p');
         let p_3 = document.createElement('p');
 
-        h2.textContent = towns[townsA].name + " Events";
+        h2.textContent = towns[townsA].name + " Upcoming Events";
         p_1.textContent = towns[townsA].events[0];
         p_2.textContent = towns[townsA].events[1];
         p_3.textContent = towns[townsA].events[2];
