@@ -35,7 +35,7 @@ fetch(forecastApiURL)
         let tempF = document.createElement('p');
         let imgF = document.createElement('img');
         
-        tempF.textContent = jsForecast.list[x].main.temp;
+        tempF.textContent = jsForecast.list[x].main.temp.toFixed(0) + "\xB0 F";
 
         const imagesrc = 'https://openweathermap.org/img/w/' + jsForecast.list[x].weather[0].icon + '.png';  // note the concatenation
         const desc = jsForecast.list[x].weather[0].description;  // note how we reference the weather array
