@@ -278,7 +278,7 @@ form label.top input:required:valid{
     color: var(--color2);
     border: 1px solid rgba(0, 0, 0, 0.3);
 }
-.forecast_table, .forecast_table td {
+.forecast_table, .forecast_table td{
     font-family: var(--paragraph-font);
     font-size: 25px;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -286,6 +286,11 @@ form label.top input:required:valid{
     border-collapse: collapse;
     background-color: white;
 }
+.forecast_table div p{
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    margin: 0;
+} 
 /********************************** EVENTS **********************************/
 .town-events{
     margin-top: 30px;

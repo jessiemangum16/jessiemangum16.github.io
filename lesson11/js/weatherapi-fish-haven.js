@@ -32,15 +32,23 @@ fetch(forecastApiURL)
     //5 DAY FORECAST
     var i = 1;
     for(var x=0; x<jsForecast.list.length; x++){
-      var temp = "forecast-temp" + i;
-      var icon = "forecast-icon" + i;
       if(jsForecast.list[x].dt_txt.includes("18:00:00")){
-        document.getElementById(temp).textContent = jsForecast.list[x].main.temp;
+        let cardF = document.createElement('section');
+        let tempF = document.createElement('p');
+        let imgF = document.createElement('img');
+        
+        tempF.textContent = jsForecast.list[x].main.temp;
 
         const imagesrc = 'https://openweathermap.org/img/w/' + jsForecast.list[x].weather[0].icon + '.png';  // note the concatenation
         const desc = jsForecast.list[x].weather[0].description;  // note how we reference the weather array
-        document.getElementById(icon).setAttribute('src', imagesrc);  // focus on the setAttribute() method
-        document.getElementById(icon).setAttribute('alt', desc);
+        imgF.setAttribute('src', imagesrc);
+        imgF.setAttribute('alt', desc);
+        
+        cardF.appendChild(imgF);
+        cardF.appendChild(tempF);
+        
+
+        document.querySelector('div.fiveDay' + i).appendChild(cardF);
         
         i++; 
       }
