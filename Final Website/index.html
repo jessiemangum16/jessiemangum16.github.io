@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home">
+    
+    <link rel="stylesheet" href="css/home.css" media="all">
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/medium.css" media="screen and (min-width:37.5em)">
+    <link rel="stylesheet" href="css/large.css" media="screen and (min-width:60em)">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script src="js/scripts.js" defer></script>
+    <script src="js/scripts-home.js" defer></script>
+    <title>Home</title>
+</head>
+<body onload="lastModified();">
+
+    <header>
+        
+
+        
+    </header>
+        
+    <div class="hero">
+        <div class="bg-img">
+            <img src="images/head1-short.jpg" alt="city">
+        </div>
+
+        <picture class="logo">
+            <!-- <source media="(max-width: 37.5em)" srcset="images/logo90-1.png">
+            <source media="(max-width: 60em)" srcset="images/logo110-1.png"> -->
+            <img src="images/logo1.png" alt="logo">
+        </picture>
+
+        <nav class="topM">
+            <button onclick="toggleMenu()">&#9776; Menu</button>
+            <ul id="top-menu" class="hide">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="city.html">City</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="siteT">
+            <h1 id="page-title">Salt Lake Chamber of Commerce</h1> 
+            <h4>Utah's Business Leader</h4>
+        </div>
+    </div>
+
+    <main>
+       
+        <div class="localB">
+            <h1>Local Businesses</h1>
+            <h4>Support new local businesses</h4>
+            <div class="business-cards">
+                <div class="bus">
+                    <img src="images/business-icon-C-100.png" alt="business icon">
+                    <h2>Business 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="bus">
+                    <img src="images/business-icon-C-100.png" alt="business icon">
+                    <h2>Business 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="bus">
+                    <img src="images/business-icon-C-100.png" alt="business icon">
+                    <h2>Business 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h1>Join the Salt Lake City Chamber of Commerce</h1>
+        </div>
+
+        <div class="purpose">
+            <h1>Salt Lake Chamber of Commerce</h1>
+            <p>
+                The main purpose of Salt Lake City Chamber of commerce is to promotion local businesses and bring businesses together to grow and succeed to the best of their abilities. 
+                
+                It is also be a place for customers to locate locally owned companies. It is important to purchase from smaller locally owned companies to endure success. 
+            </p>
+        </div>
+
+        <div class="upcoming-events">
+            <h1>Upcoming Events</h1>
+            <div class="event-cards">
+                <div class="event">
+                    <span><h4>16</h4><p>Jun</p></span>
+                    <h3>Event Title</h3><br>
+                    <p>Event Time</p>
+                    <p>Event Address</p><br>
+                    <p>Event Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="event">
+                    <span><h4>16</h4><p>Jun</p></span>
+                    <h3>Event Title</h3><br>
+                    <p>Event Time</p>
+                    <p>Event Address</p><br>
+                    <p>Event Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="event">
+                    <span><h4>16</h4><p>Jun</p></span>
+                    <h3>Event Title</h3><br>
+                    <p>Event Time</p>
+                    <p>Event Address</p><br>
+                    <p>Event Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="weather">
+            <div class="currentW">
+
+            </div>
+            <div class="forecastW">
+                
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <a id="return-home" href="../index.html">Assignment Portal</a>
+        <div id="cYear"></div>
+        <div id="mod"></div>
+    </footer>
+    
+    
+    <link rel="stylesheet" href="../css/normalize.css" media="all">
+</body>
+</html>
