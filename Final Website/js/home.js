@@ -5,18 +5,37 @@ fetch(currentApiURL)
     console.log(jsObject);
 
    
-    let prestonTemp = jsObject.main.temp;
-    let prestonHigh = jsObject.main.temp_max;
+    let temp = jsObject.main.temp;
+    let high = jsObject.main.temp_max;
 
     //WEATHER SUMMARY
-    document.getElementById('current-desc').textContent = jsObject.weather[0].description;
-    document.getElementById('current').textContent = prestonTemp.toFixed(0);
-    document.getElementById('high').textContent = prestonHigh.toFixed(0);
 
-    var speed = jsObject.wind.speed;
-    var chill = 35.74 + (0.6215 * prestonTemp) - (35.75 * Math.pow(speed,0.16)) + (0.4275 * prestonTemp * Math.pow(speed,0.16));
+    //document.getElementById('current').textContent = "Currently: " + jsObject.main.temp.toFixed(0) + "\xB0 F";
+    //document.getElementById('current-desc').textContent = jsObject.weather[0].description;
+    //document.getElementById('humidity').textContent = "Humidity: " + jsObject.main.humidity + "%";
 
-    document.getElementById('windChill').textContent = chill.toFixed(0);
-    document.getElementById('humidity').textContent = jsObject.main.humidity;
-    document.getElementById('windSpeed').textContent = jsObject.wind.speed;
+
+    let cardF = document.createElement('div');
+    let tempF = document.createElement('p');
+    let imgF = document.createElement('img');
+    let imgDes = document.createElement('p');
+    let hum = document.createElement('p');
+    
+    tempF.textContent = "Currently: " + jsObject.main.temp.toFixed(0) + "\xB0 F";
+    hum.textContent = "Humidity: " + jsObject.main.humidity + "%";
+
+    const imagesrc = 'https://openweathermap.org/img/w/' + jsObject.weather[0].icon + '.png';  // note the concatenation
+    const desc = jsObject.weather[0].description;  // note how we reference the weather array
+    imgF.setAttribute('src', imagesrc);
+    imgF.setAttribute('alt', desc);
+
+    imgDes.textContent = desc;
+    
+    
+    cardF.appendChild(tempF);
+    cardF.appendChild(imgF);
+    cardF.appendChild(imgDes);
+    cardF.appendChild(hum);
+
+    document.querySelector('div.currentW').appendChild(cardF);
   });

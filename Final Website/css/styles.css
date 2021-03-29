@@ -210,6 +210,11 @@ main{
 .event hr{
     color: var(--color2);
 }
+/********************************** WEATHER **********************************/
+.currentW img{
+    display: inline;
+}
+
 /********************************** LAZY LOAD **********************************/
 .lazy-gallery-imgs img{
     display: block;
