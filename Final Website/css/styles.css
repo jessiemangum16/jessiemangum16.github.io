@@ -60,12 +60,6 @@ img{
 }
 
 /********************************** HEADER **********************************/
-header{
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    background-color: var(--color3);
-    padding: 0px 40px;
-}
 .logo{
     width: 90px;
     padding-right: 30px;
@@ -145,7 +139,7 @@ body{
 }
 main{
     margin: 0 auto;
-    padding-bottom: 150px;
+    padding-bottom: 90px;
 }
 .pageTitle{
     text-align: center;
@@ -176,14 +170,14 @@ main{
 }
 /********************************** CTA **********************************/
 .cta{
-    background-color: var(--color3);
+    background-color: var(--color1);
     text-align: center;
 }
 .cta a{
     padding: 30px;
 }
 .cta h1{
-    color: var(--color2);
+    color: var(--color5);
 }
 /********************************** PURPOSE **********************************/
 .purpose{
@@ -214,8 +208,9 @@ main{
 }
 /********************************** UPCOMING EVENTS **********************************/
 .upcoming-events{
-    background-color: var(--color3);
+    background-color: rgba(0,0,0,.2);
     padding: 50px 50px 75px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0, 0.5);
 }
 .event-cards{
     display: grid;
@@ -226,8 +221,8 @@ main{
 .event{
     display: grid;
     grid-template-columns: 50px 1fr;
+    background-color: var(--color3);
     border: 1px solid black;
-    background-color: var(--color2);
     padding: 20px;
     box-shadow: 8px 8px 8px rgba(0,0,0,.5);
 }
@@ -241,7 +236,14 @@ main{
     color: var(--color2);
 }
 /********************************** WEATHER **********************************/
+.weather{
+    padding: 30px;
+    text-align:center;
+}
 .currentW img{
+    display: inline;
+}
+.currentW p:nth-of-type(2){
     display: inline;
 }
 .weather-cards{
@@ -251,9 +253,38 @@ main{
     padding: 50px;
 }
 .w-card{
-    border: 2px solid black;
     padding: 20px;
 }
+.member-perks{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.forecast_table{
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.forecast_table th {
+    padding: 10px 25px 10px 25px;
+    background-color: var(--color1);
+    color: var(--color5);
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 75px;
+}
+.forecast_table td{
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    color: var(--color1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 8px;
+    background-color: var(--color5);
+}
+.forecast_table div p{
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    margin: 0;
+} 
 /********************************** ALL FORMS **********************************/
 form label{
     display: block;
@@ -298,14 +329,15 @@ form label input:required:valid{
 }
 /********************************** HOME CONTACT **********************************/
 .home-contact{
-    background-color: var(--color3);
+    background-color: rgba(0,0,0,.2);
+    box-shadow: 0 0 10px 5px rgba(0,0,0, 0.5);
     padding: 30px 20%;
 }
 .contact-text{
     width: 180px;
     margin: 0 auto;
 }
-.home-contact img{
+.contact-text img{
     width: 15px;
     display: inline;
 }
@@ -317,6 +349,15 @@ form label input:required:valid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px 30px;
+}
+.social{
+    padding: 60px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.social a{
+    width: 40px;
+    margin: 0 auto;
 }
 /********************************** JOIN FORM **********************************/
 .join-form{
@@ -342,6 +383,7 @@ form label input:required:valid{
 /********************************** JOIN PERKS TABLE **********************************/
 .member-perks{
     text-align: center;
+    padding-bottom: 50px;
 }
 .perks-table{
     margin: 0 auto;
@@ -373,7 +415,17 @@ form label input:required:valid{
     font-size: 25px;
     margin: 0;
 } 
+/********************************** CONTACT PAGE **********************************/
+.map{
+    width: 600px;
+    padding: 30px;
+    margin: 0 auto;
+}
 
+.board-directors{
+    background-color: rgba(0,0,0,.2);
+    box-shadow: 0 0 10px 5px rgba(0,0,0, 0.5);
+}
 /********************************** LAZY LOAD **********************************/
 .lazy-gallery-imgs img{
     display: block;
@@ -389,7 +441,7 @@ form label input:required:valid{
 
 /********************************** FOOTER **********************************/
 footer{
-    background-color: var(--color3);
+    background-color: var(--color1);
     text-align: center;
     padding: 15px 0;
     position: absolute;
@@ -400,10 +452,13 @@ footer{
     font-size: 11pt;
     line-height: 20px;
 }
-#mod{
-    color: var(--links);
+#mod, footer p, footer div{
+    color: var(--color5);
 }
-
+footer a{
+    color: black;
+    text-decoration:underline;
+}
 .clearfix:after {
     content: "";
     display: table;
