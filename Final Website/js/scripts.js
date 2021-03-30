@@ -19,11 +19,11 @@ function lastModified() {
     document.getElementById('mod').innerHTML = date;
 }
 
-function fiveWeekDays(){
+function threeWeekDays(){
     var d = new Date();
     var dOfWeek_abrev = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 
-    for(let i=1; i<6; i++){
+    for(let i=1; i<4; i++){
       let day = "today" + i;
       let weekday = d.getDay()+i;
 

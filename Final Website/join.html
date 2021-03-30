@@ -54,7 +54,80 @@
 
     <main>
        
-        <h1>JOIN</h1>
+        <h1>Join Now</h1>
+
+        <form class="join-form" method="get" action="thanks.html">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label class="top">First Name* <input type="text" name="fname" pattern="[A-Za-z]{3,}" required></label>
+                <label class="top">Last Name* <input type="text" name="lname" pattern="[A-Za-z]{3,}" required></label>
+                <label class="top">Title <input type="text" name="lname" pattern="[A-Za-z]{3,}"></label>
+                <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                <label class="top">Phone Number <input type="tel" name="phone" placeholder="1234567890"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Buisness Information</legend>
+                <label class="top">Business Name* <input type="text" name="business-name" pattern="[A-Za-z]{3,}" required></label>
+                <label class="top">Business Address <input type="text" name="business-address"></label>
+                <label class="top">Business Website<input type="url" name="url" id="url" placeholder="https://www.example.com"></label>
+                <label class="top">Business Description <textarea name="business-description"></textarea></label>
+
+                <div>Membership Level</div>
+                <label class="sbs"><input type="radio" name="membership-level" value="Non-Profit">Non-Profit ($100)</label>
+                <label class="sbs"><input type="radio" name="membership-level" value="Bronze">Bronze ($200)</label>
+                <label class="sbs"><input type="radio" name="membership-level" value="Silver">Silver ($400)</label>
+                <label class="sbs"><input type="radio" name="membership-level" value="Gold">Gold ($1000)</label>
+                
+            </fieldset>
+                
+            <input type="submit" value="Join Now" class="submitB">
+        </form>
+
+        <div class="member-perks">
+            <table class="perks-table">
+                <tr>
+                    <th>Perks</th>
+                    <th>Non-Profit ($100)</th>
+                    <th>Bronze ($200)</th>
+                    <th>Silver ($400)</th>
+                    <th>Gold ($1000)</th>
+                </tr>
+                <tr>
+                    <td>Directory Listing</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Business Trainings</td>
+                    <td></td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Social Media Posts</td>
+                    <td></td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Luncheon Tickets</td>
+                    <td></td>
+                    <td></td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Sponsorship Opportunities</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>X</td>
+            </table>
+        </div>
 
     </main>
 

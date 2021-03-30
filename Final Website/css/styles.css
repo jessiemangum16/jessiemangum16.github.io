@@ -53,6 +53,7 @@ a{
     color: var(--links);
     font-family: var(--paragraph-font);
     font-size: 11pt;
+    text-decoration: none;
 }
 img{
     max-width: 100%;
@@ -144,20 +145,23 @@ body{
 }
 main{
     margin: 0 auto;
-    padding-bottom: 140px;
+    padding-bottom: 150px;
 }
 .pageTitle{
     text-align: center;
 }
 /********************************** LOCAL BUSINESSES **********************************/
+.localB{
+    padding: 75px;
+}
 .localB h1, .localB h4{
     text-align: center;
 }
 .business-cards{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
-    padding: 0px 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 75px;
+    padding: 50px 50px 30px;
 }
 .bus{
     display: grid;
@@ -172,20 +176,46 @@ main{
 }
 /********************************** CTA **********************************/
 .cta{
-    background-color: var(--color2);
+    background-color: var(--color3);
     text-align: center;
+}
+.cta a{
     padding: 30px;
-    margin: 30px 0;
+}
+.cta h1{
+    color: var(--color2);
 }
 /********************************** PURPOSE **********************************/
 .purpose{
     text-align: center;
     margin: 0 20%;
+    padding: 30px 0 50px 0;
+}
+.purp-icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    align-items: center;
+    padding: 30px;
+}
+.purp img{
+    display: inline;
+    width: 50px;
+}
+.purp h2{
+    display: inline;
+    padding: 20px;
+}
+.purp{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    text-align: left;
 }
 /********************************** UPCOMING EVENTS **********************************/
 .upcoming-events{
-    background-color: var(--color2);
-    padding: 30px;
+    background-color: var(--color3);
+    padding: 50px 50px 75px;
 }
 .event-cards{
     display: grid;
@@ -197,7 +227,7 @@ main{
     display: grid;
     grid-template-columns: 50px 1fr;
     border: 1px solid black;
-    background-color: var(--color3);
+    background-color: var(--color2);
     padding: 20px;
     box-shadow: 8px 8px 8px rgba(0,0,0,.5);
 }
@@ -214,6 +244,135 @@ main{
 .currentW img{
     display: inline;
 }
+.weather-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    padding: 50px;
+}
+.w-card{
+    border: 2px solid black;
+    padding: 20px;
+}
+/********************************** ALL FORMS **********************************/
+form label{
+    display: block;
+    padding-top: 20px;
+    font-family: var(--paragraph-font);
+    font-size: 13pt;
+}
+form legend{
+    font-family: var(--paragraph-font);
+    font-size: 13pt;
+    font-weight: bold;
+}
+form label.top input, form label.top textarea{
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+form label.sbs input{
+    margin: 0 20px;
+}
+form label textarea{
+    height: 100px;
+}
+form label.textA{
+    grid-column: span 2;
+}
+form input.submitB{
+    border: none;
+    background-color: var(--color2);
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: var(--paragraph-font);
+}
+form label input:required {
+    border-left: red solid 6px;
+}
+form label input:required:valid{
+    border-left: green solid 6px;
+}
+/********************************** HOME CONTACT **********************************/
+.home-contact{
+    background-color: var(--color3);
+    padding: 30px 20%;
+}
+.contact-text{
+    width: 180px;
+    margin: 0 auto;
+}
+.home-contact img{
+    width: 15px;
+    display: inline;
+}
+.home-contact p{
+    display: inline;
+    padding: 10px;
+}
+.home-contact form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px 30px;
+}
+/********************************** JOIN FORM **********************************/
+.join-form{
+    padding: 30px 20%;
+}
+.join-form input, .join-form textarea{
+    max-width: 95%;
+}
+.join-form fieldset{
+    padding: 20px;
+    margin: 20px;
+}
+.join-form div{
+    padding-top: 20px;
+    font-family: var(--paragraph-font);
+    font-size: 13pt;
+    font-weight: bold;
+}
+.join-form input.submitB{
+    margin: 15px;
+    width: 100%;
+}
+/********************************** JOIN PERKS TABLE **********************************/
+.member-perks{
+    text-align: center;
+}
+.perks-table{
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.perks-table th {
+    padding: 10px 25px 10px 25px;
+    background-color: var(--color1);
+    color: var(--color5);
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.perks-table td{
+    font-family: var(--heading-font);
+    font-size: 25px;
+    color: var(--color1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 8px;
+    background-color: var(--color5);
+}
+.perks-table td:nth-child(1){
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    color: black;
+}
+.perks-table div p{
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    margin: 0;
+} 
 
 /********************************** LAZY LOAD **********************************/
 .lazy-gallery-imgs img{
