@@ -4,6 +4,13 @@ function toggleMenu(){
     document.getElementById("top-menu").classList.toggle("hide");
 }
 
+function toggleDirectoryGrid(){
+  document.getElementById("local-b").className = "grid";
+}
+
+function toggleDirectoryList(){
+  document.getElementById("local-b").className = "list";
+}
 /*************************** LAST MODIFIED/CURRENT YEAR ***************************/
 function lastModified() {
     var d = new Date();

@@ -12,6 +12,8 @@
     <link rel="shortcut icon" href="images/logo-200.png">
     <script src="js/scripts.js" defer></script>
     <script src="js/script-directory.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer>
+
     <title>Directory</title>
 </head>
 <body onload="lastModified();">
@@ -48,7 +50,10 @@
     <main>
        
         <h1>Local Business Directory</h1>
-        <div id="local-b"></div>
+        <div class="switchB">
+            <button onclick="toggleDirectoryGrid()"><i class="fas fa-th"></i></i></button><button onclick="toggleDirectoryList()"><i class="fas fa-list-ul"></i></button>
+        </div>
+        <div id="local-b" class="grid"></div>
 
     </main>
 

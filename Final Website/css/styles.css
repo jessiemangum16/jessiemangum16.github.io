@@ -412,6 +412,23 @@ form label.address{
     max-width: 1050px;
     padding: 30px;
 }
+/********************************** DIRECTORY PAGE **********************************/
+.switchB{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+#local-b.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    padding: 30px;
+}
+#local-b section{
+    border: 2px solid black;
+    padding: 20px;
+}
+
 /********************************** LAZY LOAD **********************************/
 .lazy-gallery-imgs img{
     display: block;
