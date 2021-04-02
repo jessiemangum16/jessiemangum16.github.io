@@ -1,70 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="City">
-    
-    <link rel="stylesheet" href="css/home.css" media="all">
-    <link rel="stylesheet" href="css/styles.css" media="all">
-    <link rel="stylesheet" href="css/medium.css" media="screen and (min-width:37.5em)">
-    <link rel="stylesheet" href="css/large.css" media="screen and (min-width:60em)">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="City" />
 
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/home.css" media="all" />
+    <link rel="stylesheet" href="css/styles.css" media="all" />
+    <link
+      rel="stylesheet"
+      href="css/medium.css"
+      media="screen and (min-width:37.5em)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/large.css"
+      media="screen and (min-width:60em)"
+    />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
     <script src="js/scripts.js" defer></script>
     <script src="js/scripts-home.js" defer></script>
     <title>City</title>
-</head>
-<body onload="lastModified();">
-
+  </head>
+  <body onload="lastModified();">
     <header class="hero">
-        <div class="bg-img">
-            <img src="images/head1-short.jpg" alt="city">
-        </div>
+      <div class="bg-img">
+        <img src="images/head1-short.jpg" alt="city" />
+      </div>
 
-        <picture class="logo">
-            <!-- <source media="(max-width: 37.5em)" srcset="images/logo90-1.png">
+      <picture class="logo">
+        <!-- <source media="(max-width: 37.5em)" srcset="images/logo90-1.png">
             <source media="(max-width: 60em)" srcset="images/logo110-1.png"> -->
-            <img src="images/logo-200.png" alt="logo">
-        </picture>
+        <img src="images/logo-200.png" alt="logo" />
+      </picture>
 
-        <nav class="topM">
-            <button onclick="toggleMenu()">&#9776; Menu</button>
-            <ul id="top-menu" class="hide">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="city.html" class="active">City</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <nav class="topM">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="top-menu" class="hide">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="city.html" class="active">City</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-
-        <div class="siteT">
-            <h1 id="page-title">Salt Lake Chamber of Commerce</h1> 
-            <h4>Utah's Business Leader</h4>
-        </div>
+      <div class="siteT">
+        <h1 id="page-title">Salt Lake Chamber of Commerce</h1>
+        <h4>Utah's Business Leader</h4>
+      </div>
     </header>
 
-    <main>
-       
-        <h1>Salt Lake City</h1>
-        <p>Salt Lake is the largest metropolitan area in Utah. Salt Lake is used to refer to both the city and the county. The city is bordered by the Great Salt Lake and the snow-capped Wasatch Range. Meanwhile, the county stretches from the suburbs of North Salt Lake to Bluffdale and is ringed by the Oquirrh (pronounced “oaker”) and Wasatch ranges.</p>
+    <main class="city-main">
+      <h1>Salt Lake City</h1>
+      <p>
+        Salt Lake is the largest metropolitan area in Utah. Salt Lake is used to
+        refer to both the city and the county. The city is bordered by the Great
+        Salt Lake and the snow-capped Wasatch Range. Meanwhile, the county
+        stretches from the suburbs of North Salt Lake to Bluffdale and is ringed
+        by the Oquirrh (pronounced “oaker”) and Wasatch ranges.
+      </p>
 
-        <h2>Population</h2>
-        <p>With a 2020 population of 200,831, it is the largest city in Utah and the 121st largest city in the United States. Salt Lake City is currently growing at a rate of 0.07% annually and its population has increased by 7.72% since the most recent census, which recorded a population of 186,440 in 2010. Salt Lake City reached it's highest population of 200,932 in 2017. Spanning over 111 miles, Salt Lake City has a population density of 1,814 people per square mile.</p>
+      <div class="current-events">
+          <h2>Current Events</h2>
+      </div>
 
-        <h2></h2>
+      <h2>Population</h2>
+      <p>
+        With a 2020 population of 200,831, it is the largest city in Utah and
+        the 121st largest city in the United States. Salt Lake City is currently
+        growing at a rate of 0.07% annually and its population has increased by
+        7.72% since the most recent census, which recorded a population of
+        186,440 in 2010. Salt Lake City reached it's highest population of
+        200,932 in 2017. Spanning over 111 miles, Salt Lake City has a
+        population density of 1,814 people per square mile.
+      </p>
 
+      <h2>Elevation</h2>
+      <p>
+        Salt Lake is at a higher elevation than most cities. We strongly
+        encourage visitors to spend a night in Salt Lake before heading to the
+        ski resorts to help avoid elevation sickness. Because there is less
+        oxygen in the air, you’ll also notice that alcohol may affect you more
+        strongly than it does at home.
+      </p>
+      <ul>
+        <li>Salt Lake City: 4,330 Feet (1,320 meters)</li>
+        <li>Snowbird Base: 8,100 feet (2,469 meters)</li>
+        <li>Hidden Peak: 11,000 feet (3,353 meters)</li>
+      </ul>
+
+      <h2>Weather</h2>
+      <p>
+        Salt Lake is an arid mountain desert. The air is thin, dry, and ranges
+        between hot and freezing throughout the year. The area does experience
+        four full seasons. (Sometimes they just all hit in one day.)
+      </p>
+      <p>
+        On average, Salt Lake gets 20 inches of rain per year in addition to 54
+        inches of snow per year. Typically, there are 222 sunny days each year
+        in Salt Lake.<br />
+
+        We strongly suggest dressing in layers no matter what time of year you
+        plan your Salt Lake vacation.
+      </p>
+      <h4>Average Daily Temperatures</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>High</th>
+            <th>Low</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>January</td>
+            <td>37.0&deg;F (2.8&deg;C)</td>
+            <td>21.3&deg;F (-5.9&deg;C)</td>
+          </tr>
+          <tr>
+            <td>February</td>
+            <td>43.4&deg;F (6.3&deg;C)</td>
+            <td>25.5&deg;F (-3.6&deg;C)</td>
+          </tr>
+          <tr>
+            <td>March</td>
+            <td>52.8&deg;F (11.6&deg;C)</td>
+            <td>33.4&deg;F (0.8&deg;C)</td>
+          </tr>
+          <tr>
+            <td>April</td>
+            <td>60.9&deg;F (16.1&deg;C)</td>
+            <td>39.0&deg;F (3.9&deg;C)</td>
+          </tr>
+          <tr>
+            <td>May</td>
+            <td>70.6&deg;F (21.4&deg;C)</td>
+            <td>46.9&deg;F (8.3&deg;C)</td>
+          </tr>
+          <tr>
+            <td>June</td>
+            <td>82.2&deg;F (27.9&deg;C)</td>
+            <td>55.8&deg;F (13.2&deg;C)</td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>90.6&deg;F (32.6&deg;C)</td>
+            <td>63.4&deg;F (17.4&deg;C)</td>
+          </tr>
+          <tr>
+            <td>August</td>
+            <td>88.7&deg;F (31.5&deg;C)</td>
+            <td>62.4&deg;F (16.9&deg;C)</td>
+          </tr>
+          <tr>
+            <td>September</td>
+            <td>77.6&deg;F (25.3&deg;C)</td>
+            <td>52.4&deg;F (11.3&deg;C)</td>
+          </tr>
+          <tr>
+            <td>October</td>
+            <td>64.0&deg;F (17.8&deg;C)</td>
+            <td>41.0&deg;F (5.0&deg;C)</td>
+          </tr>
+          <tr>
+            <td>November</td>
+            <td>48.7&deg;F (9.3&deg;C)</td>
+            <td>30.4&deg;F (-0.9&deg;C)</td>
+          </tr>
+          <tr>
+            <td>December</td>
+            <td>38.0&deg;F (3.3&deg;C</td>
+            <td>22.4&deg;F (-5.3&deg;C)</td>
+          </tr>
+        </tbody>
+      </table>
+      
     </main>
 
     <footer>
-        <a id="return-home" href="../index.html">Assignment Portal</a> | <a href="resources.html">Resources</a>
-        <div id="cYear"></div>
-        <div id="mod"></div>
+      <a id="return-home" href="../index.html">Assignment Portal</a> |
+      <a href="resources.html">Resources</a>
+      <div id="cYear"></div>
+      <div id="mod"></div>
     </footer>
-    
-    
-    <link rel="stylesheet" href="../css/normalize.css" media="all">
-</body>
+
+    <link rel="stylesheet" href="../css/normalize.css" media="all" />
+  </body>
 </html>
