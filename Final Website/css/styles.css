@@ -209,9 +209,7 @@ main{
 }
 /********************************** UPCOMING EVENTS **********************************/
 .upcoming-events{
-    background-color: rgba(0,0,0,.2);
     padding: 50px 50px 75px;
-    box-shadow: 0 0 10px 5px rgba(0,0,0, 0.5);
 }
 .event-cards{
     display: grid;
@@ -326,8 +324,6 @@ form label input:required:valid{
 }
 /********************************** HOME CONTACT **********************************/
 .home-contact{
-    background-color: rgba(0,0,0,.2);
-    box-shadow: 0 0 10px 5px rgba(0,0,0, 0.5);
     padding: 30px 20%;
 }
 .contact-text{
@@ -423,11 +419,19 @@ form label.address{
     background-color: var(--color5);
     color: var(--color1);
 }
+#local-b{
+    max-width: 80%;
+    margin: 0 auto;
+}
 #local-b.grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
-    padding: 30px;
+}
+#local-b.list{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
 }
 #local-b section{
     border: 2px solid black;
