@@ -53,16 +53,19 @@
         <form class="join-form" method="get" action="thanks.html">
             <fieldset>
                 <legend>Personal Information</legend>
-                <label class="top">First Name* <input type="text" name="fname" pattern="[A-Za-z]{3,}" required></label>
-                <label class="top">Last Name* <input type="text" name="lname" pattern="[A-Za-z]{3,}" required></label>
-                <label class="top">Title <input type="text" name="lname" pattern="[A-Za-z]{3,}"></label>
+                <label class="top">First Name* <input type="text" name="fname" pattern="[A-Za-z]{3,}" placeholder="John" required></label>
+                <label class="top">Last Name* <input type="text" name="lname" pattern="[A-Za-z]{3,}" placeholder="Doe" required></label>
+                <label class="top">Title <input type="text" name="lname" pattern="[A-Za-z]{3,}" placeholder="CEO"></label>
                 <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
-                <label class="top">Phone Number <input type="tel" name="phone" placeholder="1234567890"></label>
+                <label class="top">Phone Number <input type="tel" name="phone" placeholder="801-456-7890"></label>
             </fieldset>
             <fieldset>
                 <legend>Buisness Information</legend>
-                <label class="top">Business Name* <input type="text" name="business-name" pattern="[A-Za-z]{3,}" required></label>
-                <label class="top">Business Address <input type="text" name="business-address"></label>
+                <label class="top">Business Name* <input type="text" name="business-name" pattern="[A-Za-z]{3,}" placeholder="This Business" required></label>
+
+                <label class="address"><span>Business Address <input type="text" name="business-address" placeholder="123 East 100 South"></span>
+                   <span>Zip Code <input type="text" name="zip-code" placeholder="84119"></label></span>
+
                 <label class="top">Business Website<input type="url" name="url" id="url" placeholder="https://www.example.com"></label>
                 <label class="top">Business Description <textarea name="business-description"></textarea></label>
 

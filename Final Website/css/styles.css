@@ -49,6 +49,10 @@ p, figcaption{
     font-family: var(--paragraph-font);
     font-size: 11pt;
 }
+ul li{
+    font-family: var(--paragraph-font);
+    font-size: 11pt;
+}
 a{
     color: var(--links);
     font-family: var(--paragraph-font);
@@ -290,7 +294,7 @@ form legend{
     font-size: 13pt;
     font-weight: bold;
 }
-form label.top input, form label.top textarea{
+form label.top input, form label.top textarea, form label.address input{
     border: solid 1px #999;
     border-radius: 4px;
     padding: 10px;
@@ -370,8 +374,15 @@ form label input:required:valid{
     font-weight: bold;
 }
 .join-form input.submitB{
-    margin: 15px;
-    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+form label.address{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 97%;
 }
 /********************************** JOIN PERKS TABLE **********************************/
 .member-perks{
