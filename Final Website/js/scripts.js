@@ -1,7 +1,7 @@
 /*************************** TOGGLE MENU ***************************/
 function toggleMenu(){
-    console.log(document.getElementById("top-menu").classList);
-    document.getElementById("top-menu").classList.toggle("hide");
+    console.log(document.getElementById("mobile-menu").classList);
+    document.getElementById("mobile-menu").classList.toggle("hide");
 }
 
 function toggleDirectoryGrid(){

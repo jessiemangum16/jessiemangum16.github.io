@@ -32,4 +32,20 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    #local-b.grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .map{
+        width: 600px;
+        padding: 50px 0;
+        margin: 0 auto;
+    }
+    .map iframe{
+        width: 600px;
+        height: 450px; 
+    }
+    #board{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }

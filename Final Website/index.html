@@ -19,10 +19,6 @@
 
      
     <header class="hero">
-        <div class="bg-img">
-            
-        </div>
-
         <picture class="bg-img">
             <source media="(max-width: 600px)" srcset="images/head1-mobile.jpg">
             <img src="images/head1-short.jpg" alt="city">
@@ -35,8 +31,7 @@
         </picture>
 
         <nav class="topM">
-            <button onclick="toggleMenu()">&#9776; Menu</button>
-            <ul id="top-menu" class="hide">
+            <ul id="top-menu">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="city.html">City</a></li>
                 <li><a href="join.html">Join</a></li>
@@ -45,15 +40,26 @@
             </ul>
         </nav>
 
-
         <div class="siteT">
             <h1 id="page-title">Salt Lake Chamber of Commerce</h1> 
             <h4>Utah's Business Leader</h4>
-        </div>
+        </div>      
     </header>
 
+    <div>
+        <nav class="mobileM">
+            <button onclick="toggleMenu()">&#9776; Menu</button>
+            <ul id="mobile-menu" class="hide">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="city.html">City</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <main>
-       
         <div class="localB">
             <h1>Local Businesses</h1>
             <h4>Support new local businesses</h4>

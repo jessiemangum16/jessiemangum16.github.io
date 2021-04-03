@@ -70,28 +70,28 @@ img{
 }
 
 /********************************** NAV **********************************/
-nav button{
-    background-color: transparent;
-    border: none;
-    font-size: 1.6rem;
-    color: var(--color5);
-    font-family: var(--paragraph-font);
-    width: 100%;
-    padding: 8px;
-}
+
 nav ul{
+    display: block;
     max-width: 960px;
     list-style-type: none;
 	margin: 0 auto;
-    padding: 50px 0px;
     font-family: var(--paragraph-font);
     font-size: 13pt;
+    text-align: center;
+}
+nav ul#mobile-menu{
+    padding: 0;
 }
 nav ul li a{
     display: block;
     width: 100%;
-    color: var(--color5);
+    color: white;
     text-decoration: none;
+}
+nav.mobileM ul li a{
+    background-color: var(--color2);
+    padding: 15px;
 }
 nav ul li a:hover {
 	color: var(--color5);
@@ -100,12 +100,17 @@ nav ul li a:hover {
 nav .active {
 	color: var(--color1);
 }
+nav.mobileM .active {
+	color: var(--color1);
+    background-color:rgba(0, 0, 0, 0.2);
+    font-weight: bolder;
+}
 nav ul.hide{
     display: none;
 }
 nav button{
     text-align: right;
-    padding: 30px;
+    font-size: 15pt;
 }
 
 /********************************** HERO **********************************/
@@ -123,10 +128,7 @@ nav button{
     left: 40px;
 }
 .topM{
-    position: absolute;
-    top: 8px;
-    right: 40px;
-    width: 70%;
+    display: none;
 }
 .siteT{
     position: absolute;
@@ -141,6 +143,17 @@ nav button{
 .siteT h4{
     color: var(--color5);
     font-size: 10pt;
+}
+/********************************** MOBILE MENU **********************************/
+nav.mobileM button{
+    background-color: var(--color1);
+    border: none;
+    font-size: 1.6rem;
+    color: var(--color5);
+    font-family: var(--paragraph-font);
+    width: 100%;
+    text-align: center;
+    padding: 8px;
 }
 
 /********************************** BODY **********************************/
@@ -190,6 +203,7 @@ main{
 }
 .cta h1{
     color: var(--color5);
+    font-size: 14pt;
 }
 /********************************** PURPOSE **********************************/
 .purpose{
@@ -377,7 +391,8 @@ form label input:required:valid{
 }
 /********************************** JOIN FORM **********************************/
 .join-form{
-    padding: 30px 20%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .join-form input, .join-form textarea{
     max-width: 95%;
@@ -405,8 +420,9 @@ form label.address{
 }
 /********************************** JOIN PERKS TABLE **********************************/
 .member-perks{
+    display: none;
     text-align: center;
-    padding-bottom: 50px;
+    padding: 50px 0;
 }
 .perks-table td{
     font-family: var(--heading-font);
@@ -420,14 +436,18 @@ form label.address{
 }
 /********************************** CONTACT PAGE **********************************/
 .map{
-    width: 600px;
-    padding: 30px;
+    width: 300px;
+    padding: 20px 0;
     margin: 0 auto;
+}
+.map iframe{
+    width: 300px;
+    height: 225px; 
 }
 /********************************** BOARD OF DIRECTORS **********************************/
 #board{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
     padding: 30px;
     max-width: 1200px;
@@ -442,12 +462,10 @@ form label.address{
 /********************************** DIRECTORY PAGE **********************************/
 main#directory{
     max-width: 1200px;
-    padding: 50px 0;
+    padding: 50px 20px;
 }
 .switchB{
-    display: flex;
-    justify-content: flex-end;
-    padding: 30px 0;
+    display: none;
 }
 .switchB button{
     border: none;
@@ -459,7 +477,7 @@ main#directory{
 }
 #local-b.grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 30px;
 }
 #local-b.list{

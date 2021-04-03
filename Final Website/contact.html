@@ -18,19 +18,19 @@
 <body onload="lastModified();">
 
     <header class="hero">
-        <div class="bg-img">
+        <picture class="bg-img">
+            <source media="(max-width: 600px)" srcset="images/head1-mobile.jpg">
             <img src="images/head1-short.jpg" alt="city">
-        </div>
+        </picture>
 
         <picture class="logo">
-            <!-- <source media="(max-width: 37.5em)" srcset="images/logo90-1.png">
-            <source media="(max-width: 60em)" srcset="images/logo110-1.png"> -->
+            <!-- <source media="(max-width: 600px)" srcset="images/logo90-1.png">
+            <source media="(max-width: 960px)" srcset="images/logo110-1.png"> -->
             <img src="images/logo-200.png" alt="logo">
         </picture>
 
         <nav class="topM">
-            <button onclick="toggleMenu()">&#9776; Menu</button>
-            <ul id="top-menu" class="hide">
+            <ul id="top-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="city.html">City</a></li>
                 <li><a href="join.html">Join</a></li>
@@ -39,12 +39,24 @@
             </ul>
         </nav>
 
-
         <div class="siteT">
             <h1 id="page-title">Salt Lake Chamber of Commerce</h1> 
             <h4>Utah's Business Leader</h4>
-        </div>
+        </div>      
     </header>
+
+    <div>
+        <nav class="mobileM">
+            <button onclick="toggleMenu()">&#9776; Menu</button>
+            <ul id="mobile-menu" class="hide">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="city.html">City</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
        
@@ -67,7 +79,7 @@
         </div>
         <hr>
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96682.81024291994!2d-111.99052457806096!3d40.7765867777393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87523d9488d131ed%3A0x5b53b7a0484d31ca!2sSalt%20Lake%20City%2C%20UT!5e0!3m2!1sen!2sus!4v1617135204900!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>    
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96682.81024291994!2d-111.99052457806096!3d40.7765867777393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87523d9488d131ed%3A0x5b53b7a0484d31ca!2sSalt%20Lake%20City%2C%20UT!5e0!3m2!1sen!2sus!4v1617135204900!5m2!1sen!2sus" style="border:0;" loading="lazy"></iframe>    
         </div>
         <hr>
         <div class="board-directors">
