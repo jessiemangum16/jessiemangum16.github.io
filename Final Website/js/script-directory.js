@@ -18,7 +18,7 @@ fetch(requestURL)
 
         logo.setAttribute('src', bus[i].logo);
         logo.setAttribute('alt', bus[i].name + 'logo');
-        h2.textContent = jsonObject.businesses[0].name;
+        h2.textContent = bus[i].name;
         p_1.textContent = bus[i].website;
         p_2.textContent = bus[i].address1;
         p_3.textContent = bus[i].address2;

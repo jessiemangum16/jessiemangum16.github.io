@@ -15,12 +15,12 @@ fetch(requestURL)
         let p_2 = document.createElement('p');
         let p_3 = document.createElement('p');
 
-        img.setAttribute('src', b[i].photo);
-        img.setAttribute('alt', b[i].name + 'logo');
-        h2.textContent = jsonObject.binesses[0].name;
-        p_2.textContent = b[i].address1;
-        p_3.textContent = b[i].address2;
-        p_4.textContent = b[i].phone;
+        img.setAttribute('src', "images/directors/" + b[i].photo);
+        img.setAttribute('alt', b[i].name + ' photo');
+        h2.textContent = b[i].name;
+        p_1.textContent = b[i].company;
+        p_2.textContent = b[i].title;
+        p_3.textContent = b[i].phone;
 
         card.appendChild(img);
         card.appendChild(h2);
