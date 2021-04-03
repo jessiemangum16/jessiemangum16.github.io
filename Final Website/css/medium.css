@@ -1,10 +1,10 @@
 /* Tablet Views ******************************/
 @media only screen and (min-width: 37.5em) {
     h1{
-        font-size: 24pt;
+        font-size: 20pt;
     }
     h2{
-        font-size: 18pt;
+        font-size: 16pt;
     }
     h3{
         font-size: 14pt;
@@ -17,10 +17,6 @@
         width: 110px;
         padding-right: 30px;
     }
-    nav ul{
-        display: flex;
-        width: 100%;
-    }
     nav ul.hide{
         display: flex;
         width: 100%;
@@ -32,23 +28,42 @@
         flex: 3;
         text-align: center;
     }
-    nav ul li a{
-        padding: 15px 10px 15px 10px;
-    }
-    .photo-gallery{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .articles img{
-        float: none;
-    }
     .mobile-hide{
         display: block;
     }
-    #contact-map{
-        height: 270px;
+    .siteT{
+        top: 65%;
     }
-    .contact{
-        height: 270px;
+    .siteT h1{
+        font-size: 20pt;
+    }
+    .siteT h4{
+        font-size: 12pt;
+    }
+
+    .business-cards{
+        grid-template-columns: 1fr;
+    }
+
+    .purpose{
+        padding: 50px 0;
+    }
+    .purp-icons{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+    .event-cards{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .weather-cards{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .home-contact{
+        padding: 50px 30px;
+        max-width: 960px;
+        margin: 0 auto;
     }
 }   

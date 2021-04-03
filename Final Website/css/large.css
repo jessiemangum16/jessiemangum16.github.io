@@ -16,26 +16,20 @@
     .logo{
         width: 150px;
         padding-right: 30px;
-    }    
-    nav li{
-        flex: 3;
     }
-    .photo-gallery{
-        display: grid;
+    .siteT h1{
+        font-size: 28pt;
+    }
+    .siteT h4{
+        font-size: 24pt;
+    }
+
+    .business-cards{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .event-cards{
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .gallery-imgs:hover{
-        box-shadow: 0 0 20px #111;
-        transition: 0.3s;
-    }
-    .articles img{
-        float: right;
-    }
-    .contact{
-        padding: 30px;
-        height: 360px;
-    }
-    #contact-map{
-        height: 360px;
-    }
+
 }

@@ -1,29 +1,8 @@
-
-
-
-
-
-
-
-
-
-
 const currentApiURL = "https://api.openweathermap.org/data/2.5/weather?id=5780993&units=imperial&appid=159b64909a20d12c8a9f4243af9f627b";
 fetch(currentApiURL)
   .then((response) => response.json())
   .then((jsObject) => {
     console.log(jsObject);
-
-   
-    let temp = jsObject.main.temp;
-    let high = jsObject.main.temp_max;
-
-    //WEATHER SUMMARY
-
-    //document.getElementById('current').textContent = "Currently: " + jsObject.main.temp.toFixed(0) + "\xB0 F";
-    //document.getElementById('current-desc').textContent = jsObject.weather[0].description;
-    //document.getElementById('humidity').textContent = "Humidity: " + jsObject.main.humidity + "%";
-
 
     let cardF = document.createElement('div');
     let tempF = document.createElement('p');
@@ -40,6 +19,8 @@ fetch(currentApiURL)
     imgF.setAttribute('alt', desc);
 
     imgDes.textContent = desc;
+
+    cardF.setAttribute('class', "cWeather")
     
     
     cardF.appendChild(tempF);

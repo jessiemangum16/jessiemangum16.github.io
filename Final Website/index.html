@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Home">
-    
+
+    <link rel="stylesheet" href="../css/normalize.css" media="all" defer>
     <link rel="stylesheet" href="css/styles.css" media="all">
     <link rel="stylesheet" href="css/medium.css" media="screen and (min-width:37.5em)">
     <link rel="stylesheet" href="css/large.css" media="screen and (min-width:60em)">
@@ -19,12 +20,17 @@
      
     <header class="hero">
         <div class="bg-img">
-            <img src="images/head1-short.jpg" alt="city">
+            
         </div>
 
+        <picture class="bg-img">
+            <source media="(max-width: 600px)" srcset="images/head1-mobile.jpg">
+            <img src="images/head1-short.jpg" alt="city">
+        </picture>
+
         <picture class="logo">
-            <!-- <source media="(max-width: 37.5em)" srcset="images/logo90-1.png">
-            <source media="(max-width: 60em)" srcset="images/logo110-1.png"> -->
+            <!-- <source media="(max-width: 600px)" srcset="images/logo90-1.png">
+            <source media="(max-width: 960px)" srcset="images/logo110-1.png"> -->
             <img src="images/logo-200.png" alt="logo">
         </picture>
 
@@ -53,24 +59,32 @@
             <h4>Support new local businesses</h4>
             <div class="business-cards">
                 <div class="bus">
-                    <img src="images/business-icon-100.png" alt="business icon">
-                    <h2>Business 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img src="images/kings-logo.jpg" alt="kings logo">
+                    <h2>The King's English Bookshop</h2>
+                    <p>Matching books to readers since 1977.
+                        <br><br>Discover some of what makes The King's English one of the most unique and inviting bookstores anywhere.
+                        <br><br><strong>Consignment Guidelines</strong>
+                        <br><strong>Donations</strong>
+                        <br><strong>Frequent Reader Program</strong></p>
                 </div>
                 <div class="bus">
-                    <img src="images/business-icon-100.png" alt="business icon">
-                    <h2>Business 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img src="images/delice-logo.jpg" alt="Delice Logo">
+                    <h2>Delice French Bakery & Cafe</h2>
+                    <p>In November of 2018, Jean-Jacques Grossi  and  Akbar Matinkhah  open Délice French Bakery and Café. The mission was to create pastries and cakes that brought a taste of France to the Salt Lake Valley.
+
+                       <br><br> Chef Jean-Jacques Grossi started cooking and baking at a young age in the South of France, moving to the Greater Salt Lake area in 1977. He’s been in the food industry ever since, and with over 45 years of experience, the most delightful recipes are brought to life. With his personal touch and classic French recipes, we are proud to offer a variety of hand-crafted sweet bites to the Salt Lake City community. Our chef’s favorite treat? The Feuillantine cake.</p>
                 </div>
                 <div class="bus">
-                    <img src="images/business-icon-100.png" alt="business icon">
-                    <h2>Business 3</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img src="images/machine-logo.png" alt="The Machine Age Logo">
+                    <h2>The Machine Age</h2>
+                    <p>Take a journey through space and time with Professor Julian Raintree & His Curious Concoctions! 
+
+                       <br><br>One-of-a-Kind funky-fab Steampunk lighting, clockworks, computer keyboards, and unique antique and vintage creations by renowned John Cottom aka Professor Julian Raintree. The entire store is spec-tacular eye candy!</p>
                 </div>
                 <div class="bus">
-                    <img src="images/business-icon-100.png" alt="business icon">
-                    <h2>Business 4</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <img src="images/hatch-logo.png" alt="Hatch Famiy Logo">
+                    <h2>Hatch Family Chocolates</h2>
+                    <p>Our Hatch Family milk and dark chocolates are masterfully created in our kitchen following the same recipes created by Steve’s Grandmother. We are still evolving our flavors and will keep adding to these wonderful selections. Choose from a selection of assorted hand-dipped chocolates—with or without nuts.</p>
                 </div>
             </div>
         </div>
@@ -106,25 +120,25 @@
             <h1>Upcoming Events</h1>
             <div class="event-cards">
                 <div class="event">
-                    <span><h4>16</h4><p>Jun</p></span>
-                    <h3>Event Title</h3><br>
-                    <p>Event Time</p>
-                    <p>Event Address</p><br>
-                    <p>Event Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <span><h4>3</h4><p>Apr</p></span>
+                    <h3>2021 Salt Lake City Performance Art Festival</h3><br>
+                    <p>Fri, Apr 2, 8:00 AM – Sat, Apr 3, 5:15 PM</p>
+                    <p>210 E 400 S, Salt Lake City, UT</p><br>
+                    <p>The Eighth Annual Salt Lake City Performance Art Festival will feature world-class performance art — as a live stream online event — with works from 16 respected local and international artists.</p>
                 </div>
                 <div class="event">
-                    <span><h4>16</h4><p>Jun</p></span>
-                    <h3>Event Title</h3><br>
-                    <p>Event Time</p>
-                    <p>Event Address</p><br>
-                    <p>Event Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <span><h4>14</h4><p>May</p></span>
+                    <h3>Salt Lake Home Expo</h3><br>
+                    <p>Fri, May 14, 12 – 8 PM</p>
+                    <p>9575 S, State St, Sandy, UT</p><br>
+                    <p>Nationwide Expos is making reserving your booth in our Home Expos easier than ever with our fast and easy online booking! Reserve your booth in under 2 minutes from any phone, tablet or computer.</p>
                 </div>
                 <div class="event">
-                    <span><h4>16</h4><p>Jun</p></span>
-                    <h3>Event Title</h3><br>
-                    <p>Event Time</p>
-                    <p>Event Address</p><br>
-                    <p>Event Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <span><h4>28</h4><p>May</p></span>
+                    <h3>Utah Symphony</h3><br>
+                    <p>Fri, May 28, 10 AM – 3 PM</p>
+                    <p>123 W S Temple, Salt Lake City, UT</p><br>
+                    <p>Buy Utah Symphony: Thierry Fischer - Tchaikovsky 5 With Mozart & Schoenberg (Finishing Touches Rehearsal) tickets to see the best classical music played live and in-person.</p>
                 </div>
             </div>
         </div>
@@ -133,8 +147,9 @@
             <h1>Weather</h1>
 
             <div class="weather-cards">
-                <div class="currentW w-card">
+                <div class="w-card">
                     <h3>Current Weather</h3>
+                    <div class="currentW"></div>
                 </div>
                 <div class="forecastW w-card">
                     <h3>3 Day Forecast</h3>
@@ -172,10 +187,10 @@
             </form>
 
             <div class="social">
-                <a href="#"><img src="images/fb40.png" alt="facebook icon"></a>
-                <a href="#"><img src="images/insta40.png" alt="instagram icon"></a>
-                <a href="#"><img src="images/twitter40.png" alt="twitter icon"></a>
-                <a href="#"><img src="images/youTube40.png" alt="youtube icon"></a>
+                <a href="https://www.facebook.com/saltlakechamber"><img src="images/fb40.png" alt="facebook icon"></a>
+                <a href="https://www.instagram.com/slchamber/"><img src="images/insta40.png" alt="instagram icon"></a>
+                <a href="https://twitter.com/saltlakechamber"><img src="images/twitter40.png" alt="twitter icon"></a>
+                <a href="https://www.youtube.com/user/SaltLakeChamber"><img src="images/youTube40.png" alt="youtube icon"></a>
             </div>
         </div>
         
@@ -189,6 +204,6 @@
     </footer>
     
     
-    <link rel="stylesheet" href="../css/normalize.css" media="all">
+    
 </body>
 </html>

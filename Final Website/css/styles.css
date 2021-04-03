@@ -27,7 +27,7 @@ h1, h2, h3{
     color: var(--color1);
 }
 h1{
-    font-size: 20pt;
+    font-size: 18pt;
     text-align: center;
 }
 h2{
@@ -103,6 +103,10 @@ nav .active {
 nav ul.hide{
     display: none;
 }
+nav button{
+    text-align: right;
+    padding: 30px;
+}
 
 /********************************** HERO **********************************/
 .hero{
@@ -126,13 +130,17 @@ nav ul.hide{
 }
 .siteT{
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
+.siteT h1{
+    font-size: 14pt;
+}
 .siteT h4{
     color: var(--color5);
+    font-size: 10pt;
 }
 
 /********************************** BODY **********************************/
@@ -147,24 +155,27 @@ main{
 }
 /********************************** LOCAL BUSINESSES **********************************/
 .localB{
-    padding: 75px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
 }
 .localB h1, .localB h4{
     text-align: center;
 }
 .business-cards{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 75px;
     padding: 50px 50px 30px;
 }
 .bus{
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 20px;
 }
 .bus img{
-    grid-row: span 2;
+    max-height: 100px;
+    margin: 0 auto;
 }
 .bus h2, .bus p{
     margin: 0;
@@ -175,7 +186,7 @@ main{
     text-align: center;
 }
 .cta a{
-    padding: 30px;
+    padding: 50px;
 }
 .cta h1{
     color: var(--color5);
@@ -183,13 +194,13 @@ main{
 /********************************** PURPOSE **********************************/
 .purpose{
     text-align: center;
-    margin: 0 20%;
-    padding: 30px 0 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px;
 }
 .purp-icons{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
+    grid-template-columns: 1fr;
     align-items: center;
     padding: 30px;
 }
@@ -206,24 +217,26 @@ main{
     grid-template-columns: 50px 1fr;
     align-items: center;
     text-align: left;
+    margin: 0 auto;
 }
 /********************************** UPCOMING EVENTS **********************************/
 .upcoming-events{
-    padding: 50px 50px 75px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
 }
 .event-cards{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 40px;
     padding: 0 40px;
 }
 .event{
     display: grid;
     grid-template-columns: 50px 1fr;
-    background-color: var(--color3);
-    border: 1px solid black;
+    border: 1px solid var(--color1);
     padding: 20px;
-    box-shadow: 8px 8px 8px rgba(0,0,0,.5);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 .event span{
     grid-row: span 8;
@@ -236,24 +249,32 @@ main{
 }
 /********************************** WEATHER **********************************/
 .weather{
-    padding: 30px;
-    text-align:center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
 }
-.currentW img{
-    display: inline;
-}
-.currentW p:nth-of-type(2){
-    display: inline;
+.weather h3{
+    text-align: center;
 }
 .weather-cards{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 30px;
-    padding: 50px;
 }
-.w-card{
-    padding: 20px;
+.cWeather{
+    max-width: 200px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    text-align: center;
+    margin: 0 auto;
 }
+.cWeather p:nth-of-type(1), .cWeather p:nth-of-type(3){
+    grid-column: span 2;
+}
+.forecastW{
+    text-align: center;
+}
+
 /********************************** ALL TABLES **********************************/
 table{
     margin: 0 auto;
@@ -322,9 +343,11 @@ form label input:required {
 form label input:required:valid{
     border-left: green solid 6px;
 }
-/********************************** HOME CONTACT **********************************/
+/********************************** CONTACT FORM **********************************/
 .home-contact{
-    padding: 30px 20%;
+    padding: 50px 30px;
+    max-width: 960px;
+    margin: 0 auto;
 }
 .contact-text{
     width: 180px;
@@ -401,7 +424,15 @@ form label.address{
     padding: 30px;
     margin: 0 auto;
 }
-
+/********************************** BOARD OF DIRECTORS **********************************/
+#board{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 /********************************** CITY PAGE **********************************/
 .city-main{
@@ -409,10 +440,14 @@ form label.address{
     padding: 30px;
 }
 /********************************** DIRECTORY PAGE **********************************/
+main#directory{
+    max-width: 1200px;
+    padding: 50px 0;
+}
 .switchB{
     display: flex;
     justify-content: flex-end;
-    padding-right: 30px;
+    padding: 30px 0;
 }
 .switchB button{
     border: none;
@@ -420,7 +455,6 @@ form label.address{
     color: var(--color1);
 }
 #local-b{
-    max-width: 80%;
     margin: 0 auto;
 }
 #local-b.grid{
@@ -434,11 +468,14 @@ form label.address{
     grid-gap: 30px;
 }
 #local-b section{
-    border: 2px solid black;
+    border: 1px solid var(--color1);
     padding: 20px;
 }
 #local-b img{
-    height: 100px;
+    max-height: 100px;
+}
+#local-b a{
+    text-decoration: underline;
 }
 
 /********************************** LAZY LOAD **********************************/
