@@ -467,7 +467,7 @@ form label.address{
 }
 .city-events{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 30px;
 }
 /********************************** DIRECTORY PAGE **********************************/

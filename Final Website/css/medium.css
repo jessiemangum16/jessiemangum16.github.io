@@ -111,4 +111,7 @@
     #board{
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .city-events{
+        grid-template-columns: 1fr 1fr;
+    }
 }   
