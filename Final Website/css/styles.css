@@ -393,6 +393,9 @@ form label input:required:valid{
     margin: 0 auto;
 }
 /********************************** JOIN FORM **********************************/
+main#join{
+    padding: 50px 0;
+}
 .join-form{
     max-width: 1200px;
     margin: 0 auto;
