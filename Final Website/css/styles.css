@@ -404,7 +404,7 @@ form label input:required:valid{
     padding: 20px;
     margin: 20px;
 }
-.join-form div{
+.join-form div.bold{
     padding-top: 20px;
     font-family: var(--paragraph-font);
     font-size: 13pt;
@@ -416,7 +416,7 @@ form label input:required:valid{
     text-align: center;
     width: 50%;
 }
-form label.address{
+form .address-zip{
     display: grid;
     grid-template-columns: 2fr 1fr;
     max-width: 97%;

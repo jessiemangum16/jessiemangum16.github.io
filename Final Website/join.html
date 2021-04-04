@@ -73,13 +73,15 @@
                 <legend>Buisness Information</legend>
                 <label class="top">Business Name* <input type="text" name="business-name" pattern="[A-Za-z]{3,}" placeholder="This Business" required></label>
 
-                <label class="address"><span>Business Address <input type="text" name="business-address" placeholder="123 East 100 South"></span>
-                   <span>Zip Code <input type="text" name="zip-code" placeholder="84119"></label></span>
+                <div class="address-zip">
+                    <label class="address top">Business Address <input type="text" name="business-address" placeholder="123 East 100 South"></label>
+                    <label class="zip top">Zip Code <input type="text" name="zip-code" placeholder="84119"></label>
+                </div>
 
                 <label class="top">Business Website<input type="url" name="url" id="url" placeholder="https://www.example.com"></label>
                 <label class="top">Business Description <textarea name="business-description"></textarea></label>
 
-                <div>Membership Level</div>
+                <div class="bold">Membership Level</div>
                 <label class="sbs"><input type="radio" name="membership-level" value="Non-Profit">Non-Profit ($100)</label>
                 <label class="sbs"><input type="radio" name="membership-level" value="Bronze">Bronze ($200)</label>
                 <label class="sbs"><input type="radio" name="membership-level" value="Silver">Silver ($400)</label>
