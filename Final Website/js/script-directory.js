@@ -16,7 +16,7 @@ fetch(requestURL)
         let p_2 = document.createElement('p');
         let p_3 = document.createElement('p');
 
-        logo.setAttribute('src', "images/" + bus[i].logo);
+        logo.setAttribute('src', "images/bus/" + bus[i].logo);
         logo.setAttribute('alt', bus[i].name + 'logo');
         h2.textContent = bus[i].name;
         a.textContent = bus[i].website;
