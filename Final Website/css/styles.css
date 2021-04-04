@@ -255,7 +255,7 @@ main{
     padding: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
-.event span{
+.event div{
     grid-row: span 8;
 }
 .event h3, .event h4, .event p{
