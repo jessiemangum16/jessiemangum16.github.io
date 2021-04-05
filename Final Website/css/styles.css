@@ -91,6 +91,7 @@ nav ul li a{
     width: 100%;
     color: white;
     text-decoration: none;
+    padding: 20px;
 }
 nav.mobileM ul li a{
     background-color: var(--color2);
@@ -102,6 +103,7 @@ nav ul li a:hover {
 }
 nav .active {
 	color: var(--color1);
+    font-weight: bolder;
 }
 nav.mobileM .active {
 	color: var(--color1);
@@ -540,6 +542,7 @@ footer{
 footer a{
     color: black;
     text-decoration:underline;
+    font-weight: bolder;
 }
 .clearfix:after {
     content: "";
