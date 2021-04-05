@@ -102,7 +102,8 @@ nav ul li a:hover {
     border-top: 2px solid var(--color5);
 }
 nav .active {
-	color: var(--color1);
+    border-top: 2px solid var(--color5);
+	color: var(--color5);
     font-weight: bolder;
 }
 nav.mobileM .active {
@@ -528,6 +529,7 @@ main#directory{
 /********************************** FOOTER **********************************/
 footer{
     background-color: var(--color1);
+    color: var(--color5);
     text-align: center;
     padding: 15px 0;
     width: 100%;
@@ -540,7 +542,7 @@ footer{
     color: var(--color5);
 }
 footer a{
-    color: black;
+    color: var(--color5);
     text-decoration:underline;
     font-weight: bolder;
 }
