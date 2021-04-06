@@ -15,8 +15,7 @@ fetch(requestURL)
         let p_2 = document.createElement('p');
         let p_3 = document.createElement('p');
 
-        img.setAttribute('src', "images/ph/ph-200x280.jpg");
-        img.setAttribute('data-src', "images/directors/" + b[i].photo);
+        img.setAttribute('src', "images/directors/" + b[i].photo);
         img.setAttribute('alt', b[i].name + ' photo');
         h2.textContent = b[i].name;
         p_1.textContent = b[i].company;
