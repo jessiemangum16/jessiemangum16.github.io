@@ -1,4 +1,4 @@
-const requestURL = 'https://jessiemangum16.github.io/Final%20Website/js/directors.json';
+const requestURL = 'https://jessiemangum16.github.io/final-website/js/directors.json';
 
 fetch(requestURL)
   .then(function (response) {
