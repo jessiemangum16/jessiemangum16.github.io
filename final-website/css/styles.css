@@ -488,6 +488,7 @@ main#directory{
     border: none;
     background-color: var(--color5);
     color: var(--color1);
+    font-family: var(--paragraph-font);
 }
 #local-b{
     margin: 0 auto;
