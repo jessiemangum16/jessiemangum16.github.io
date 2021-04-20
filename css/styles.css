@@ -1,27 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root {
+    --color1: #10B7AF;
+    
+    --heading-font: 'Gabriela', serif;
+    --paragraph-font: 'Roboto', sans-serif;
+}
 
 header{
-    background-color: #10B7AF;
+    background-color: var(--color1);
     padding: 20px 0;
     width: 100%;
     text-align: center;
 }
 h1, h2, h3{
-    font-family: 'Gabriela', serif;
+    font-family: var(--heading-font);
+}
+p, a, h4{
+    font-family: var(--paragraph-font);
 }
 a{
-    color: #480476;
+    color: black;
 }
 html, body{
     height: 100%;
 }
 .page-wrap{
     min-height: 100%;
-    margin-bottom: -94px;
+    margin-bottom: -106px;
 }
 main{
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 30px auto;
 }
 #return-home{
     float: left;
@@ -33,10 +44,13 @@ main{
     box-shadow: 0px 0px 10px 0px;
 }
 footer{
-    background-color: #10B7AF;
+    background-color: var(--color1);
     text-align: center;
     padding: 20px 0;
 }
+footer div{
+    padding: 2px;
+}
 #mod{
-    color: #480476;
+    color: black;
 }

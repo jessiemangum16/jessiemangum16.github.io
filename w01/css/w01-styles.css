@@ -1,0 +1,64 @@
+:root {
+    --color1: #10B7AF;
+    --color2: #0b5e59;
+    
+    --heading-font: 'Gabriela', serif;
+    --paragraph-font: 'Roboto', sans-serif;
+}
+
+.team-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+.team-form h2 {
+    text-align: center;
+}
+.team-form .user-box {
+    position: relative;
+}
+.team-form .user-box input {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;
+}
+.team-form .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.team-form .user-box input:focus ~ label,
+.team-form .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: var(--color1);
+    font-size: 12px;
+}
+.team-form form input.sub {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    border: none;
+    background-color: var(--color2);
+    color: white;
+    border-radius: 8px;
+}
+.team-form form input.sub:hover{
+    background-color: var(--color1);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);;
+}
