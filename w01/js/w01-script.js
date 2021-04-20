@@ -1,4 +1,4 @@
-function addAndSaveCustomer(){
+function addAndSaveTeamMember(){
     var aFname = document.getElementById("fname_input").value;
     var aLname = document.getElementById("lname_input").value;
     var aPhone = document.getElementById("phone_input").value;
@@ -39,7 +39,8 @@ function showAllTeam(){
             var aTeamMember = allTeam[i];
             teamDisplayer.innerHTML += "<hr><p>Team Member: " + aTeamMember["fname"] + " " + aTeamMember["lname"] + "</p>" + 
                                         "<p>Phone Number: " + aTeamMember["phone"] + "</p>" + 
-                                        "<p>Email: " + aTeamMember["email"] + "</p>" + 
+                                        "<p>Email: " + aTeamMember["email"] + "</p>";
+
         }
     }
 }

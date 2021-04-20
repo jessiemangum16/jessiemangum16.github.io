@@ -28,7 +28,6 @@ html, body{
 }
 .page-wrap{
     min-height: 100%;
-    margin-bottom: -106px;
 }
 main{
     max-width: 1200px;
