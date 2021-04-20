@@ -2,15 +2,26 @@
 
 header{
     background-color: #10B7AF;
-    text-align: center;
     padding: 20px 0;
     width: 100%;
+    text-align: center;
 }
 h1, h2, h3{
     font-family: 'Gabriela', serif;
 }
 a{
     color: #480476;
+}
+html, body{
+    height: 100%;
+}
+.page-wrap{
+    min-height: 100%;
+    margin-bottom: -76px;
+}
+main{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 #return-home{
     float: left;
