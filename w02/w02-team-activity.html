@@ -10,24 +10,10 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="../js/script.js"></script>
-    <script src="js/w01-script.js"></script>
+    <script src="js/w02-script.js"></script>
     <title>W02: Team Activity</title>
-
-    <script>
-
-        function sumUp(){
-            var inputNum = document.getElementById("input-num").value;
-            var sumTotal;
-
-            for(var i=1; i <= inputNum; i++){
-                sumTotal += i;
-            }
-
-            document.getElementById("output") = sumTotal;
-        }
-
-    </script>
 </head>
+
 <body onload="lastModified();">
     
     <div class="page-wrap">
@@ -37,9 +23,27 @@
 
         <main>
 
+            <h2>Sum Up</h2>
             <input id="input-num" type="text">
-            <button id="btn" type="button" onclick="sumUp()"></button>
+            <button id="btn" type="button" onclick="sumUp()">Sum Up</button>
+            <br><br>
             <div id="output"></div>
+
+            <h2>Sum Of Inputs</h2>
+            <input id="input-num1" type="text"> + <input id="input-num2" type="text">
+            <button id="btn2" type="button" onclick="sumOf()">Sum Of Numbers</button>
+            <br><br>
+            <div id="output2"></div>
+
+            <h2>Calculator</h2>
+            <input id="input1" type="text"><br>
+            <input id="input2" type="text">
+            <button id="add-btn" type="button" onclick="add()">+</button>
+            <button id="sub-btn" type="button" onclick="sub()">-</button>
+            <button id="mult-btn" type="button" onclick="mult()">*</button>
+            <button id="divide-btn" type="button" onclick="divide()">/</button>
+            <br><br>
+            <div id="outputFinal"></div>
 
         </main>
     </div>
