@@ -1,7 +1,8 @@
+
 function sumUp(){
     var inputNum = document.getElementById("input-num").value;
     var sumTotal = 0;
-
+  
     if (inputNum >= 0){
         for(var i=1; i <= inputNum; i++){
             sumTotal = sumTotal + i;
@@ -10,62 +11,48 @@ function sumUp(){
     }else{
         document.getElementById("output").innerText = "Please input a number greater than 0.";
     }
-}
-function sumOf(){
+  }
+  
+  function sumOf(){
     var inputNum1 = parseFloat(document.getElementById("input-num1").value);
     var inputNum2 = parseFloat(document.getElementById("input-num2").value);
     var sumTotal = 0;
-
+  
     if (inputNum1 >= 0 && inputNum2 >= 0){
         sumTotal = inputNum1 + inputNum2;
-
+  
         document.getElementById("output2").innerText = sumTotal;
     }else{
         document.getElementById("output2").innerText = "Please input a number greater than 0.";
-
+  
     }
-}
-
-function add(){
+  }
+  
+  function getValues(){
     var inputNum1 = parseFloat(document.getElementById("input1").value);
     var inputNum2 = parseFloat(document.getElementById("input2").value);
-
+  
     if (inputNum1 >= 0 && inputNum2 >= 0){
-        document.getElementById("outputFinal").innerText = inputNum1 + inputNum2;
+        return [inputNum1, inputNum2];
+        
     }else{
         document.getElementById("outputFinal").innerText = "Please input a number greater than 0.";
     }
-}
-const sub = function(){
-    var inputNum1 = parseFloat(document.getElementById("input1").value);
-    var inputNum2 = parseFloat(document.getElementById("input2").value);
-    var sumTotal = 0;
-
-    if (inputNum1 >= 0 && inputNum2 >= 0){
-        document.getElementById("outputFinal").innerText = inputNum1 - inputNum2;
-    }else{
-        document.getElementById("outputFinal").innerText = "Please input a number greater than 0.";
-    }
-}
-const mult = () => {
-    var inputNum1 = parseFloat(document.getElementById("input1").value);
-    var inputNum2 = parseFloat(document.getElementById("input2").value);
-    var sumTotal = 0;
-
-    if (inputNum1 >= 0 && inputNum2 >= 0){
-        document.getElementById("outputFinal").innerText = inputNum1 * inputNum2;
-    }else{
-        document.getElementById("outputFinal").innerText = "Please input a number greater than 0.";
-    }
-}
-function divide(){
-    var inputNum1 = parseFloat(document.getElementById("input1").value);
-    var inputNum2 = parseFloat(document.getElementById("input2").value);
-    var sumTotal = 0;
-
-    if (inputNum1 >= 0 && inputNum2 >= 0){
-        document.getElementById("outputFinal").innerText = inputNum1 / inputNum2;
-    }else{
-        document.getElementById("outputFinal").innerText = "Please input a number greater than 0.";
-    }
-}
+  }
+  
+  function add(){
+    let nums = getValues();
+    document.getElementById("outputFinal").innerText = nums[0] + nums[1];
+  }
+  const sub = function(){
+    let nums = getValues();
+    document.getElementById("outputFinal").innerText = nums[0] - nums[1];
+  }
+  const mult = () => {
+    let nums = getValues();
+    document.getElementById("outputFinal").innerText = nums[0] * nums[1];
+  }
+  function divide(){
+    let nums = getValues();
+    document.getElementById("outputFinal").innerText = nums[0] / nums[1];
+  }
