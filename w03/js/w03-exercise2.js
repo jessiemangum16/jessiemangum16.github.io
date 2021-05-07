@@ -1,5 +1,7 @@
-document.getElementById("balloon").style.fontSize = "20px";
-console.log(document.getElementById("balloon").style.fontSize);
+
+if (!(document.getElementById("balloon").style.fontSize > 0)){
+            document.getElementById("balloon").style.fontSize = '13px';
+        }
 
 window.addEventListener("keydown", event => {
     if (event.key == "ArrowUp") {
@@ -15,7 +17,6 @@ window.addEventListener("keydown", event => {
         console.log(document.getElementById("balloon").style.fontSize);
         event.preventDefault();
     }
+}); 
 
-
-});
 
