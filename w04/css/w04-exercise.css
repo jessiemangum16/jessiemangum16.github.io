@@ -1,0 +1,21 @@
+main{
+    padding: 0 20px;
+}
+label{
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+button {
+    margin: 30px;
+    width: 300px;
+    padding: 10px;
+    background-color: #10B7AF;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+}
+div{
+    font-family: 'Roboto', sans-serif;
+}
+div.output{
+    display: inline;
+}
