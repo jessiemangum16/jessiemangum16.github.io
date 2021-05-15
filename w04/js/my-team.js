@@ -3,7 +3,7 @@ const p1 = "X";
 const p2 = "O";
 let p = p1;
 
-function addPiece(e) {
+function takeTurn(e) {
     console.log(e.target);
     e.target.innerHTML = p;
 
@@ -22,5 +22,22 @@ function addPiece(e) {
     }
 }
 
-ticTac.addEventListener('click', addPiece);
+function resetField(){
+    for (let i = 0; i < ticTac.children.length; i++){
+        ticTac.children[i].innerText = "";
+        p = p1;
+    }
+}
+
+function draw(){
+    for(let i = 0; i < ticTac.children.length; i++){
+        if (ticTac.children[i].innerText != "X" && ticTac.children[i].innerText != "O"){
+            return false;
+        }else{
+            return true;
+        }
+    }
+}
+
+ticTac.addEventListener('click', takeTurn);
 
