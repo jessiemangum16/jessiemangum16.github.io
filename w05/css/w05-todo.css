@@ -1,0 +1,43 @@
+main{
+    width: 400px;
+    margin: 0 auto;
+}
+#task-board{
+    margin: 20px 0;
+}
+button.no-border{
+    border: none;
+    background-color: transparent;
+}
+
+#all_Task_display{
+    border: 1px solid black;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+}
+#all_Task_display p{
+    margin: 0;
+}
+
+#task-foot{
+    border: 1px solid black;
+    padding: 20px;
+}
+#task-foot p{
+    display: inline;
+}
+#foot-buttons{
+    display: inline;
+    float: right;
+}
+#foot-buttons button{
+    border: none;
+    background-color: transparent;
+}
+
+#new-task{
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    grid-gap: 5px;
+}
