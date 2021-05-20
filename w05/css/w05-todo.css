@@ -19,6 +19,9 @@ button.no-border{
 #all_Task_display p{
     margin: 0;
 }
+li{
+    list-style-type: none;
+}
 
 #task-foot{
     border: 1px solid black;
