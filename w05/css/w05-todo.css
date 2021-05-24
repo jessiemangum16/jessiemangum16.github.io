@@ -1,3 +1,10 @@
+:root {
+    --color1: #10B7AF;
+    
+    --heading-font: 'Gabriela', serif;
+    --paragraph-font: 'Roboto', sans-serif;
+}
+
 main{
     width: 400px;
     margin: 0 auto;
@@ -11,6 +18,7 @@ button.no-border{
 }
 
 #all_Task_display{
+    border-radius: 4px;
     border: 1px solid black;
     padding: 20px;
     display: grid;
@@ -22,8 +30,12 @@ button.no-border{
 li{
     list-style-type: none;
 }
+p.checked{
+    text-decoration: line-through;
+}
 
 #task-foot{
+    border-radius: 4px;
     border: 1px solid black;
     padding: 20px;
 }
@@ -43,4 +55,13 @@ li{
     display: grid;
     grid-template-columns: 1fr 30px;
     grid-gap: 5px;
+}
+#new-task input{
+    border-radius: 4px;
+    border: 1px solid black;
+}
+#new-task button{
+    border-radius: 4px;
+    border: none;
+    background-color: var(--color1);
 }

@@ -19,11 +19,6 @@ function addTask(){
     showAllTask();
 
     document.getElementById("new-task-input").value = null;
-    document.getElementById("tasks-left").value = "Tasks Left: " + allTask.length + 1;
-} 
-
-function deleteAll(){
-    localStorage.clear();
 }
 
 function showAllTask(){
@@ -33,18 +28,20 @@ function showAllTask(){
         var TaskDisplayer = document.getElementById("all_Task_display");
         TaskDisplayer.innerHTML = null;
 
+        document.getElementById("tasks-left").innerHTML = "Tasks Left: " + allTask.length;
+
         for (var i = 0; i < allTask.length; i++){
             var aTask = allTask[i];
             checkMark = "";
             if (aTask.completed == false){
                 checkMark = "&#9744";
-                checkClass = 'class="no-border check-b"';
+                checkClass = 'class=""';
             }else if(aTask.completed == true){
                 checkMark = "&#9745";
-                checkClass = 'class="no-border check-b checked"';
+                checkClass = 'class="checked"';
             }
-            TaskDisplayer.innerHTML += "<button type='button' "+ checkClass +"id='"+ aTask["id"] +"'>"+ checkMark +"</button>" 
-                                        + "<p>" + aTask["task"] + "</p>" 
+            TaskDisplayer.innerHTML += "<button type='button' class='no-border check-b' id='"+ aTask["id"] +"'>"+ checkMark +"</button>" 
+                                        + "<p "+ checkClass +">" + aTask["task"] + "</p>" 
                                         + "<button type='button' class='no-border remove-b' id='"+ aTask["id"] +"'>X</button>";
         }
     }
@@ -54,23 +51,33 @@ function showAllTask(){
     const removeButtons = document.querySelectorAll("button.remove-b");
     for (const removeButton of removeButtons){
         removeButton.addEventListener('click', function(e) {
-            e.target.innerHTML = "delete";
+            console.log("delete");
+
+            targetID = e.target.id;
+            for (var i = 0; i < allTask.length; i++){
+                if (allTask[i].id == targetID){
+
+                    allTask.splice(i, 1);
+
+                    var allTaskString = JSON.stringify(allTask);
+                    localStorage["all_Task"] = allTaskString;
+
+                    showAllTask();
+                }
+            } 
         })
     }
 
     const checkButtons = document.querySelectorAll("button.check-b");
     for (const checkButton of checkButtons){
-        checkButton.addEventListener('click', function(e) {
-            console.log(e.target);
-            e.target.innerHTML = "&#9745";
-            
+        checkButton.addEventListener('click', function(e) {            
             targetID = e.target.id;
-            console.log(targetID);
             for (var i = 0; i < allTask.length; i++){
                 if (allTask[i].id == targetID){
                     allTask[i].completed = true;
-                    localStorage.setItem("completed", "true");
-                    console.log(allTask[i]);
+
+                    var allTaskString = JSON.stringify(allTask);
+                    localStorage["all_Task"] = allTaskString;
 
                     showAllTask();
                 }
@@ -91,9 +98,17 @@ function showActiveTask(){
             var aTask = allTask[i];
 
             if(aTask["completed"] == false){
-                TaskDisplayer.innerHTML += "<button type='button' class='no-border check-b'>&#9744</button>" 
-                                            + "<p>" + aTask["task"] + "</p>" 
-                                            + "<button type='button' class='no-border remove-b'>X</button>";
+                checkMark = "";
+                if (aTask.completed == false){
+                    checkMark = "&#9744";
+                    checkClass = 'class=""';
+                }else if(aTask.completed == true){
+                    checkMark = "&#9745";
+                    checkClass = 'class="checked"';
+                }
+                TaskDisplayer.innerHTML += "<button type='button' class='no-border check-b' id='"+ aTask["id"] +"'>"+ checkMark +"</button>" 
+                                            + "<p "+ checkClass +">" + aTask["task"] + "</p>" 
+                                            + "<button type='button' class='no-border remove-b' id='"+ aTask["id"] +"'>X</button>";
             }
         }
     }
@@ -110,9 +125,17 @@ function showCompletedTask(){
             var aTask = allTask[i];
 
             if(aTask["completed"] == true){
-                TaskDisplayer.innerHTML += "<button type='button' class='no-border check-b'>&#9744</button>" 
-                                            + "<p>" + aTask["task"] + "</p>" 
-                                            + "<button type='button' class='no-border remove-b'>X</button>";
+                checkMark = "";
+                if (aTask.completed == false){
+                    checkMark = "&#9744";
+                    checkClass = 'class=""';
+                }else if(aTask.completed == true){
+                    checkMark = "&#9745";
+                    checkClass = 'class="checked"';
+                }
+                TaskDisplayer.innerHTML += "<button type='button' class='no-border check-b' id='"+ aTask["id"] +"'>"+ checkMark +"</button>" 
+                                            + "<p "+ checkClass +">" + aTask["task"] + "</p>" 
+                                            + "<button type='button' class='no-border remove-b' id='"+ aTask["id"] +"'>X</button>";
             }
         }
     }
