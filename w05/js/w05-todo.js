@@ -22,20 +22,34 @@ function addTask(){
     document.getElementById("tasks-left").value = "Tasks Left: " + allTask.length + 1;
 } 
 
+function deleteAll(){
+    localStorage.clear();
+}
+
 function showAllTask(){
     var storedTaskString = localStorage["all_Task"];
     if(storedTaskString != null){
         var allTask = JSON.parse(storedTaskString);
         var TaskDisplayer = document.getElementById("all_Task_display");
-        TaskDisplayer.value = null;
+        TaskDisplayer.innerHTML = null;
 
         for (var i = 0; i < allTask.length; i++){
             var aTask = allTask[i];
-            TaskDisplayer.innerHTML += "<button type='button' class='no-border check-b'>&#9744</button>" 
+            checkMark = "";
+            if (aTask.completed == false){
+                checkMark = "&#9744";
+                checkClass = 'class="no-border check-b"';
+            }else if(aTask.completed == true){
+                checkMark = "&#9745";
+                checkClass = 'class="no-border check-b checked"';
+            }
+            TaskDisplayer.innerHTML += "<button type='button' "+ checkClass +"id='"+ aTask["id"] +"'>"+ checkMark +"</button>" 
                                         + "<p>" + aTask["task"] + "</p>" 
-                                        + "<button type='button' class='no-border remove-b'>X</button>";
+                                        + "<button type='button' class='no-border remove-b' id='"+ aTask["id"] +"'>X</button>";
         }
     }
+
+    console.log(allTask);
 
     const removeButtons = document.querySelectorAll("button.remove-b");
     for (const removeButton of removeButtons){
@@ -47,8 +61,20 @@ function showAllTask(){
     const checkButtons = document.querySelectorAll("button.check-b");
     for (const checkButton of checkButtons){
         checkButton.addEventListener('click', function(e) {
+            console.log(e.target);
             e.target.innerHTML = "&#9745";
-            e.target.aTask["completed"] = true;
+            
+            targetID = e.target.id;
+            console.log(targetID);
+            for (var i = 0; i < allTask.length; i++){
+                if (allTask[i].id == targetID){
+                    allTask[i].completed = true;
+                    localStorage.setItem("completed", "true");
+                    console.log(allTask[i]);
+
+                    showAllTask();
+                }
+            } 
         })
     }
 
@@ -59,7 +85,7 @@ function showActiveTask(){
     if(storedTaskString != null){
         var allTask = JSON.parse(storedTaskString);
         var TaskDisplayer = document.getElementById("all_Task_display");
-        TaskDisplayer.value = null;
+        TaskDisplayer.innerHTML = null;
 
         for (var i = 0; i < allTask.length; i++){
             var aTask = allTask[i];
@@ -78,7 +104,7 @@ function showCompletedTask(){
     if(storedTaskString != null){
         var allTask = JSON.parse(storedTaskString);
         var TaskDisplayer = document.getElementById("all_Task_display");
-        TaskDisplayer.innterHTML = null;
+        TaskDisplayer.innerHTML = null;
 
         for (var i = 0; i < allTask.length; i++){
             var aTask = allTask[i];
