@@ -21,6 +21,83 @@ function addTask(){
     document.getElementById("new-task-input").value = null;
 }
 
+function removeTask(){
+    var storedTaskString = localStorage["all_Task"];
+
+    if(storedTaskString != null){
+        var allTask = JSON.parse(storedTaskString);
+
+        const removeButtons = document.querySelectorAll("button.remove-b");
+        for (const removeButton of removeButtons){
+            removeButton.addEventListener('click', function(e) {
+
+                targetID = e.target.id;
+                for (var i = 0; i < allTask.length; i++){
+                    if (allTask[i].id == targetID){
+
+                        allTask.splice(i, 1);
+
+                        var allTaskString = JSON.stringify(allTask);
+                        localStorage["all_Task"] = allTaskString;
+
+                        showAllTask();
+                    }
+                } 
+            })
+        }
+    }
+}
+
+function checkTask(){
+    var storedTaskString = localStorage["all_Task"];
+
+    if(storedTaskString != null){
+        var allTask = JSON.parse(storedTaskString);
+
+        const checkButtons = document.querySelectorAll("button.check-b");
+        for (const checkButton of checkButtons){
+            checkButton.addEventListener('click', function(e) {            
+                targetID = e.target.id;
+                for (var i = 0; i < allTask.length; i++){
+                    if (allTask[i].id == targetID){
+                        allTask[i].completed = true;
+    
+                        var allTaskString = JSON.stringify(allTask);
+                        localStorage["all_Task"] = allTaskString;
+    
+                        showAllTask();
+                    }
+                } 
+            })
+        }
+    }
+}
+
+function uncheckTask(){
+    var storedTaskString = localStorage["all_Task"];
+
+    if(storedTaskString != null){
+        var allTask = JSON.parse(storedTaskString);
+
+        const checkedButtons = document.querySelectorAll("button.checked-b");
+        for (const checkedButton of checkedButtons){
+            checkedButton.addEventListener('click', function(e) {            
+                targetID = e.target.id;
+                for (var i = 0; i < allTask.length; i++){
+                    if (allTask[i].id == targetID){
+                        allTask[i].completed = false;
+    
+                        var allTaskString = JSON.stringify(allTask);
+                        localStorage["all_Task"] = allTaskString;
+    
+                        showAllTask();
+                    }
+                } 
+            })
+        }
+    }
+}
+
 function showAllTask(){
     var storedTaskString = localStorage["all_Task"];
     if(storedTaskString != null){
@@ -56,61 +133,9 @@ function showAllTask(){
         }
     }
 
-    console.log(allTask);
-
-    const removeButtons = document.querySelectorAll("button.remove-b");
-    for (const removeButton of removeButtons){
-        removeButton.addEventListener('click', function(e) {
-
-            targetID = e.target.id;
-            for (var i = 0; i < allTask.length; i++){
-                if (allTask[i].id == targetID){
-
-                    allTask.splice(i, 1);
-
-                    var allTaskString = JSON.stringify(allTask);
-                    localStorage["all_Task"] = allTaskString;
-
-                    showAllTask();
-                }
-            } 
-        })
-    }
-
-    const checkButtons = document.querySelectorAll("button.check-b");
-    for (const checkButton of checkButtons){
-        checkButton.addEventListener('click', function(e) {            
-            targetID = e.target.id;
-            for (var i = 0; i < allTask.length; i++){
-                if (allTask[i].id == targetID){
-                    allTask[i].completed = true;
-
-                    var allTaskString = JSON.stringify(allTask);
-                    localStorage["all_Task"] = allTaskString;
-
-                    showAllTask();
-                }
-            } 
-        })
-    }
-
-    const checkedButtons = document.querySelectorAll("button.checked-b");
-    for (const checkedButton of checkedButtons){
-        checkedButton.addEventListener('click', function(e) {            
-            targetID = e.target.id;
-            for (var i = 0; i < allTask.length; i++){
-                if (allTask[i].id == targetID){
-                    allTask[i].completed = false;
-
-                    var allTaskString = JSON.stringify(allTask);
-                    localStorage["all_Task"] = allTaskString;
-
-                    showAllTask();
-                }
-            } 
-        })
-    }
-
+    removeTask();
+    checkTask();
+    uncheckTask();
 }
 
 function showActiveTask(){
@@ -142,6 +167,10 @@ function showActiveTask(){
             }
         }
     }
+
+    removeTask();
+    checkTask();
+    uncheckTask();
 }
 
 function showCompletedTask(){
@@ -173,6 +202,10 @@ function showCompletedTask(){
             }
         }
     }
+
+    removeTask();
+    checkTask();
+    uncheckTask();
 }
 
 
