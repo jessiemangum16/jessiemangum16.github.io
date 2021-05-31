@@ -1,6 +1,3 @@
-// Example of using Classes and modules to organize the code needed to render our list of hikes. Not using MVC here.
-
-//create an array of hikes
 const hikeList = [
   {
     name: 'Bechler Falls',
@@ -44,7 +41,9 @@ export default class Hikes {
     // we need a back button to return back to the list. This will build it and hide it. When we need it we just need to remove the 'hidden' class
     this.backButton = this.buildBackButton();
   }
-  // why is this function necessary?  hikeList is not exported, and so it cannot be seen outside of this module. I added this in case I ever need the list of hikes outside of the module. This also sets me up nicely if my data were to move. I can just change this method to the new source and everything will still work if I only access the data through this getter.
+  // why is this function necessary?  hikeList is not exported, and so it cannot be seen outside of this module. 
+  //I added this in case I ever need the list of hikes outside of the module. This also sets me up nicely if my data were to move. 
+  //I can just change this method to the new source and everything will still work if I only access the data through this getter.
   getAllHikes() {
     return hikeList;
   }
@@ -71,10 +70,11 @@ export default class Hikes {
   }
   // in order to show the details of a hike ontouchend we will need to attach a listener AFTER the list of hikes has been built. The function below does that.
   addHikeListener() {
-    // We need to loop through the children of our list and attach a listener to each, remember though that children is a nodeList...not an array. So in order to use something like a forEach we need to convert it to an array.
+    // We need to loop through the children of our list and attach a listener to each, remember though that children is a nodeList...not an array. 
+    //So in order to use something like a forEach we need to convert it to an array.
     const childrenArray = Array.from(this.parentElement.children);
     childrenArray.forEach(child => {
-      child.addEventListener('touchend', e => {
+      child.addEventListener('click', e => {
         // why currentTarget instead of target?
         this.showOneHike(e.currentTarget.dataset.name);
       });
@@ -92,7 +92,8 @@ export default class Hikes {
   }
 }
 // End of Hikes class
-// methods responsible for building HTML.  Why aren't these in the class?  They don't really need to be, and by moving them outside of the exported class, they cannot be called outside the module...they become private.
+// methods responsible for building HTML.  Why aren't these in the class?  They don't really need to be, and by moving them outside of the exported class, 
+// they cannot be called outside the module...they become private.
 function renderHikeList(parent, hikes) {
   hikes.forEach(hike => {
     parent.appendChild(renderOneHikeLight(hike));
