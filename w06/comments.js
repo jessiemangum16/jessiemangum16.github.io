@@ -1,6 +1,4 @@
-// A the code that is responsible to get and set data for a part of the application is often called a model. I've used that terminology here.
 
-//commentModel
 class CommentModel {
     constructor(type) {
       this.type = type;
