@@ -57,6 +57,7 @@ export default class Hikes {
     renderHikeList(this.parentElement, this.getAllHikes());
     this.addHikeListener();
     this.backButton.classList.add('hidden');
+    //SHOW COMMENTS
     this.comments.showCommentList();
   }
 
@@ -65,6 +66,7 @@ export default class Hikes {
     this.parentElement.innerHTML = '';
     this.parentElement.appendChild(renderOneHikeFull(hike));
     this.backButton.classList.remove('hidden');
+    //SHOW COMMENTS
     this.comments.showCommentList(hikeName);
   }
 
