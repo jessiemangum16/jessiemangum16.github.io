@@ -31,7 +31,7 @@ function showAllComment(){
         for (var i = 0; i < allComment.length; i++){
             var aComment = allComment[i];
             
-            commentDisplayer.innerHTML += "<p>" + aComment["content"] + "</p>";
+            commentDisplayer.innerHTML += "<p>" + aComment["content"] + "</p> <hr>";
         }
     }
 }

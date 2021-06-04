@@ -141,6 +141,7 @@ function renderOneHikeFull(hike) {
             <h3>How to get there</h3>
             <p>${hike.directions}</p>
         </div>
+        <h3>Comments</h3>
         <div id="all_comment_display"></div>
         <input type="textarea" id="new-comment-input"/>
         <button type="button" id="add-comment" onclick="addComment()">Add Comment</button>
