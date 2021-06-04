@@ -55,3 +55,11 @@ li div.hike-directions{
     grid-column: 1/3;
     padding: 20px;
 }
+
+#all_comment_display{
+    grid-column: 1/3;
+}
+#new-comment-input{
+  grid-column: 1/3;
+  width: 50%;
+}
