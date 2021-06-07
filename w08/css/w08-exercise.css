@@ -1,0 +1,30 @@
+.css-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.css-card-beginning, .css-card-end{
+    width: 500px;
+    border: 1px solid rgba(0,0,0,.8);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 20px;
+    background-color: rgba(0,0,0,.2);
+    padding: 20px;
+}
+.img-placeholder{
+    width: 200px;
+    height: 250px;
+    background-color: grey;
+}
+
+/************************************ TEXTBOOK TRANSFORMATIONS ************************************/
+.end .card-text h3 span:hover{
+    color: #484848;  
+    transform: translateX(40px);
+}
+.end .card-text h3 span{
+    font-size: 30px;
+    color: #999999;
+    display: inline-block;
+}
