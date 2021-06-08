@@ -21,10 +21,15 @@
 /************************************ TEXTBOOK TRANSFORMATIONS ************************************/
 .end .card-text h3 span:hover{
     color: #484848;  
-    transform: translateX(40px);
+    transform: rotate(10deg) translateX(40px) scale(1.5);
+    transition-duration: 1s;
+    transition: transform 0.5s ease-out 50ms;
 }
 .end .card-text h3 span{
     font-size: 30px;
     color: #999999;
     display: inline-block;
+    transform: scale(1.5, 0.25);
+    
+    transition: transform 0.3s ease-out 50ms;
 }
