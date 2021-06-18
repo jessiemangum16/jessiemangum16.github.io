@@ -1,0 +1,66 @@
+:root {
+    --color1: #10B7AF;
+    
+    --heading-font: 'Gabriela', serif;
+    --paragraph-font: 'Roboto', sans-serif;
+}
+
+main{
+    max-width: 400px;
+    margin: 0 auto;
+}
+#Location-board{
+    margin: 20px 0;
+}
+button.no-border{
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    font-family: var(--paragraph-font);
+}
+button.no-border:hover{
+    background-color: var(--color1);
+}
+
+#all_Location_display{
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+#all_Location_display p{
+    margin: 0;
+    padding: 10px 5px;
+}
+li{
+    list-style-type: none;
+}
+p.checked{
+    text-decoration: line-through;
+}
+
+
+
+/**************************** NEW Location ****************************/
+#new-Location{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    grid-gap: 5px;
+}
+#new-Location input{
+    border-radius: 4px;
+    border: 1px solid black;
+    font-size: 18px;
+    font-family: var(--paragraph-font);
+}
+#new-Location input#add-Location{
+    border-radius: 4px;
+    width: 50px;
+    height: 40px;
+    border: none;
+    background-color: var(--color1);
+}
+#new-Location input#add-Location:hover{
+    box-shadow: 0 0 5px black;
+}
