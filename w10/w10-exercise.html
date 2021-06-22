@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="W10 Exercise">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/medium.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="../js/script.js"></script>
+
+    <link rel="stylesheet" href="css/w10-exercise.css">
+    
+
+    <title>W10 Exercise</title>
+</head>
+<body onload="lastModified();">
+    
+    <div class="page-wrap">
+        <header>
+            <h1 id="page-title">W10 Exercise</h1>
+        </header>
+
+        <main>
+            <h3>Form 1 : no requirements or rules</h3>
+            <form>
+                <label for="choose">Would you prefer a banana or cherry?</label>
+                <input id="choose" name="i_like">
+                <button>Submit</button>
+            </form>
+            <br>
+            <h3>Form 2: input required</h3>
+            <form>
+                <label for="choose">Would you prefer a banana or cherry? (required)</label>
+                <input id="choose" name="i_like" required>
+                <button>Submit</button>
+            </form>
+            <br>
+            <h3>Form 3: input required to be exactly banana or cherry</h3>
+            <form>
+                <label for="choose">Would you prefer a banana or a cherry? (required)</label>
+                <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
+                <button>Submit</button>
+            </form>
+            <br>
+            <h3>Form 4: Input must have 6 characters, number can not be more than 10.</h3>
+            <form>
+                <div>
+                  <label for="choose">Would you prefer a banana or a cherry?</label>
+                  <input type="text" id="choose" name="i_like" required minlength="6" maxlength="6">
+                </div>
+                <div>
+                  <label for="number">How many would you like?</label>
+                  <input type="number" id="number" name="amount" value="1" min="1" max="10">
+                </div>
+                <div>
+                  <button>Submit</button>
+                </div>
+            </form>
+
+            <br>
+            <h3>Form 5: Full Example</h3>
+            <form id="form5">
+                <p>
+                  <fieldset>
+                    <legend>Do you have a driver's license?<abbr title="This field is mandatory" aria-label="required">*</abbr></legend>
+                    <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Yes</label>
+                    <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
+                  </fieldset>
+                </p>
+                <p>
+                  <label for="n1">How old are you?</label>
+                  <input type="number" min="12" max="120" step="1" id="n1" name="age" pattern="\d+">
+                </p>
+                <p>
+                  <label for="t1">What's your favorite fruit?<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+                  <input type="text" id="t1" name="fruit" list="l1" required pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+                  <datalist id="l1">
+                    <option>Banana</option>
+                    <option>Cherry</option>
+                    <option>Apple</option>
+                    <option>Strawberry</option>
+                    <option>Lemon</option>
+                    <option>Orange</option>
+                  </datalist>
+                </p>
+                <p>
+                  <label for="t2">What's your e-mail address?</label>
+                  <input type="email" id="t2" name="email">
+                </p>
+                <p>
+                  <label for="t3">Leave a short message</label>
+                  <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+                </p>
+                <p>
+                  <button>Submit</button>
+                </p>
+            </form>
+
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="f-return"><a href="../index.html">Return to Portfolio</a></div>
+        <div id="cYear"></div>
+        <div id="mod"></div>
+    </footer>
+    
+    <script src="js/w10-exercise.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: [
+                'Roboto',
+                'Gabriela'
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
