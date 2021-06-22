@@ -6,19 +6,20 @@
 }
 
 main{
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
 }
 #Location-board{
     margin: 20px 0;
 }
-button.no-border{
+button.del{
     border: none;
     background-color: transparent;
     font-size: 30px;
     font-family: var(--paragraph-font);
+    height: 35px;
 }
-button.no-border:hover{
+button.del:hover{
     background-color: var(--color1);
 }
 
@@ -26,8 +27,12 @@ button.no-border:hover{
     border-radius: 4px;
     border: 1px solid black;
     padding: 20px;
+}
+.locations{
+    text-align: center;
+    align-items: center;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
 }
 #all_Location_display p{
     margin: 0;
@@ -35,9 +40,6 @@ button.no-border:hover{
 }
 li{
     list-style-type: none;
-}
-p.checked{
-    text-decoration: line-through;
 }
 
 
