@@ -4,7 +4,6 @@
     --heading-font: 'Gabriela', serif;
     --paragraph-font: 'Roboto', sans-serif;
 }
-
 main{
     max-width: 600px;
     margin: 0 auto;
@@ -32,7 +31,8 @@ button.del:hover{
     text-align: center;
     align-items: center;
     display: grid;
-    grid-template-columns: auto 1fr 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr auto;
+    grid-gap: 20px;
 }
 #all_Location_display p{
     margin: 0;
@@ -41,10 +41,9 @@ button.del:hover{
 li{
     list-style-type: none;
 }
-
-
-
 /**************************** NEW Location ****************************/
+
+
 #new-Location{
     display: grid;
     grid-template-columns: 1fr 50px;
@@ -65,4 +64,15 @@ li{
 }
 #new-Location input#add-Location:hover{
     box-shadow: 0 0 5px black;
+}
+
+/**************************** SINGLE Location ****************************/
+.location-single{
+    
+}
+
+
+
+.hide{
+    display: none;
 }

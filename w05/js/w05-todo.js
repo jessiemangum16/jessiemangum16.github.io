@@ -28,6 +28,7 @@ function removeTask(){
         var allTask = JSON.parse(storedTaskString);
 
         const removeButtons = document.querySelectorAll("button.remove-b");
+        console.log(removeButtons);
         for (const removeButton of removeButtons){
             removeButton.addEventListener('click', function(e) {
 

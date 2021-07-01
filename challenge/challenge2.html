@@ -24,20 +24,27 @@
 
         <main>
 
-            <h2>Weather List</h2>
+            <div id="list-view">
+                <h2>Weather Tracker</h2>
 
-            <div id="new-Location">
-                <input type="number" name="zip" id="new-Location-input" pattern="[0-9]{5}" maxlength="5" inputmode="numeric" placeholder="Add new zip code"/>
-                <input type="submit" id="add-Location" value="+" onclick="addLocation()">
+                <div id="new-L-block">
+                    <div id="new-Location">
+                        <input type="number" name="zip" id="new-Location-input" pattern="[0-9]{5}" maxlength="5" inputmode="numeric" placeholder="Add new zip code"/>
+                        <input type="submit" id="add-Location" value="+" onclick="addLocation()">
+                    </div>
+                </div>
+
+                <div id="msg"></div>
+                
+                <div id='Location-board'>
+                    <div id="all_Location_display"></div>
+                </div>
             </div>
-            <div id="msg"></div>
-            
-            <div id='Location-board'>
-                <div id="all_Location_display"></div>
+
+            <div id="single-view" class="hide">
+                <button onclick="showAllLocation()">Go Back</button>
+                <div id="single-location"></div>
             </div>
-
-
-
         </main>
     </div>
 

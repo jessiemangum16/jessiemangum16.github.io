@@ -74,6 +74,7 @@ export default class Hikes {
       });
     });
   }
+
   buildBackButton() {
     const backButton = document.createElement('button');
     backButton.innerHTML = '&lt;- All Hikes';
@@ -100,6 +101,7 @@ function renderHikeList(parent, hikes) {
     parent.appendChild(renderOneHikeLight(hike));
   });
 }
+
 function renderOneHikeLight(hike) {
   const item = document.createElement('li');
   item.classList.add('light');
@@ -119,6 +121,7 @@ function renderOneHikeLight(hike) {
 
   return item;
 }
+
 function renderOneHikeFull(hike) {
   const item = document.createElement('li');
   item.innerHTML = ` 
@@ -148,7 +151,5 @@ function renderOneHikeFull(hike) {
     
     `;
   return item;
-
-  
 }
 
