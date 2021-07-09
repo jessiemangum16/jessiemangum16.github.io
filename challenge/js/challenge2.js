@@ -85,16 +85,18 @@ function shortView(aLocation){
                     `<div class="short-location">
                         <div class="locations" id="${aLocation.id}" onclick="singleLocation(${aLocation.id})">
                             <h4>${jsForecast.city.name}</h4>
-                            <div>
-                                <p>${jsCurrent.main.temp.toFixed(0)}\xB0 F <img src='https://openweathermap.org/img/w/${jsCurrent.weather[0].icon}.png' alt='${jsCurrent.weather[0].description}'></p>
-                                <p>${jsCurrent.weather[0].description} </p>
+                            <div class="currentW">
+                                <h4>Current</h4>
+                                <p class="currentTemp">${jsCurrent.main.temp.toFixed(0)}\xB0 F </p>
+                                <img src='https://openweathermap.org/img/w/${jsCurrent.weather[0].icon}.png' alt='${jsCurrent.weather[0].description}'>
+                                <p class="currentDec">${jsCurrent.weather[0].description} </p>
                             </div>
                             <div>
                                 <table>
                                     <tr>
-                                        <th>Day 1</th>
-                                        <th>Day 2</th>
-                                        <th>Day 3</th>
+                                        <th>${weekdays(1)}</th>
+                                        <th>${weekdays(2)}</th>
+                                        <th>${weekdays(3)}</th>
                                     </tr>
                                     <tr>
                                         <td><img src='https://openweathermap.org/img/w/${locationArray[0].weather[0].icon}.png' alt='${locationArray[0].weather[0].description}'></td>
@@ -127,6 +129,7 @@ function shortView(aLocation){
         }
     });
     });
+    
 }
 
 function longView(aLocation){
@@ -142,7 +145,6 @@ function longView(aLocation){
                 var locationArray = jsForecast.list.filter(function( obj ) {
                     return obj.dt_txt.includes("18:00:00");
                 });
-
                 //LONG VIEW
                 const item = document.getElementById("single-location");
                 item.innerHTML +=  
@@ -151,7 +153,7 @@ function longView(aLocation){
                             
                             <div>
                                 <h4>Today</h4>
-                                <p>Current Temperature: ${jsCurrent.main.temp.toFixed(0)}\xB0 F ${jsCurrent.weather[0].description} <img src='https://openweathermap.org/img/w/${jsCurrent.weather[0].icon}.png' alt='${jsCurrent.weather[0].description}'></p>
+                                <p class="longTemp">Temp: ${jsCurrent.main.temp.toFixed(0)}\xB0 F ${jsCurrent.weather[0].description} <img src='https://openweathermap.org/img/w/${jsCurrent.weather[0].icon}.png' alt='${jsCurrent.weather[0].description}'></p>
                                 <p>High: ${jsCurrent.main.temp_max.toFixed(0)}\xB0 F</p>
                                 <p>Low: ${jsCurrent.main.temp_min.toFixed(0)}\xB0 F</p>
                                 <p>Humidity: ${jsCurrent.main.humidity}%</p>
@@ -160,14 +162,15 @@ function longView(aLocation){
                                 <p>Sunrise: ${new Date(jsCurrent.sys.sunset * 1000).toLocaleTimeString()}</p>
                             </div>
                             <div>
+                            <hr>
                                 <h4>5 Day Forecast</h4>
                                 <table>
                                     <tr>
-                                        <th>Day 1</th>
-                                        <th>Day 2</th>
-                                        <th>Day 3</th>
-                                        <th>Day 4</th>
-                                        <th>Day 5</th>
+                                        <th>${weekdays(1)}</th>
+                                        <th>${weekdays(2)}</th>
+                                        <th>${weekdays(3)}</th>
+                                        <th>${weekdays(4)}</th>
+                                        <th>${weekdays(5)}</th>
                                     </tr>
                                     <tr>
                                         <td><img src='https://openweathermap.org/img/w/${locationArray[0].weather[0].icon}.png' alt='${locationArray[0].weather[0].description}'></td>
@@ -236,3 +239,16 @@ function getTimeFromDate(timestamp) {
     var time = new Date();
     return time.setHours(hours, minutes);
   }
+
+function weekdays(day){
+    var d = new Date();
+    var dOfWeek_abrev = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+    let weekday = d.getDay()+day;
+    if(weekday > 6){
+        weekday = weekday - 7;
+        return dOfWeek_abrev[weekday];
+    }else{
+        return dOfWeek_abrev[weekday];
+    }
+}

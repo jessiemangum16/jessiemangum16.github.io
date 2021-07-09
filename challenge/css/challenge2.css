@@ -8,66 +8,23 @@ main{
     max-width: 600px;
     margin: 0 auto;
 }
-#Location-board{
-    margin: 20px 0;
-}
-button.del{
-    border: none;
-    background-color: transparent;
-    font-size: 30px;
-    font-family: var(--paragraph-font);
-    height: 35px;
-}
-button.del:hover{
-    background-color: var(--color1);
-}
-
-#all_Location_display{
-    border-radius: 4px;
-    border: 1px solid black;
-    padding: 20px;
-}
-.locations{
-    text-align: center;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr auto;
-    grid-gap: 20px;
-}
-.short-location{
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    padding-bottom: 20px;
-}
 li{
     list-style-type: none;
 }
-
 table{
     border-collapse: collapse;
     margin: 0 auto;
+    font-family: var(--paragraph-font);
 }
 th{
     border-bottom: 1px solid black;
     padding: 10px;
 }
-.locations td:nth-of-type(2), .locations th:nth-of-type(2){
-    border-left: 1px solid black;  
-    border-right: 1px solid black; 
-}
-#single-location td:nth-of-type(2n), #single-location th:nth-of-type(2n){
-    border-left: 1px solid black;  
-    border-right: 1px solid black; 
-}
 td p{
     padding: 0;
     margin: 0;
 }
-
 /**************************** NEW Location ****************************/
-
-
 #new-Location{
     display: grid;
     grid-template-columns: 1fr 50px;
@@ -89,12 +46,58 @@ td p{
 #new-Location input#add-Location:hover{
     box-shadow: 0 0 5px black;
 }
+/**************************** SHORT VIEW ****************************/
+.short-location{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding-bottom: 20px;
+}
+#Location-board{
+    margin: 20px 0;
+}
+#all_Location_display{
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 20px;
+}
+.locations{
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    grid-gap: 20px;
+}
+.locations td:nth-of-type(2), .locations th:nth-of-type(2){
+    border-left: 1px solid black;  
+    border-right: 1px solid black; 
+}
+.currentW{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.currentW h4, .currentDec{
+    grid-column: 1/-1;
+}
+button.del{
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    font-family: var(--paragraph-font);
+    height: 35px;
+}
+button.del:hover{
+    background-color: var(--color1);
+}
 
-/**************************** SINGLE Location ****************************/
+/**************************** LONG VIEW ****************************/
 #single-location{
     text-align: center;
 }
-
+#single-location td:nth-of-type(2n), #single-location th:nth-of-type(2n){
+    border-left: 1px solid black;  
+    border-right: 1px solid black; 
+}
 
 
 .hide{
