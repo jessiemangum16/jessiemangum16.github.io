@@ -152,8 +152,8 @@ function longView(aLocation){
                             <h3>${jsCurrent.name}</h3>
                             
                             <div>
-                                <h4>Today</h4>
-                                <p class="longTemp">Temp: ${jsCurrent.main.temp.toFixed(0)}\xB0 F ${jsCurrent.weather[0].description} <img src='https://openweathermap.org/img/w/${jsCurrent.weather[0].icon}.png' alt='${jsCurrent.weather[0].description}'></p>
+                                <h4>Current Weather</h4>
+                                <p>Temp: ${jsCurrent.main.temp.toFixed(0)}\xB0 F ${jsCurrent.weather[0].description}</p>
                                 <p>High: ${jsCurrent.main.temp_max.toFixed(0)}\xB0 F</p>
                                 <p>Low: ${jsCurrent.main.temp_min.toFixed(0)}\xB0 F</p>
                                 <p>Humidity: ${jsCurrent.main.humidity}%</p>
