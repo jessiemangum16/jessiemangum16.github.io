@@ -7,6 +7,7 @@ function addLocation(){
             "id" : aTimeStamp,
             "Location" : aNewLocation
         }
+        document.getElementById("msg").textContent = null;
         var allLocation = null;
         var storedLocationString = localStorage["all_Location"];
         if(storedLocationString == null){
@@ -45,7 +46,6 @@ function showAllLocation(){
 }
 
 function singleLocation(id){
-    console.log(id);
 
     var storedLocationString = localStorage["all_Location"];
     if(storedLocationString != null){
@@ -67,21 +67,28 @@ function singleLocation(id){
 }
 
 function shortView(aLocation){
+    const currentApiURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + aLocation["Location"] +"&units=imperial&appid=159b64909a20d12c8a9f4243af9f627b";
     const forecastApiURL = "https://api.openweathermap.org/data/2.5/forecast?zip="+ aLocation["Location"] +"&units=imperial&appid=e2fd3a926cedd61c21791684dceb2f79";
     fetch(forecastApiURL)
     .then((response) => response.json())
     .then((jsForecast) => {
+        fetch(currentApiURL)
+        .then((response) => response.json())
+        .then((jsCurrent) => {
         if(jsForecast.cod == 200){
             var locationArray = jsForecast.list.filter(function( obj ) {
                 return obj.dt_txt.includes("18:00:00");
             });
-            console.log(jsForecast);
             //SHORT VIEW
             const item = document.getElementById("all_Location_display");
             item.innerHTML +=  
                     `<div class="short-location">
                         <div class="locations" id="${aLocation.id}" onclick="singleLocation(${aLocation.id})">
                             <h4>${jsForecast.city.name}</h4>
+                            <div>
+                                <p>${jsCurrent.main.temp.toFixed(0)}\xB0 F <img src='https://openweathermap.org/img/w/${jsCurrent.weather[0].icon}.png' alt='${jsCurrent.weather[0].description}'></p>
+                                <p>${jsCurrent.weather[0].description} </p>
+                            </div>
                             <div>
                                 <table>
                                     <tr>
@@ -119,107 +126,85 @@ function shortView(aLocation){
                     </div>`;
         }
     });
+    });
 }
 
 function longView(aLocation){
     const currentApiURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + aLocation["Location"] +"&units=imperial&appid=159b64909a20d12c8a9f4243af9f627b";
-    
-    fetch(currentApiURL)
-    .then((response) => response.json())
-    .then((jsCurrent) => {
-        if(jsCurrent.cod == 200){
-
-            //LONG VIEW
-            const item = document.getElementById("single-location");
-
-            item.innerHTML +=  
-                    `<div class="location-single" id="${aLocation.id}"">
-                        <h3>${jsCurrent.name}</h3>
-                        
-                        <div>
-                            <h4>Today</h4>
-                            
-                            <p>Current Temperature: ${jsCurrent.main.temp.toFixed(0)}\xB0 F ${jsCurrent.weather[0].description} <img src='https://openweathermap.org/img/w/${jsCurrent.weather[0].icon}.png' alt='${jsCurrent.weather[0].description}'></p>
-                            <p>High: ${jsCurrent.main.temp_max.toFixed(0)}\xB0 F</p>
-                            <p>Low: ${jsCurrent.main.temp_min.toFixed(0)}\xB0 F</p>
-                            <p>Humidity: ${jsCurrent.main.humidity}%</p>
-                            <p>Wind Speed: ${jsCurrent.wind.speed} mph</p>
-                            <p>Sunrise: ${new Date(jsCurrent.sys.sunrise * 1000).toLocaleTimeString()}</p>
-                            <p>Sunrise: ${new Date(jsCurrent.sys.sunset * 1000).toLocaleTimeString()}</p>
-                        </div>`;
-            
-        }else{
-            const item = document.getElementById("single-location");
-            item.innerHTML +=  
-                    `<div class="locations">
-                        <h4>${aLocation.Location}</h4>
-                        <div>
-                            <p>${jsForecast.message}</p>
-                        </div>
-                        <div>
-                            <button class="del" id="${aLocation.id}" onclick="del(${aLocation.id})">X</button>
-                        </div>
-                    </div>`;
-        }
-    });
-
     const forecastApiURL = "https://api.openweathermap.org/data/2.5/forecast?zip="+ aLocation["Location"] +"&units=imperial&appid=e2fd3a926cedd61c21791684dceb2f79";
     fetch(forecastApiURL)
     .then((response) => response.json())
     .then((jsForecast) => {
-        if(jsForecast.cod == 200){
-            var locationArray = jsForecast.list.filter(function( obj ) {
-                return obj.dt_txt.includes("18:00:00");
-            });
+        fetch(currentApiURL)
+        .then((response) => response.json())
+        .then((jsCurrent) => {
+            if(jsForecast.cod == 200){
+                var locationArray = jsForecast.list.filter(function( obj ) {
+                    return obj.dt_txt.includes("18:00:00");
+                });
 
-            //LONG VIEW
-            const item = document.getElementById("single-location");
-            item.innerHTML +=  
-                    `   <div>
-                            <h4>5 Day Forecast</h4>
-                            <table>
-                                <tr>
-                                    <th>Day 1</th>
-                                    <th>Day 2</th>
-                                    <th>Day 3</th>
-                                    <th>Day 4</th>
-                                    <th>Day 5</th>
-                                </tr>
-                                <tr>
-                                    <td><img src='https://openweathermap.org/img/w/${locationArray[0].weather[0].icon}.png' alt='${locationArray[0].weather[0].description}'></td>
-                                    <td><img src='https://openweathermap.org/img/w/${locationArray[1].weather[0].icon}.png' alt='${locationArray[1].weather[0].description}'></td>
-                                    <td><img src='https://openweathermap.org/img/w/${locationArray[2].weather[0].icon}.png' alt='${locationArray[2].weather[0].description}'></td>
-                                    <td><img src='https://openweathermap.org/img/w/${locationArray[3].weather[0].icon}.png' alt='${locationArray[2].weather[0].description}'></td>
-                                    <td><img src='https://openweathermap.org/img/w/${locationArray[4].weather[0].icon}.png' alt='${locationArray[2].weather[0].description}'></td>
-                                </tr>
-                                <tr>
-                                    <td><p>${locationArray[0].main.temp.toFixed(0)}\xB0 F</p></td>
-                                    <td><p>${locationArray[1].main.temp.toFixed(0)}\xB0 F</p></td>
-                                    <td><p>${locationArray[2].main.temp.toFixed(0)}\xB0 F</p></td>
-                                    <td><p>${locationArray[3].main.temp.toFixed(0)}\xB0 F</p></td>
-                                    <td><p>${locationArray[4].main.temp.toFixed(0)}\xB0 F</p></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div>
+                //LONG VIEW
+                const item = document.getElementById("single-location");
+                item.innerHTML +=  
+                        `<div class="location-single" id="${aLocation.id}"">
+                            <h3>${jsCurrent.name}</h3>
+                            
+                            <div>
+                                <h4>Today</h4>
+                                <p>Current Temperature: ${jsCurrent.main.temp.toFixed(0)}\xB0 F ${jsCurrent.weather[0].description} <img src='https://openweathermap.org/img/w/${jsCurrent.weather[0].icon}.png' alt='${jsCurrent.weather[0].description}'></p>
+                                <p>High: ${jsCurrent.main.temp_max.toFixed(0)}\xB0 F</p>
+                                <p>Low: ${jsCurrent.main.temp_min.toFixed(0)}\xB0 F</p>
+                                <p>Humidity: ${jsCurrent.main.humidity}%</p>
+                                <p>Wind Speed: ${jsCurrent.wind.speed} mph</p>
+                                <p>Sunrise: ${new Date(jsCurrent.sys.sunrise * 1000).toLocaleTimeString()}</p>
+                                <p>Sunrise: ${new Date(jsCurrent.sys.sunset * 1000).toLocaleTimeString()}</p>
+                            </div>
+                            <div>
+                                <h4>5 Day Forecast</h4>
+                                <table>
+                                    <tr>
+                                        <th>Day 1</th>
+                                        <th>Day 2</th>
+                                        <th>Day 3</th>
+                                        <th>Day 4</th>
+                                        <th>Day 5</th>
+                                    </tr>
+                                    <tr>
+                                        <td><img src='https://openweathermap.org/img/w/${locationArray[0].weather[0].icon}.png' alt='${locationArray[0].weather[0].description}'></td>
+                                        <td><img src='https://openweathermap.org/img/w/${locationArray[1].weather[0].icon}.png' alt='${locationArray[1].weather[0].description}'></td>
+                                        <td><img src='https://openweathermap.org/img/w/${locationArray[2].weather[0].icon}.png' alt='${locationArray[2].weather[0].description}'></td>
+                                        <td><img src='https://openweathermap.org/img/w/${locationArray[3].weather[0].icon}.png' alt='${locationArray[2].weather[0].description}'></td>
+                                        <td><img src='https://openweathermap.org/img/w/${locationArray[4].weather[0].icon}.png' alt='${locationArray[2].weather[0].description}'></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>${locationArray[0].main.temp.toFixed(0)}\xB0 F</p></td>
+                                        <td><p>${locationArray[1].main.temp.toFixed(0)}\xB0 F</p></td>
+                                        <td><p>${locationArray[2].main.temp.toFixed(0)}\xB0 F</p></td>
+                                        <td><p>${locationArray[3].main.temp.toFixed(0)}\xB0 F</p></td>
+                                        <td><p>${locationArray[4].main.temp.toFixed(0)}\xB0 F</p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
 
-                        </div>
-                    </div>`;
-            
-        }else{
-            const item = document.getElementById("single-location");
-            item.innerHTML +=  
-                    `<div class="locations">
-                        <h4>${aLocation.Location}</h4>
-                        <div>
-                            <p>${jsForecast.message}</p>
-                        </div>
-                        <div>
-                            <button class="del" id="${aLocation.id}" onclick="del(${aLocation.id})">X</button>
-                        </div>
-                    </div>`;
-        }
-    });
+                            </div>
+                        </div>`;
+                
+            }else{
+                const item = document.getElementById("single-location");
+                item.innerHTML +=  
+                        `<div class="locations">
+                            <h4>${aLocation.Location}</h4>
+                            <div>
+                                <p>${jsForecast.message}</p>
+                            </div>
+                            <div>
+                                <button class="del" id="${aLocation.id}" onclick="del(${aLocation.id})">X</button>
+                            </div>
+                        </div>`;
+            }
+        });
+        });
 }
 
 function del(e){
