@@ -27,10 +27,6 @@ main{
     max-width: 1200px;
     margin: 30px auto;
 }
-#return-home{
-    float: left;
-    padding-left: 20px;
-}
 footer{
     background-color: var(--color1);
     text-align: center;
