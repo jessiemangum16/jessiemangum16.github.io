@@ -1,0 +1,55 @@
+/* Desktop Views ****************************/
+@media only screen and (min-width: 60em) {
+    h1{
+        font-size: 28pt;
+    }
+    h2{
+        font-size: 20pt;
+    }
+    h3{
+        font-size: 16pt;
+    }
+    h4{
+        font-family: var(--paragraph-font);
+        font-size: 12pt;
+    }
+    .logo{
+        width: 150px;
+        padding-right: 30px;
+    }
+    .siteT h1{
+        font-size: 28pt;
+    }
+    .siteT h4{
+        font-size: 24pt;
+    }
+
+    .business-cards{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .event-cards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #local-b.grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .map{
+        width: 600px;
+        padding: 50px 0;
+        margin: 0 auto;
+    }
+    .map iframe{
+        width: 600px;
+        height: 450px; 
+    }
+    #board{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .city-events{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

@@ -1,0 +1,117 @@
+/* Tablet Views ******************************/
+@media only screen and (min-width: 37.5em) {
+    h1{
+        font-size: 20pt;
+    }
+    h2{
+        font-size: 16pt;
+    }
+    h3{
+        font-size: 14pt;
+    }
+    h4{
+        font-family: var(--paragraph-font);
+        font-size: 12pt;
+    }
+    .logo{
+        width: 110px;
+        padding-right: 30px;
+    }
+    nav.topM ul{
+        display: flex;
+        width: 100%;
+        padding: 50px 0;
+    }
+    nav button{
+        display: none;
+    }
+    nav ul li a{
+        font-size: 13pt;
+    }
+    nav li{
+        flex: 3;
+        text-align: center;
+    }
+    .mobile-hide{
+        display: block;
+    }
+    .topM{
+        display: block;
+        position: absolute;
+        top: 8px;
+        right: 40px;
+        width: 70%;
+    }
+    .mobileM{
+        display: none;
+    }
+    .siteT{
+        top: 65%;
+    }
+    .siteT h1{
+        font-size: 20pt;
+    }
+    .siteT h4{
+        font-size: 12pt;
+    }
+
+    .business-cards{
+        grid-template-columns: 1fr;
+    }
+
+    .cta h1{
+        color: var(--color5);
+        font-size: 20pt;
+    }
+    .purpose{
+        padding: 50px 0;
+    }
+    .purp-icons{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+    .member-perks{
+        display: block;
+    }
+
+    .switchB{
+        display: flex;
+        justify-content: flex-end;
+        padding: 30px 0;
+    }
+    #local-b.grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .event-cards{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .weather-cards{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .home-contact{
+        padding: 50px 30px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .map{
+        width: 500px;
+        padding: 50px 0;
+        margin: 0 auto;
+    }
+    .map iframe{
+        width: 500px;
+        height: 350px; 
+    }
+    #board{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .city-events{
+        grid-template-columns: 1fr 1fr;
+    }
+}   

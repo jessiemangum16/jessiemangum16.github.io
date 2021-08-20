@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Raleway:wght@300&display=swap');
+/* Color Scheme
+Blue: #247BA0
+Grey: #50514F
+Light Green: #CBD4C2
+Tan: #C3B299
+light grey: #FFFCFF
+*/
+:root {
+    /* change the values below to your colors from your palette */
+    --color1: #247BA0;
+    --color2: #50514F;
+    --color3: #CBD4C2;
+    --color4: #C3B299;
+    --color5: #FFFCFF;
+    --links: #50514F;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: 'Berkshire Swash', cursive;
+    --paragraph-font: 'Raleway', sans-serif;
+}
+h1, h2, h3{
+    font-family: var(--heading-font);
+    color: var(--color1);
+}
+h1{
+    font-size: 18pt;
+    text-align: center;
+}
+h2{
+    font-size: 16pt;
+}
+h3{
+    font-size: 13pt;
+}
+h4{
+    font-family: var(--paragraph-font);
+    font-size: 13pt;
+}
+h5{
+    font-family: var(--paragraph-font);
+    font-size: 12pt;
+    color: var(--color5);
+}
+p, figcaption{
+    font-family: var(--paragraph-font);
+    font-size: 11pt;
+}
+ul li{
+    font-family: var(--paragraph-font);
+    font-size: 11pt;
+}
+a{
+    color: var(--links);
+    font-family: var(--paragraph-font);
+    font-size: 11pt;
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+hr{
+    max-width: 1200px;
+}
+
+/********************************** HEADER **********************************/
+.logo{
+    width: 90px;
+    padding-right: 30px;
+}
+
+/********************************** NAV **********************************/
+
+nav ul{
+    display: block;
+    max-width: 960px;
+    list-style-type: none;
+	margin: 0 auto;
+    font-family: var(--paragraph-font);
+    font-size: 13pt;
+    text-align: center;
+}
+nav ul#mobile-menu{
+    padding: 0;
+}
+nav ul li a{
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+nav.mobileM ul li a{
+    background-color: var(--color2);
+    padding: 15px;
+}
+nav ul li a:hover {
+	color: var(--color5);
+    border-top: 2px solid var(--color5);
+}
+nav .active {
+    border-top: 2px solid var(--color5);
+	color: var(--color5);
+    font-weight: bolder;
+}
+nav.mobileM .active {
+	color: var(--color1);
+    background-color:rgba(0, 0, 0, 0.2);
+    font-weight: bolder;
+}
+nav ul.hide{
+    display: none;
+}
+nav button{
+    text-align: right;
+    font-size: 15pt;
+}
+
+/********************************** HERO **********************************/
+.hero{
+    position: relative;
+    background-color: black;
+}
+.bg-img{
+    opacity: .2;
+    height: 100%;
+}
+.logo{
+    position: absolute;
+    top: 8px;
+    left: 40px;
+}
+.topM{
+    display: none;
+}
+.siteT{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.siteT h1{
+    font-size: 14pt;
+}
+.siteT h4{
+    color: var(--color5);
+    font-size: 10pt;
+}
+/********************************** MOBILE MENU **********************************/
+nav.mobileM button{
+    background-color: var(--color1);
+    border: none;
+    font-size: 1.6rem;
+    color: var(--color5);
+    font-family: var(--paragraph-font);
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+}
+
+/********************************** BODY **********************************/
+body{
+    background-color: var(--color5);
+}
+main{
+    margin: 0 auto;
+}
+.pageTitle{
+    text-align: center;
+}
+/********************************** LOCAL BUSINESSES **********************************/
+.localB{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.localB h1, .localB h4{
+    text-align: center;
+}
+.business-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 75px;
+    padding: 50px 50px 30px;
+}
+.bus{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+.bus img{
+    max-height: 100px;
+    margin: 0 auto;
+}
+.bus h2, .bus p{
+    margin: 0;
+}
+/********************************** CTA **********************************/
+.cta{
+    background-color: var(--color1);
+    text-align: center;
+}
+.cta a{
+    padding: 50px;
+}
+.cta h1{
+    color: var(--color5);
+    font-size: 14pt;
+}
+/********************************** PURPOSE **********************************/
+.purpose{
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+.purp-icons{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 30px;
+}
+.purp img{
+    display: inline;
+    width: 50px;
+}
+.purp h2{
+    display: inline;
+    padding: 20px;
+}
+.purp{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    text-align: left;
+    margin: 0 auto;
+}
+/********************************** UPCOMING EVENTS **********************************/
+.upcoming-events{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.event-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    padding: 0 40px;
+}
+.event{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    border: 1px solid var(--color1);
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+.event div{
+    grid-row: span 8;
+}
+.event h3, .event h4, .event p{
+    margin: 0;
+}
+.event hr{
+    color: var(--color2);
+}
+/********************************** WEATHER **********************************/
+.weather{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.weather h3{
+    text-align: center;
+}
+.weather-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+.cWeather{
+    max-width: 200px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    text-align: center;
+    margin: 0 auto;
+}
+.cWeather p:nth-of-type(1), .cWeather p:nth-of-type(3){
+    grid-column: span 2;
+}
+.forecastW{
+    text-align: center;
+}
+
+/********************************** ALL TABLES **********************************/
+table{
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+table th {
+    padding: 10px 25px 10px 25px;
+    background-color: var(--color1);
+    color: var(--color5);
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+table td{
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 8px;
+    background-color: var(--color5);
+}
+table div p{
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    margin: 0;
+} 
+/********************************** ALL FORMS **********************************/
+form label{
+    display: block;
+    padding-top: 20px;
+    font-family: var(--paragraph-font);
+    font-size: 13pt;
+}
+form legend{
+    font-family: var(--paragraph-font);
+    font-size: 13pt;
+    font-weight: bold;
+}
+form label.top input, form label.top textarea, form label.address input{
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+form label.sbs input{
+    margin: 0 20px;
+}
+form label textarea{
+    height: 100px;
+}
+form label.textA{
+    grid-column: span 2;
+}
+form input.submitB{
+    border: none;
+    background-color: var(--color2);
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: var(--paragraph-font);
+}
+form label input:required {
+    border-left: red solid 6px;
+}
+form label input:required:valid{
+    border-left: green solid 6px;
+}
+/********************************** CONTACT FORM **********************************/
+.home-contact{
+    padding: 50px 30px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.contact-text{
+    width: 180px;
+    margin: 0 auto;
+}
+.contact-text img{
+    width: 15px;
+    display: inline;
+}
+.home-contact p{
+    display: inline;
+    padding: 10px;
+}
+.home-contact form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px 30px;
+}
+.social{
+    padding: 60px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.social a{
+    width: 40px;
+    margin: 0 auto;
+}
+/********************************** JOIN FORM **********************************/
+main#join{
+    padding: 50px 0;
+}
+.join-form{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.join-form input, .join-form textarea{
+    max-width: 95%;
+}
+.join-form fieldset{
+    padding: 20px;
+    margin: 20px;
+}
+.join-form div.bold{
+    padding-top: 20px;
+    font-family: var(--paragraph-font);
+    font-size: 13pt;
+    font-weight: bold;
+}
+.join-form input.submitB{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+form .address-zip{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 97%;
+}
+/********************************** JOIN PERKS TABLE **********************************/
+.member-perks{
+    display: none;
+    text-align: center;
+    padding: 50px 0;
+}
+.perks-table td{
+    font-family: var(--heading-font);
+    font-size: 25px;
+    color: var(--color1);
+}
+.perks-table td:nth-child(1){
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    color: black;
+}
+/********************************** CONTACT PAGE **********************************/
+.map{
+    width: 300px;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+.map iframe{
+    width: 300px;
+    height: 225px; 
+}
+/********************************** BOARD OF DIRECTORS **********************************/
+#board{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/********************************** CITY PAGE **********************************/
+.city-main{
+    max-width: 1200px;
+    padding: 30px;
+}
+.city{
+    padding: 30px 0;
+}
+.city-events{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+/********************************** DIRECTORY PAGE **********************************/
+main#directory{
+    max-width: 1200px;
+    padding: 50px 20px;
+}
+.switchB{
+    display: none;
+}
+.switchB button{
+    border: none;
+    background-color: var(--color5);
+    color: var(--color1);
+    font-family: var(--paragraph-font);
+}
+#local-b{
+    margin: 0 auto;
+}
+#local-b.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+#local-b.list{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+#local-b section{
+    border: 1px solid var(--color1);
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+#local-b img{
+    max-height: 100px;
+}
+#local-b a{
+    text-decoration: underline;
+}
+
+/********************************** LAZY LOAD **********************************/
+.lazy-gallery-imgs img{
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+.lazy-gallery-imgs img[data-src]{
+    filter: blur(0.2em);
+    
+}
+/********************************** FOOTER **********************************/
+footer{
+    background-color: var(--color1);
+    color: var(--color5);
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    height: 60px; 
+    font-family: var(--paragraph-font);
+    font-size: 11pt;
+    line-height: 20px;
+}
+#mod, footer p, footer div{
+    color: var(--color5);
+}
+footer a{
+    color: var(--color5);
+    text-decoration:underline;
+    font-weight: bolder;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

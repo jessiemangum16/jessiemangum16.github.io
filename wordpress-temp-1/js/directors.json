@@ -1,0 +1,67 @@
+{
+    "board": [
+        {
+            "photo": "a1.jfif",
+            "name": "John Doe",
+            "company": "Alpha Graphics",
+            "title": "Program Manager",
+            "phone": "(801) 461-0500"
+        },
+        {
+            "photo": "b1.jfif",
+            "name": "Jane Smith",
+            "company": "Sugar House Furniture",
+            "title": "Business Director",
+            "phone": "(801) 485-3606"
+        },
+        {
+            "photo": "b2.jfif",
+            "name": "Jackie Joe",
+            "company": "The King's English Bookshop",
+            "title": "Chief Operating Officer",
+            "phone": "(801) 484-9100"
+        },
+        {
+            "photo": "a2.jfif",
+            "name": "Frank Smith",
+            "company": "Solstice Home Health, Hospice & Palliative Care",
+            "title": "Marketing Manager",
+            "phone": "(801) 485-1035"
+        },
+        {
+            "photo": "a3.jfif",
+            "name": "Harry James",
+            "company": "Hatch Family Chocolates",
+            "title": "Chief Strategy Officer",
+            "phone": "(801) 532-4912"
+        },
+        {
+            "photo": "b3.jfif",
+            "name": "Grace Miles",
+            "company": "Street Tacos SLC",
+            "title": "Franchise Manager",
+            "phone": "(801) 364-0249"
+        },
+        {
+            "photo": "a4.jfif",
+            "name": "Tommy Toe",
+            "company": "Central Book Exchange",
+            "title": "Cheif Marketing Officer",
+            "phone": "(801) 485-3913"
+        },
+        {
+            "photo": "b4.jfif",
+            "name": "Paula Poe",
+            "company": "The Machine Age",
+            "title": "Vice President",
+            "phone": "(801) 359-2020"
+        },
+        {
+            "photo": "b5.jfif",
+            "name": "Karen Quinton",
+            "company": "Délice French Bakery & Cafe",
+            "title": "Chairman",
+            "phone": "(801) 953-1910"
+        }
+    ]
+}

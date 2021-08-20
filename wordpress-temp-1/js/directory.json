@@ -1,0 +1,76 @@
+{
+    "businesses": [
+        {
+            "name": "Alpha Graphics",
+            "logo": "alpha-logo.png",
+            "website": "https://www.alphagraphics.com/",
+            "address1": "2945 South West Temple",
+            "address2": "Salt Lake City, UT 84115",
+            "phone": "(801) 461-0500"
+        },
+        {
+            "name": "Sugar House Furniture",
+            "logo": "sugar-logo.jpg",
+            "website": "https://www.sugarhousefurniture.com/",
+            "address1": "2198 South Highland Drive",
+            "address2": "Salt Lake City, UT 84106",
+            "phone": "(801) 485-3606"
+        },
+        {
+            "name": "The King's English Bookshop",
+            "logo": "kings-logo.jpg",
+            "website": "https://www.kingsenglish.com/",
+            "address1": "1511 South 1500 East",
+            "address2": "Salt Lake City, UT 84105",
+            "phone": "(801) 484-9100"
+        },
+        {
+            "name": "Solstice Home Health, Hospice & Palliative Care",
+            "logo": "solstice-logo.png",
+            "website": "https://www.solsticehc.com/",
+            "address1": "1940 South 1100 East",
+            "address2": "Salt Lake City, UT 84106",
+            "phone": "(801) 485-1035"
+        },
+        {
+            "name": "Hatch Family Chocolates",
+            "logo": "hatch-logo.png",
+            "website": "https://www.hatchfamilychocolates.com/",
+            "address1": "376 8th Avenue, Unit A",
+            "address2": "Salt Lake City, UT 84103",
+            "phone": "(801) 532-4912"
+        },
+        {
+            "name": "Street Tacos SLC",
+            "logo": "street-logo.png",
+            "website": "https://streettacosut.com/",
+            "address1": "243 W 400 S",
+            "address2": "Salt Lake City, UT 84101",
+            "phone": "(801) 364-0249"
+        },
+        {
+            "name": "Central Book Exchange",
+            "logo": "central-logo.png",
+            "website": "https://www.central-bookexchange.com/",
+            "address1": "2017 S 1100 E",
+            "address2": "Salt Lake City, UT 84106",
+            "phone": "(801) 485-3913"
+        },
+        {
+            "name": "The Machine Age",
+            "logo": "machine-logo.png",
+            "website": "http://www.trolleysquare.com/the-machine-age/",
+            "address1": "602 S 700 E",
+            "address2": "Salt Lake City, UT 84102",
+            "phone": "(801) 359-2020"
+        },
+        {
+            "name": "Délice French Bakery & Cafe",
+            "logo": "delice-logo.jpg",
+            "website": "https://delicebakeryslc.com/",
+            "address1": "2747 S. State Street",
+            "address2": "Salt Lake City, UT 84115",
+            "phone": "(801) 953-1910"
+        }
+    ]
+}

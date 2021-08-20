@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home">
+
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/medium.css" media="screen and (min-width:37.5em)">
+    <link rel="stylesheet" href="css/large.css" media="screen and (min-width:60em)">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script src="js/scripts.js" defer></script>
+    <script src="js/home.js" defer></script>
+    <title>Home</title>
+</head>
+<body onload="lastModified(); threeWeekDays()">
+
+     
+    <header class="hero">
+        <picture class="bg-img">
+            <source media="(max-width: 600px)" srcset="images/head1-mobile.jpg">
+            <img src="images/ph/ph-2500x866.jpg" data-src="images/head1-short.jpg" alt="city">
+        </picture>
+
+        <picture class="logo">
+            <img src="images/ph/ph-150x150.jpg" data-src="images/logo-200.png" alt="Salt Lake logo">
+        </picture>
+
+        <nav class="topM">
+            <ul id="top-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="city.html">City</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="siteT">
+            <h1 id="page-title">Salt Lake Chamber of Commerce</h1> 
+            <h4>Utah's Business Leader</h4>
+        </div>      
+    </header>
+
+    <div>
+        <nav class="mobileM">
+            <button onclick="toggleMenu()">&#9776; Menu</button>
+            <ul id="mobile-menu" class="hide">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="city.html">City</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <div class="localB">
+            <h1>Local Businesses</h1>
+            <h4>Support new local businesses</h4>
+            <div class="business-cards">
+                <div class="bus">
+                    <img src="images/ph/ph-100x100.jpg" data-src="images/bus/kings-logo.jpg" alt="kings logo">
+                    <h2>The King's English Bookshop</h2>
+                    <p>Matching books to readers since 1977.
+                        <br><br>Discover some of what makes The King's English one of the most unique and inviting bookstores anywhere.
+                        <br><br><strong>Consignment Guidelines</strong>
+                        <br><strong>Donations</strong>
+                        <br><strong>Frequent Reader Program</strong></p>
+                </div>
+                <div class="bus">
+                    <img src="images/ph/ph-100x100.jpg" data-src="images/bus/delice-logo.jpg" alt="Delice Logo">
+                    <h2>Délice French Bakery & Cafe</h2>
+                    <p>In November of 2018, Jean-Jacques Grossi  and  Akbar Matinkhah  open Délice French Bakery and Café. The mission was to create pastries and cakes that brought a taste of France to the Salt Lake Valley.
+
+                       <br><br> Chef Jean-Jacques Grossi started cooking and baking at a young age in the South of France, moving to the Greater Salt Lake area in 1977. He’s been in the food industry ever since, and with over 45 years of experience, the most delightful recipes are brought to life. With his personal touch and classic French recipes, we are proud to offer a variety of hand-crafted sweet bites to the Salt Lake City community. Our chef’s favorite treat? The Feuillantine cake.</p>
+                </div>
+                <div class="bus">
+                    <img src="images/ph/ph-100x100.jpg" data-src="images/bus/machine-logo.png" alt="The Machine Age Logo">
+                    <h2>The Machine Age</h2>
+                    <p>Take a journey through space and time with Professor Julian Raintree & His Curious Concoctions! 
+
+                       <br><br>One-of-a-Kind funky-fab Steampunk lighting, clockworks, computer keyboards, and unique antique and vintage creations by renowned John Cottom aka Professor Julian Raintree. The entire store is spec-tacular eye candy!</p>
+                </div>
+                <div class="bus">
+                    <img src="images/ph/ph-100x100.jpg" data-src="images/bus/hatch-logo.png" alt="Hatch Famiy Logo">
+                    <h2>Hatch Family Chocolates</h2>
+                    <p>Our Hatch Family milk and dark chocolates are masterfully created in our kitchen following the same recipes created by Steve’s Grandmother. We are still evolving our flavors and will keep adding to these wonderful selections. Choose from a selection of assorted hand-dipped chocolates—with or without nuts.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <a href="join.html"><h1>Join the Salt Lake City Chamber of Commerce</h1></a>
+        </div>
+
+        <div class="purpose">
+            <h1>Purpose</h1>
+            <p>
+                The main purpose of Salt Lake City Chamber of commerce is to promotion local businesses and bring businesses together to grow and succeed to the best of their abilities. 
+                
+                It is also be a place for customers to locate locally owned companies. It is important to purchase from smaller locally owned companies to endure success. 
+            </p>
+            <div class="purp-icons">
+                <div class="purp">
+                    <img src="images/ph/ph-50x50.jpg" data-src="images/icons/promote.png" alt="promote icon">
+                    <h2>Promote</h2>
+                </div>
+                <div class="purp">
+                    <img src="images/ph/ph-50x50.jpg" data-src="images/icons/unite.png" alt="unite icon">
+                    <h2>Unite</h2>
+                </div>
+                <div class="purp">
+                    <img src="images/ph/ph-50x50.jpg" data-src="images/icons/succeed.png" alt="succeed icon">
+                    <h2>Succeed</h2>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="upcoming-events">
+            <h1>Upcoming Events</h1>
+            <div class="event-cards">
+                <div class="event">
+                    <div><h4>3</h4><p>Apr</p></div>
+                    <h3>2021 Salt Lake City Performance Art Festival</h3><br>
+                    <p>Fri, Apr 2, 8:00 AM – Sat, Apr 3, 5:15 PM</p>
+                    <p>210 E 400 S, Salt Lake City, UT</p><br>
+                    <p>The Eighth Annual Salt Lake City Performance Art Festival will feature world-class performance art — as a live stream online event — with works from 16 respected local and international artists.</p>
+                </div>
+                <div class="event">
+                    <div><h4>14</h4><p>May</p></div>
+                    <h3>Salt Lake Home Expo</h3><br>
+                    <p>Fri, May 14, 12 – 8 PM</p>
+                    <p>9575 S, State St, Sandy, UT</p><br>
+                    <p>Nationwide Expos is making reserving your booth in our Home Expos easier than ever with our fast and easy online booking! Reserve your booth in under 2 minutes from any phone, tablet or computer.</p>
+                </div>
+                <div class="event">
+                    <div><h4>28</h4><p>May</p></div>
+                    <h3>Utah Symphony</h3><br>
+                    <p>Fri, May 28, 10 AM – 3 PM</p>
+                    <p>123 W S Temple, Salt Lake City, UT</p><br>
+                    <p>Buy Utah Symphony: Thierry Fischer - Tchaikovsky 5 With Mozart & Schoenberg (Finishing Touches Rehearsal) tickets to see the best classical music played live and in-person.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="weather">
+            <h1>Weather</h1>
+
+            <div class="weather-cards">
+                <div class="w-card">
+                    <h3>Current Weather</h3>
+                    <div class="currentW"></div>
+                </div>
+                <div class="forecastW w-card">
+                    <h3>3 Day Forecast</h3>
+                    <table class="forecast_table">
+                        <tr>
+                            <th><div id="today1"></div></th>
+                            <th><div id="today2"></div></th>
+                            <th><div id="today3"></div></th>
+                        </tr>
+                        <tr>
+                            <td><div class=threeDay1></div></td>
+                            <td><div class=threeDay2></div></td>
+                            <td><div class=threeDay3></div></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="home-contact">
+            <h1>Get In Touch</h1>
+
+            <div class="contact-text">
+                <img src="images/ph/ph-15x15.jpg" data-src="images/icons/phone.png" alt="phone icon"><p>(888) 888-8888</p> <br>
+                <img src="images/ph/ph-15x15.jpg" data-src="images/icons/email.png" alt="email icon"><p>email@email.com</p><br>
+                <img src="images/ph/ph-15x15.jpg" data-src="images/icons/location.png" alt="location icon"><p>700 E 8600 S<br>Salt Lake City, Utah 84119</p>
+            </div>
+
+            <form method="get" action="thanks.html">
+                <label class="top">Full Name* <input type="text" name="name" pattern="[A-Za-z]{5}" required></label>
+                <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                <label class="textA top">Comments <textarea name="comments"></textarea></label>
+                    
+                <input type="submit" value="Contact Us" class="submitB">
+            </form>
+
+            <div class="social">
+                <a href="https://www.facebook.com/saltlakechamber"><img src="images/ph/ph-40x40.jpg" data-src="images/icons/fb40.png" alt="facebook icon"></a>
+                <a href="https://www.instagram.com/slchamber/"><img src="images/ph/ph-40x40.jpg" data-src="images/icons/insta40.png" alt="instagram icon"></a>
+                <a href="https://twitter.com/saltlakechamber"><img src="images/ph/ph-40x40.jpg" data-src="images/icons/twitter40.png" alt="twitter icon"></a>
+                <a href="https://www.youtube.com/user/SaltLakeChamber"><img src="images/ph/ph-40x40.jpg" data-src="images/icons/youTube40.png" alt="youtube icon"></a>
+            </div>
+        </div>
+        
+
+    </main>
+
+    <footer>
+        <a id="return-home" href="../index.html">Assignment Portal</a> | <a href="resources.html">Resources</a>
+        <div id="cYear"></div>
+        <div id="mod"></div>
+    </footer>
+    
+    
+    <link rel="stylesheet" href="../css/normalize.css" media="all">
+</body>
+</html>

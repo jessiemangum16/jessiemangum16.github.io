@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join">
+    
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/medium.css" media="screen and (min-width:37.5em)">
+    <link rel="stylesheet" href="css/large.css" media="screen and (min-width:60em)">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script src="js/scripts.js" defer></script>
+    <title>Join</title>
+</head>
+<body onload="lastModified();">
+
+    <header class="hero">
+        <picture class="bg-img">
+            <source media="(max-width: 600px)" srcset="images/join-head-mobile.jpg">
+            <img src="images/ph/ph-2500x866.jpg" data-src="images/join-head-full.jpg" alt="city">
+        </picture>
+
+        <picture class="logo">
+            <img src="images/ph/ph-150x150.jpg" data-src="images/logo-200.png" alt="Salt Lake logo">
+        </picture>
+
+        <nav class="topM">
+            <ul id="top-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="city.html">City</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="siteT">
+            <h1 id="page-title">Salt Lake Chamber of Commerce</h1> 
+            <h4>Utah's Business Leader</h4>
+        </div>      
+    </header>
+
+    <div>
+        <nav class="mobileM">
+            <button onclick="toggleMenu()">&#9776; Menu</button>
+            <ul id="mobile-menu" class="hide">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="city.html">City</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main id="join">
+       
+        <h1>Join Now</h1>
+
+        <form class="join-form" method="get" action="thanks.html">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label class="top">First Name* <input type="text" name="fname" pattern="[A-Za-z]{3,}" placeholder="John" required></label>
+                <label class="top">Last Name* <input type="text" name="lname" pattern="[A-Za-z]{3,}" placeholder="Doe" required></label>
+                <label class="top">Title <input type="text" name="lname" pattern="[A-Za-z]{3,}" placeholder="CEO"></label>
+                <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                <label class="top">Phone Number <input type="tel" name="phone" placeholder="801-456-7890"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Buisness Information</legend>
+                <label class="top">Business Name* <input type="text" name="business-name" pattern="[A-Za-z]{3,}" placeholder="This Business" required></label>
+
+                <div class="address-zip">
+                    <label class="address top">Business Address <input type="text" name="business-address" placeholder="123 East 100 South"></label>
+                    <label class="zip top">Zip Code <input type="text" name="zip-code" placeholder="84119"></label>
+                </div>
+
+                <label class="top">Business Website<input type="url" name="url" id="url" placeholder="https://www.example.com"></label>
+                <label class="top">Business Description <textarea name="business-description"></textarea></label>
+
+                <div class="bold">Membership Level</div>
+                <label class="sbs"><input type="radio" name="membership-level" value="Non-Profit">Non-Profit ($100)</label>
+                <label class="sbs"><input type="radio" name="membership-level" value="Bronze">Bronze ($200)</label>
+                <label class="sbs"><input type="radio" name="membership-level" value="Silver">Silver ($400)</label>
+                <label class="sbs"><input type="radio" name="membership-level" value="Gold">Gold ($1000)</label>
+                
+            </fieldset>
+                
+            <input type="submit" value="Join Now" class="submitB">
+        </form>
+
+        <div class="member-perks">
+            <table class="perks-table">
+                <tr>
+                    <th>Perks</th>
+                    <th>Non-Profit ($100)</th>
+                    <th>Bronze ($200)</th>
+                    <th>Silver ($400)</th>
+                    <th>Gold ($1000)</th>
+                </tr>
+                <tr>
+                    <td>Directory Listing</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Business Trainings</td>
+                    <td></td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Social Media Posts</td>
+                    <td></td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Luncheon Tickets</td>
+                    <td></td>
+                    <td></td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td>Sponsorship Opportunities</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>X</td>
+            </table>
+        </div>
+
+    </main>
+
+    <footer>
+        <a id="return-home" href="../index.html">Assignment Portal</a> | <a href="resources.html">Resources</a>
+        <div id="cYear"></div>
+        <div id="mod"></div>
+    </footer>
+    
+    
+    <link rel="stylesheet" href="../css/normalize.css" media="all">
+</body>
+</html>

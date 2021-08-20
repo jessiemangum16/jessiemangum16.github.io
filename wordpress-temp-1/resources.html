@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resources">
+    
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/medium.css" media="screen and (min-width:37.5em)">
+    <link rel="stylesheet" href="css/large.css" media="screen and (min-width:60em)">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script src="js/scripts.js" defer></script>
+    <title>Resources</title>
+</head>
+<body onload="lastModified();">
+
+    <header class="hero">
+        <picture class="bg-img">
+            <source media="(max-width: 600px)" srcset="images/head1-mobile.jpg">
+            <img src="images/ph/ph-2500x866.jpg" data-src="images/head1-short.jpg" alt="city">
+        </picture>
+
+        <picture class="logo">
+            <img src="images/ph/ph-150x150.jpg" data-src="images/logo-200.png" alt="Salt Lake logo">
+        </picture>
+
+        <nav class="topM">
+            <ul id="top-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="city.html">City</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="siteT">
+            <h1 id="page-title">Salt Lake Chamber of Commerce</h1> 
+            <h4>Utah's Business Leader</h4>
+        </div>      
+    </header>
+
+    <div>
+        <nav class="mobileM">
+            <button onclick="toggleMenu()">&#9776; Menu</button>
+            <ul id="mobile-menu" class="hide">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="city.html">City</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+       
+        <h1>Resources</h1>
+        <h4>Information was used from the following sites.</h4>
+
+        <ul>
+            <li>https://www.visitsaltlake.com/about-salt-lake/quick-facts-and-stats/</li>
+            <li>https://worldpopulationreview.com/us-cities/salt-lake-city-ut-population</li>
+            <li>https://www.visitsaltlake.com/events/</li>
+            <li>https://www.visitsaltlake.com/events/festivals-and-special-events/</li>
+        </ul>
+
+
+    </main>
+
+    <footer>
+        <a id="return-home" href="../index.html">Assignment Portal</a> | <a href="resources.html">Resources</a>
+        <div id="cYear"></div>
+        <div id="mod"></div>
+    </footer>
+    
+    
+    <link rel="stylesheet" href="../css/normalize.css" media="all">
+</body>
+</html>
