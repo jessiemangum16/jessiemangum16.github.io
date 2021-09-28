@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+/***************************** MOBILE SITE *****************************/
+body {
+  margin: 0;
+}
+@media (min-width: 900px) {
+  body div:nth-of-type(1) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+header {
+  background-color: #6495ED;
+  padding: 30px;
+}
+
+main {
+  background-color: #FAEBD7;
+  padding: 30px;
+}
+
+h1, h2 {
+  font-family: "Lora", serif;
+}
+
+li, div, p {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+nav li {
+  padding: 5px 0;
+}
+nav ul {
+  list-style-type: none;
+  text-align: right;
+}
+nav a {
+  color: #FAEBD7;
+  text-decoration: none;
+}
+nav a :hover {
+  color: white;
+  text-decoration: underline;
+}
+nav a :active {
+  color: #DEB887;
+}
+
+h1, h1 a {
+  color: #FAEBD7;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: right;
+}
+h1 :hover, h1 a :hover {
+  color: white;
+  text-decoration: underline;
+}
+
+article {
+  padding: 30px;
+  background-color: white;
+  margin: 20px 0 40px 0;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 900px) {
+  article {
+    margin: 50px;
+  }
+}
+article div.post-date {
+  color: rgba(0, 0, 0, 0.5);
+}
+article h2 {
+  margin: 5px 0 30px 0;
+}
+article h2 a {
+  text-decoration: none;
+  color: black;
+}
+article h2 a :hover {
+  color: #6495ED;
+  text-decoration: underline;
+}
+article h2 a :active {
+  color: #DEB887;
+}
+article figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 250px;
+  width: 80%;
+}
+article p a {
+  color: #6495ED;
+  text-decoration: none;
+}
+article p a :hover {
+  text-decoration: underline;
+}
+article p a :active {
+  color: #DEB887;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -6,23 +6,54 @@ $body-bg-color: #FAEBD7;
 $nav-text: #FAEBD7;
 $nav-text-active: #DEB887;
 $nav-text-hover: white;
+$article-heading: black;
+$article-heading-hover: #6495ED;
+$article-heading-active: #DEB887;
+$article-bg-color: white;
+$article-link-color: #6495ED;
+$article-link-active: #DEB887;
+$article-date-color: rgba(0,0,0,.5);
 
 //fonts
 $heading-font: 'Lora', serif;
 $body-font: Helvetica, Arial, sans-serif;
 
+$section-padding: 30px;
+$article-img-width: 80%;
+$article-img-max-width: 250px;
+
+//breakpoints
+$break-medium: 320px;
+$break-large: 900px;
+
+@mixin breakpoint($break) {
+    @if $break == large {
+        @media (min-width: $break-large) { @content; }
+    } @else if $break == medium {
+        @media (min-width: $break-medium) { @content; }
+    } @else {
+        @media ($break) { @content; }
+    }
+}  
 
 /***************************** MOBILE SITE *****************************/
 body{
     margin: 0;
+    div:nth-of-type(1){
+        @include breakpoint(large){
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+    }
+    
 }
 header{
     background-color: $head-bg-color;
-    padding: 30px;
+    padding: $section-padding;
 }
 main{
-    background-color: $body-bg-color7;
-    padding: 20px;
+    background-color: $body-bg-color;
+    padding: $section-padding;
 }
 h1, h2{
     font-family: $heading-font;
@@ -30,72 +61,74 @@ h1, h2{
 li, div, p{
     font-family: $body-font;
 }
-nav li{
-    padding: 5px 0;
+nav{
+    li{padding: 5px 0;}
+    
+    ul{
+        list-style-type: none;
+        text-align: right;
+    }
+    a{
+        color: $nav-text;
+        text-decoration: none;
+        :hover{
+            color: $nav-text-hover;
+            text-decoration: underline;
+        }
+        :active{
+            color: $nav-text-active;
+        }
+    }
 }
-nav a, h1 a{
+h1, h1 a{
     color: $nav-text;
     text-decoration: none;
-}
-nav ul, h1{
     list-style-type: none;
     text-align: right;
-}
-nav a:active{
-    color: $nav-text-active;
-}
-nav a:hover, h1 a:hover{
-    color: $nav-text-hover;
-    text-decoration: underline;
-}
-article h2{
-    margin: 5px 0 30px 0;
-}
-article h2 a{
-    text-decoration: none;
-    color: black;
-}
-article h2 a:active{
-    color: #DEB887;
-}
-article h2 a:hover{
-    color: #6495ED;
-    text-decoration: underline;
+    :hover{
+        color: $nav-text-hover;
+        text-decoration: underline;
+    }
 }
 article{
-    padding: 20px;
-    background-color: white;
+    @include breakpoint(large) {margin: 50px;}
+    padding: $section-padding;
+    background-color: $article-bg-color;
     margin: 20px 0 40px 0;
     box-shadow: 3px 3px 2px rgba(0,0,0,.2);
-}
-figure img{
-    display: block;
-    margin: 0 auto;
-    max-width: 250px;
-    width: 80%;
-}
-article a{
-    color: #6495ED;
-    text-decoration: none;
-}
-article a:active{
-    color: #DEB887
-}
-article a:hover{
-    text-decoration: underline;
-}
-div.post-date{
-    color: rgba(0,0,0,.5)
+    div.post-date{
+        color: $article-date-color;
+    }
+    h2{
+        margin: 5px 0 30px 0;
+        a{
+            text-decoration: none;
+            color: $article-heading;
+            :hover{
+                color: $article-heading-hover;
+                text-decoration: underline;
+            }
+            :active{
+                color: $article-heading-active;
+            }
+        }
+    }
+    figure img{
+        display: block;
+        margin: 0 auto;
+        max-width: $article-img-max-width;
+        width: $article-img-width;
+    }
+    p a{
+        color: $article-link-color;
+        text-decoration: none;
+        :hover{
+            text-decoration: underline;
+        }
+        :active{
+            color: $article-link-active;
+        }
+    }
 }
 
 
-/***************************** DESKTOP SITE *****************************/
-@media only screen and (min-width: 900px) {
-    body div:nth-of-type(1){
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-    }
-    article{
-        margin: 50px;
-    }
-}
