@@ -1,6 +1,6 @@
-//  import $ from 'jquery';
-//  import popper from 'popper.js';
-//  import bootstrap from 'bootstrap';
+import $ from "jquery";
+import popper from 'popper.js';
+import bootstrap from 'bootstrap';
 // check to see if javascript is working
 function component() {
   const element = document.createElement("p");
