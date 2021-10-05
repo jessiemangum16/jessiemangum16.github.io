@@ -1,0 +1,1 @@
+{"mappings":"AAIA;EACE,kBCCc","sources":["src/scss/styles.scss","src/scss/_variables.scss"],"sourcesContent":["// @import \"node_modules/bootstrap/scss/bootstrap\";\n\n@import \"variables\";\n\nbody {\n  background-color: $body-bg-color;\n}\n",null],"names":[],"version":3,"file":"index.fbb79a5f.css.map","sourceRoot":"/__parcel_source_root/"}
