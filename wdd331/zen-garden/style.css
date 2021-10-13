@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Raleway&display=swap');
+:root {
+    /* change the values below to your colors from your palette */
+    --color1: #003547;
+    --color2: #005e82;
+    --color3: #f3ffb9;
+    --color4: #f8a293;
+    --color5: #ffffff;
+    --links: #50514F;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: 'Lobster', cursive;
+    --paragraph-font: 'Raleway', sans-serif;
+}
+
+p{
+    font-family: var(--paragraph-font);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading-font);
+}
+a{
+    font-family: var(--paragraph-font);
+    color: var(--color2);
+}
+body, .page-wrapper{
+    margin: 0;
+}
+header, .summary{
+    background-color: var(--color1);
+    color: var(--color5);
+    padding: 30px;
+    text-align: center;
+}
+
+aside{
+    background-color: var(--color1);
+    color: var(--color5);
+}
+aside .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+aside .wrapper div{
+    padding: 30px;
+}
+aside h3{
+    text-align: center;
+}
+aside ul{
+    padding: 0;
+}
+aside li{
+    list-style-type: none;
+
+}
