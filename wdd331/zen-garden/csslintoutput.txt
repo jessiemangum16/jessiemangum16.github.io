@@ -1,0 +1,106 @@
+
+style.css
+  2:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+  3:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+  4:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+  5:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+  6:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+  7:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+  8:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+  8:15  ×  Expected "#ffffff" to be "#fff"                                                                color-hex-length                     
+  9:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+  9:14  ×  Expected "#50514F" to be "#50514f"                                                             color-hex-case                       
+ 10:2   ×  Unexpected whitespace at end of line                                                           no-eol-whitespace                    
+ 11:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 12:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 13:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 16:1   ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 17:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 19:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 19:3   ×  Expected newline after ","                                                                     selector-list-comma-newline-after    
+ 19:7   ×  Expected newline after ","                                                                     selector-list-comma-newline-after    
+ 19:11  ×  Expected newline after ","                                                                     selector-list-comma-newline-after    
+ 19:15  ×  Expected newline after ","                                                                     selector-list-comma-newline-after    
+ 19:19  ×  Expected newline after ","                                                                     selector-list-comma-newline-after    
+ 19:22  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 20:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 23:1   ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 24:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 25:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 27:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 27:11  ×  Expected newline after ","                                                                     selector-list-comma-newline-after    
+ 27:13  ×  Expected selector "aside a" to come before selector ".summary a"                               no-descending-specificity            
+ 27:19  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 28:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 30:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 30:5   ×  Expected newline after ","                                                                     selector-list-comma-newline-after    
+ 30:19  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 31:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 33:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 33:7   ×  Expected newline after ","                                                                     selector-list-comma-newline-after    
+ 33:16  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 34:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 35:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 36:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 37:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 39:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 39:10  ×  Expected newline after ","                                                                     selector-list-comma-newline-after    
+ 39:24  ×  Expected newline after ","                                                                     selector-list-comma-newline-after    
+ 39:40  ×  Expected newline after ","                                                                     selector-list-comma-newline-after    
+ 39:51  ×  Expected newline after ","                                                                     selector-list-comma-newline-after    
+ 39:65  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 40:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 41:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 42:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 43:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 44:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 46:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 46:27  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 47:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 48:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 49:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 52:6   ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 53:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 54:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 56:1   ×  Expected selector "footer a" to come before selector ".summary a"                              no-descending-specificity            
+ 56:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 56:8   ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 57:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 59:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 59:25  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 60:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 62:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 62:24  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 63:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 65:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 65:19  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 66:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 68:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 68:25  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 69:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 71:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 71:18  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 72:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 75:5   ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 76:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 77:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 79:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 79:14  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 80:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 81:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 83:1   ×  Expected selector "aside .wrapper div" to come before selector ".main div:nth-of-type(2n-1)"   no-descending-specificity            
+ 83:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 83:18  ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 84:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 86:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 86:8   ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 87:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 89:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 89:8   ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 90:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 92:1   ×  Expected empty line before rule                                                                rule-empty-line-before               
+ 92:8   ×  Expected single space before "{"                                                               block-opening-brace-space-before     
+ 93:5   ×  Expected indentation of 2 spaces                                                               indentation                          
+ 95:1   ×  Unexpected empty line before closing brace                                                     block-closing-brace-empty-line-before
+ 95:1   ×  Unexpected missing end-of-source newline                                                       no-missing-end-of-source-newline
+
