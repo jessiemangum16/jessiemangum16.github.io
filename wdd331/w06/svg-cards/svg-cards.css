@@ -1,0 +1,28 @@
+#mypattern1 .circle:nth-child(1) {
+  fill: #f700ff;
+}
+
+#mypattern1 .rectangle:nth-child(2) {
+  fill: #8400ff;
+}
+
+#mypattern1 .circle:nth-child(3) {
+  fill: #0011ff;
+}
+
+#mypattern1 .rectangle:nth-child(4) {
+  fill: #00ff22;
+}
+
+#mypattern1 .circle:nth-child(5) {
+  fill: #fffb00;
+}
+
+#mypattern1 .rectangle:nth-child(6) {
+  fill: #ff8800;
+}
+
+#mypattern1 .circle:nth-child(7) {
+  fill: #ff0000;
+}
+/*# sourceMappingURL=svg-cards.css.map */

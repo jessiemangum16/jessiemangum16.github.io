@@ -1,0 +1,31 @@
+$red: #ff0000;
+$orange: #ff8800;
+$yellow: #fffb00;
+$green: #00ff22;
+$blue: #0011ff;
+$purple: #8400ff;
+$pink: #f700ff;
+
+#mypattern1{
+    .circle:nth-child(1){
+        fill: $pink;
+    }
+    .rectangle:nth-child(2){
+        fill: $purple;
+    }
+    .circle:nth-child(3){
+        fill: $blue;
+    }
+    .rectangle:nth-child(4){
+        fill: $green;
+    }
+    .circle:nth-child(5){
+        fill: $yellow;
+    }
+    .rectangle:nth-child(6){
+        fill: $orange;
+    }
+    .circle:nth-child(7){
+        fill: $red;
+    }
+}
