@@ -25,4 +25,10 @@
 #mypattern1 .circle:nth-child(7) {
   fill: #ff0000;
 }
+
+#joomla {
+  fill: grey;
+  -webkit-transform: translate(50, 80);
+          transform: translate(50, 80);
+}
 /*# sourceMappingURL=svg-cards.css.map */
