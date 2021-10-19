@@ -1,3 +1,8 @@
+.card {
+  width: 300px;
+  height: 420px;
+}
+
 #mypattern1 .circle:nth-child(1) {
   fill: #f700ff;
 }
@@ -28,7 +33,5 @@
 
 #joomla {
   fill: grey;
-  -webkit-transform: translate(50, 80);
-          transform: translate(50, 80);
 }
 /*# sourceMappingURL=svg-cards.css.map */
