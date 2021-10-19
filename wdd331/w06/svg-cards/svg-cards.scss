@@ -16,6 +16,10 @@ $card-height: 420px;
 .card-rectangle{
     width: $card-width;
     height: $card-height;
+    stroke: black;
+}
+ellipse{
+    fill: pink;
 }
 #mypattern1{
     .circle:nth-child(1){
@@ -43,4 +47,7 @@ $card-height: 420px;
 
 #joomla{
     fill: grey;
+}
+#mypattern3 #cir{
+    fill: lightblue;
 }

@@ -6,6 +6,11 @@
 .card-rectangle {
   width: 300px;
   height: 420px;
+  stroke: black;
+}
+
+ellipse {
+  fill: pink;
 }
 
 #mypattern1 .circle:nth-child(1) {
@@ -38,5 +43,9 @@
 
 #joomla {
   fill: grey;
+}
+
+#mypattern3 #cir {
+  fill: lightblue;
 }
 /*# sourceMappingURL=svg-cards.css.map */
