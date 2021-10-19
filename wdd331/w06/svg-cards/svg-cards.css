@@ -3,6 +3,11 @@
   height: 420px;
 }
 
+.card-rectangle {
+  width: 300px;
+  height: 420px;
+}
+
 #mypattern1 .circle:nth-child(1) {
   fill: #f700ff;
 }
