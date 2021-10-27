@@ -12,20 +12,31 @@ $paragraph-font: "Raleway", sans-serif;
 //FONTS
 p {
   font-family: $paragraph-font;
+  font-size: 16px;
+  line-height: 20px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
   font-family: $heading-font;
+  font-size: 80px;
+  margin: 0;
+}
+h2{
+  font-family: $paragraph-font;
+  font-size: 30px;
+}
+h3{
+  font-family: $heading-font;
+  font-size: 40px;
 }
 
 a {
   font-family: $paragraph-font;
   color: $dark-blue;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
 }
 
 .summary a {
@@ -47,6 +58,15 @@ header,
 }
 
 //CONTENT
+@keyframes slide-in-left {
+  from {transform: translateX(100%); opacity:0}
+  to {transform: translateX(0%); opacity:1}
+}
+
+@keyframes slide-in-right {
+  from {transform: translateX(-100%); opacity:0}
+  to {transform: translateX(0%); opacity:1}
+}
 .preamble,
 .explanation,
 .participation,
@@ -55,14 +75,22 @@ header,
   background-color: $pink;
   max-width: 60%;
   padding: 75px;
-  margin: 50px 0;
-  box-shadow: 30px 30px 0 $blue;
+  margin: 150px 0;
+  box-shadow: 75px 75px 0 $blue;
+  animation: slide-in-left 2s;
 }
 
 .main div:nth-of-type(2n-1) {
   text-align: right;
   margin-left: auto;
-  box-shadow: -30px 30px 0 $blue;
+  box-shadow: -75px 75px 0 $blue;
+  animation: slide-in-right 2s;
+}
+
+.requirements p:last-child{
+  font-size: 18px;
+  font-style: italic;
+  padding: 50px 0 0 0;
 }
 
 //ICONS
@@ -71,7 +99,7 @@ footer {
   padding: 50px;
 
   a {
-    width: 50px;
+    width: 75px;
   }
   .zen-validate-html {
     content: url(icons/icon-1.svg);
@@ -101,10 +129,11 @@ aside {
   a {
     color: $white;
     text-decoration: none;
-  }
-  a:hover{
+    &:hover{
       color: $pink;
   }
+  }
+  
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
