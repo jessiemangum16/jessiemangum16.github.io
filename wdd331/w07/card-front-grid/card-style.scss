@@ -1,0 +1,42 @@
+$card-width: 500px;
+$large-shape: 130px;
+$small-shape: 50px;
+$num-size: 80px;
+$color: red;
+
+.card-front{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: $card-width;
+    height: $card-width * 1.4;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    text-align: center;
+}
+svg.red{
+    fill: $color;
+}
+div svg{
+    width: $large-shape;
+}
+div.num svg{
+    width: $small-shape;
+    height: $small-shape;
+}
+.flip{
+    transform: rotate(180deg);
+}
+p{
+    font-size: $num-size;
+    margin: 0 0 10px 0;
+    color: $color;
+}
+.left{
+    grid-column: 2 / span 3;
+}
+.right{
+    grid-column: 5 / span 3;
+}
+.center{
+    grid-column: span 8;
+}
