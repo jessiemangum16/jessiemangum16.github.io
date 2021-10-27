@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Raleway&display=swap");
+p {
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lobster", cursive;
+}
+
+a {
+  font-family: "Raleway", sans-serif;
+  color: #003547;
+}
+
+.summary a {
+  color: #f8a293;
+}
+
+body,
+.page-wrapper {
+  margin: 0;
+}
+
+header,
+.summary {
+  background-color: #003547;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  background-color: #f8a293;
+  max-width: 60%;
+  padding: 75px;
+  margin: 50px 0;
+  -webkit-box-shadow: 30px 30px 0 #005e82;
+          box-shadow: 30px 30px 0 #005e82;
+}
+
+.main div:nth-of-type(2n-1) {
+  text-align: right;
+  margin-left: auto;
+  -webkit-box-shadow: -30px 30px 0 #005e82;
+          box-shadow: -30px 30px 0 #005e82;
+}
+
+footer {
+  text-align: center;
+  padding: 50px;
+}
+
+footer a {
+  width: 50px;
+}
+
+footer .zen-validate-html {
+  content: url(icons/icon-1.svg);
+}
+
+footer .zen-validate-css {
+  content: url(icons/icon-2.svg);
+}
+
+footer .zen-license {
+  content: url(icons/icon-3.svg);
+}
+
+footer .zen-accessibility {
+  content: url(icons/icon-4.svg);
+}
+
+footer .zen-github {
+  content: url(icons/icon-5.svg);
+}
+
+aside {
+  background-color: #003547;
+  color: #fff;
+}
+
+aside a {
+  color: #fff;
+  text-decoration: none;
+}
+
+aside a:hover {
+  color: #f8a293;
+}
+
+aside .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+aside .wrapper div {
+  padding: 30px;
+}
+
+aside h3 {
+  text-align: center;
+}
+
+aside ul {
+  padding: 0;
+}
+
+aside li {
+  list-style-type: none;
+}
+/*# sourceMappingURL=style.css.map */

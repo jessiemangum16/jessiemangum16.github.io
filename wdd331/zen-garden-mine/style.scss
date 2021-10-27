@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Raleway&display=swap");
+
+$dark-blue: #003547;
+$blue: #005e82;
+$yellow: #f3ffb9;
+$pink: #f8a293;
+$white: #fff;
+
+$heading-font: "Lobster", cursive;
+$paragraph-font: "Raleway", sans-serif;
+
+//FONTS
+p {
+  font-family: $paragraph-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+}
+
+a {
+  font-family: $paragraph-font;
+  color: $dark-blue;
+}
+
+.summary a {
+  color: $pink;
+}
+
+body,
+.page-wrapper {
+  margin: 0;
+}
+
+//HEADER
+header,
+.summary {
+  background-color: $dark-blue;
+  color: $white;
+  padding: 30px;
+  text-align: center;
+}
+
+//CONTENT
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  background-color: $pink;
+  max-width: 60%;
+  padding: 75px;
+  margin: 50px 0;
+  box-shadow: 30px 30px 0 $blue;
+}
+
+.main div:nth-of-type(2n-1) {
+  text-align: right;
+  margin-left: auto;
+  box-shadow: -30px 30px 0 $blue;
+}
+
+//ICONS
+footer {
+  text-align: center;
+  padding: 50px;
+
+  a {
+    width: 50px;
+  }
+  .zen-validate-html {
+    content: url(icons/icon-1.svg);
+  }
+
+  .zen-validate-css {
+    content: url(icons/icon-2.svg);
+  }
+
+  .zen-license {
+    content: url(icons/icon-3.svg);
+  }
+
+  .zen-accessibility {
+    content: url(icons/icon-4.svg);
+  }
+
+  .zen-github {
+    content: url(icons/icon-5.svg);
+  }
+}
+
+//FOOTER
+aside {
+  background-color: $dark-blue;
+  color: $white;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+  a:hover{
+      color: $pink;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .wrapper div {
+    padding: 30px;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
