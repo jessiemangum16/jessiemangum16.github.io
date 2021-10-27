@@ -1,0 +1,10 @@
+$card-width: 500px;
+
+@import 'partials/grid-partial.scss';
+
+.card-front{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: $card-width;
+    height: $card-width * 1.4;
+}
