@@ -1,21 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Raleway&display=swap");
-
-:root {
-  /* change the values below to your colors from your palette */
-  --color1: #003547;
-  --color2: #005e82;
-  --color3: #f3ffb9;
-  --color4: #f8a293;
-  --color5: #fff;
-  --links: #50514f;
-
-  /* change the values below to your chosen font(s) */
-  --heading-font: "Lobster", cursive;
-  --paragraph-font: "Raleway", sans-serif;
-}
-
 p {
-  font-family: var(--paragraph-font);
+  font-family: "Raleway", sans-serif;
 }
 
 h1,
@@ -24,17 +9,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--heading-font);
+  font-family: "Lobster", cursive;
 }
 
 a {
-  font-family: var(--paragraph-font);
-  color: var(--color2);
+  font-family: "Raleway", sans-serif;
+  color: #003547;
 }
 
-aside a,
 .summary a {
-  color: var(--color4);
+  color: #f8a293;
 }
 
 body,
@@ -44,8 +28,8 @@ body,
 
 header,
 .summary {
-  background-color: var(--color1);
-  color: var(--color5);
+  background-color: #003547;
+  color: #fff;
   padding: 30px;
   text-align: center;
 }
@@ -59,13 +43,15 @@ header,
   max-width: 60%;
   padding: 75px;
   margin: 50px 0;
-  box-shadow: 30px 30px 0 var(--color2);
+  -webkit-box-shadow: 30px 30px 0 #005e82;
+          box-shadow: 30px 30px 0 #005e82;
 }
 
 .main div:nth-of-type(2n-1) {
   text-align: right;
   margin-left: auto;
-  box-shadow: -30px 30px 0 var(--color2);
+  -webkit-box-shadow: -30px 30px 0 #005e82;
+          box-shadow: -30px 30px 0 #005e82;
 }
 
 footer {
@@ -98,13 +84,19 @@ footer .zen-github {
 }
 
 aside {
-  background-color: var(--color1);
-  color: var(--color5);
+  background-color: #003547;
+  color: #fff;
+}
+
+aside a {
+  color: #fff;
 }
 
 aside .wrapper {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
 }
 
 aside .wrapper div {
@@ -122,3 +114,4 @@ aside ul {
 aside li {
   list-style-type: none;
 }
+/*# sourceMappingURL=style.css.map */
