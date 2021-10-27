@@ -90,6 +90,11 @@ aside {
 
 aside a {
   color: #fff;
+  text-decoration: none;
+}
+
+aside a:hover {
+  color: #f8a293;
 }
 
 aside .wrapper {
