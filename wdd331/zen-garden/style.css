@@ -109,13 +109,14 @@ header,
   max-width: 60%;
   padding: 75px;
   margin: 150px 0;
-  -webkit-box-shadow: 75px 75px 0 #005e82;
-          box-shadow: 75px 75px 0 #005e82;
+  -webkit-box-shadow: 75px 75px 0 #003547;
+          box-shadow: 75px 75px 0 #003547;
   -webkit-animation: slide-in-left 2s;
           animation: slide-in-left 2s;
 }
 
 .main div:nth-of-type(2n-1) {
+  background-color: #f3ffb9;
   text-align: right;
   margin-left: auto;
   -webkit-box-shadow: -75px 75px 0 #005e82;
@@ -137,6 +138,11 @@ footer {
 
 footer a {
   width: 75px;
+}
+
+footer a:hover {
+  -webkit-filter: invert(88%) sepia(37%) saturate(1223%) hue-rotate(298deg) brightness(100%) contrast(95%);
+          filter: invert(88%) sepia(37%) saturate(1223%) hue-rotate(298deg) brightness(100%) contrast(95%);
 }
 
 footer .zen-validate-html {
