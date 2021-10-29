@@ -9,25 +9,55 @@ $white: #fff;
 $heading-font: "Lobster", cursive;
 $paragraph-font: "Raleway", sans-serif;
 
+$break-small: 0px;
+$break-medium: 480px;
+$break-large: 1200px;
+
+@mixin breakpoint($break) {
+  @if $break == large {
+      @media (min-width: $break-large) { @content; }
+  } @else if $break == medium {
+      @media (min-width: $break-medium) { @content; }
+  } @else if $break == small {
+      @media (min-width: $break-small) { @content; }
+  } @else {
+      @media ($break) { @content; }
+  }
+} 
+
 //FONTS
 p {
   font-family: $paragraph-font;
   font-size: 16px;
-  line-height: 20px;
 }
 
 h1 {
   font-family: $heading-font;
-  font-size: 80px;
+  font-size: 40px;
   margin: 0;
+  @include breakpoint(medium){
+    font-size: 60px;
+  }
+  @include breakpoint(large){
+    font-size: 80px;
+  }
 }
 h2{
   font-family: $paragraph-font;
-  font-size: 30px;
+  font-size: 20px;
+  @include breakpoint(large){
+    font-size: 30px;
+  }
 }
 h3{
   font-family: $heading-font;
-  font-size: 40px;
+  font-size: 25px;
+  @include breakpoint(medium){
+    font-size: 30px;
+  }
+  @include breakpoint(large){
+    font-size: 40px;
+  }
 }
 
 a {
@@ -73,19 +103,37 @@ header,
 .benefits,
 .requirements {
   background-color: $pink;
-  max-width: 60%;
-  padding: 75px;
-  margin: 150px 0;
-  box-shadow: 75px 75px 0 $dark-blue;
+  max-width: 75%;
+  padding: 25px;
+  margin: 50px 0;
+  box-shadow: 25px 25px 0 $dark-blue;
   animation: slide-in-left 2s;
+  @include breakpoint(medium){
+    max-width: 60%;
+    padding: 50px;
+    margin: 75px 0;
+    box-shadow: 37.5px 37.5px 0 $dark-blue;
+  }
+  @include breakpoint(large){
+    max-width: 60%;
+    padding: 75px;
+    margin: 150px 0;
+    box-shadow: 75px 75px 0 $dark-blue;
+  }
 }
 
 .main div:nth-of-type(2n-1) {
   background-color: $yellow;
   text-align: right;
   margin-left: auto;
-  box-shadow: -75px 75px 0 $blue;
+  box-shadow: -25px 25px 0 $blue;
   animation: slide-in-right 2s;
+  @include breakpoint(medium){
+    box-shadow: 37.5px 37.5px 0 $blue;
+  }
+  @include breakpoint(large){
+    box-shadow: -75px 75px 0 $blue;
+  }
 }
 
 .requirements p:last-child{
@@ -100,7 +148,10 @@ footer {
   padding: 50px;
 
   a {
-    width: 75px;
+    width: 45px;
+    @include breakpoint(large){
+      width: 75px;
+    }
   }
   a:hover{
     filter: invert(88%) sepia(37%) saturate(1223%) hue-rotate(298deg) brightness(100%) contrast(95%);
@@ -130,6 +181,7 @@ footer {
 aside {
   background-color: $dark-blue;
   color: $white;
+  
   a {
     color: $white;
     text-decoration: none;
@@ -140,11 +192,25 @@ aside {
   
   .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    @include breakpoint(medium){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .design-selection{
+        grid-row: span 2;
+      }
+    }
+    @include breakpoint(large){
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 
   .wrapper div {
-    padding: 30px;
+    padding: 10px;
+    @include breakpoint(large){
+      padding: 30px;
+    }
   }
 
   h3 {
