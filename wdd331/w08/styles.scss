@@ -1,10 +1,15 @@
 $card-width: 500px;
-$large-shape: 130px;
-$small-shape: 50px;
+$large-shape: 120px;
+$small-shape: 40px;
 $num-size: 80px;
 $color: red;
 
-@import "partials/grid-partial.scss";
+@supports (display: grid) {
+    @import 'partials/grid-partial.scss';
+}
+@supports not (display: grid) {
+    @import 'partials/flex-partial.scss';
+}
 
 .card-front{
     border: 1px solid black;

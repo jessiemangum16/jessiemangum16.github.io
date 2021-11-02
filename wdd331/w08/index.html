@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Card Front 2 - Grid and Flex</title>
+    <meta name="description" content="Card Front 2 - Grid and Flex">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+
+    <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-heart" viewBox="0 0 1024 1024">
+                <title>heart</title>
+                <path class="path1" d="M755.188 64c-107.63 0-200.258 87.554-243.164 179-42.938-91.444-135.578-179-243.216-179-148.382 0-268.808 120.44-268.808 268.832 0 301.846 304.5 380.994 512.022 679.418 196.154-296.576 511.978-387.206 511.978-679.418 0-148.392-120.43-268.832-268.812-268.832z"></path>
+            </symbol>          
+        </defs>
+    </svg>
+
+    <div class="card card-front row">
+
+        <div class="num cell col-1"><p>7</p><svg class="icon red">  <use xlink:href="#icon-heart"></use>    </svg></div>
+
+        <div class="left cell col-2"><svg class="icon red"><use xlink:href="#icon-heart"></use></svg></div>
+        <div class="right cell col-2 offset-2"><svg class="icon red"><use xlink:href="#icon-heart"></use></svg></div>
+        <div class="center cell col-8"><svg class="icon red"><use xlink:href="#icon-heart"></use></svg></div>
+        <div class="left flip cell col-2 offset-1"><svg class="icon red"><use xlink:href="#icon-heart"></use></svg></div>
+        <div class="right flip cell col-2 offset-2"><svg class="icon red"><use xlink:href="#icon-heart"></use></svg></div>
+        <div class="left flip cell col-2 offset-1"><svg class="icon red"><use xlink:href="#icon-heart"></use></svg></div>
+        <div class="right flip cell col-2 offset-2"><svg class="icon red"><use xlink:href="#icon-heart"></use></svg></div>
+
+        <div class="num flip cell col-1"><p>7</p><svg class="icon red">  <use xlink:href="#icon-heart"></use>    </svg></div>
+        
+    </div> 
+
+  </body>
+</html>
