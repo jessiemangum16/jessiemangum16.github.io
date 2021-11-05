@@ -10,6 +10,23 @@ $body-font: #020202;
 $link-blue: #0076b6; //why do we have both of these blues?
 $byui-blue: #056cb6;
 
+$break-small: 0px;
+$break-medium: 576px;
+$break-medium2: 576px;
+$break-large: 1000px;
+
+@mixin breakpoint($break) {
+  @if $break == large {
+      @media (min-width: $break-large) { @content; }
+  } @else if $break == medium {
+      @media (min-width: $break-medium) { @content; }
+  } @else if $break == small {
+      @media (min-width: $break-small) { @content; }
+  } @else {
+      @media ($break) { @content; }
+  }
+} 
+
 // Utility classes
 *,
 *:before,
@@ -73,13 +90,32 @@ button{
 
 
 header {
+  background-color: $byui-blue;
   .site-banner{
-    background-color: $byui-blue;
+    max-width: 1150px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     form{
       grid-column: span 2;
+      background-color: black;
+      div{
+        margin: 5px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+      }
+      #searchDesktop{
+        width: 100%;
+        border: none;
+        padding: 5px;
+      }
+      button{
+        background-color: #68AD44;
+        border-radius: 0 5px 5px 0;
+        padding: 5px 10px;
+        margin-left: -5px;
+      }
     }
     .site-banner__left{
       background-color: black;
@@ -88,6 +124,9 @@ header {
         color: white;
         text-decoration: none;
         font-size: 30px;
+        @include breakpoint(large){
+          font-size: 50px;
+        }
       }
     }
     .site-banner__right{
@@ -97,6 +136,9 @@ header {
         color: white;
         text-decoration: none;
         font-size: 30px;
+        @include breakpoint(large){
+          font-size: 50px;
+        }
       }
     }
   }
@@ -105,6 +147,16 @@ header {
     border-bottom: 1px solid black;
     text-align: center;
     padding: 20px 0;
+    @include breakpoint(medium){
+      text-align: left;
+    }
+    @include breakpoint(large){
+      border: none;
+    }
+    div{
+      max-width: 1150px;
+      margin: 0 auto;
+    }
     h1{
       font-size: 20px;
       margin: 0;
@@ -113,19 +165,53 @@ header {
 }
 
 main{
-  margin: 40px 15px;
+  padding: 40px 15px;
+  @include breakpoint(medium){
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  @include breakpoint(large){
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+  }
+}
+.main-content{
+  max-width: 750px;
 }
 .covid-info{
   background-color: black;
   color: white;
-  margin-bottom: 36px;
-  padding: 1px 0 21px 0;
+  padding: 20px 0;
   text-align: center;
+  margin: 0 auto 36px auto;
+  @include breakpoint(large){
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+  }
+  button{
+    height: 35px;
+    width: 200px;
+  }
+}
+.devotional{
+  margin: 0 auto;
 }
 .interest-box{
+  @include breakpoint(large){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
   figure {
-    margin: 40px 0;
+    margin: 40px auto;
     border: 1px solid $med-gray;
+    @include breakpoint(medium){
+      max-width: 450px;
+    }
     img{
       width: 100%;
     }
@@ -136,15 +222,50 @@ main{
   }
 }
 aside{
-  .info-dropdown button{
-    width: 100%;
-    padding: 10px 20px;
-    text-align: left;
-    font-size: 15px;
-    background-color: $light-gray;
-    border: 1px solid $med-gray;
-    border-radius: 5px;
-    color: black;
+  .info-dropdown{
+    button{
+      width: 100%;
+      padding: 10px 20px;
+      text-align: left;
+      font-size: 15px;
+      background-color: $light-gray;
+      border: 1px solid $med-gray;
+      border-radius: 5px;
+      color: black;
+    }
+    #checkBtn2{
+      display: none;
+    }
+    #info-menu{
+      display: none;
+    }
+    #checkBtn2:checked ~ #info-menu{
+      display: block;
+    }
+    ul{
+      padding: 0;
+      float: center;
+      position: absolute;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      box-shadow: 5px 5px 5px $med-gray;
+      li{
+        
+        background-color: white;
+        list-style: none;
+        border-bottom: 1px solid $med-gray;
+        border-left: 1px solid $med-gray;
+        border-right: 1px solid $med-gray;
+        padding: 10px 20px;
+        margin: 0 -15px;
+        a{
+          text-decoration: none;
+          color: $link-blue;
+          
+        }
+      }
+    }
   }
   .resources{
     margin: 30px 0;
@@ -190,8 +311,18 @@ aside{
     border-top: 1px solid $med-gray;
     padding: 30px 0 20px 0;
   }
+  .article{
+    @include breakpoint(large){
+      display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 20px;
+    }
+  }
   img{
     display: none;
+    @include breakpoint(large){
+      display: inline-block;
+    }
   }
   h4{
     color: $byui-blue;

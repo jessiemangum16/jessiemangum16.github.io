@@ -23,6 +23,7 @@
                 <span class="sr-only">Submit</span>
               </span>
             </button>
+            
           </div>
         </form>
         <div class="site-banner__left">
@@ -54,35 +55,52 @@
         
         
       </div>
-      <div class="title">
-        <h1>Brigham Young University - Idaho</h1>
-      </div>
+      <section class="title">
+        <div >
+          <h1>Brigham Young University - Idaho</h1>
+        </div>
+      </section>
+      
     </header>
+
     <main>
-      <section class="covid-info">
-        <h2>Latest COVID-19 Information</h2>
-        <button>COVID-19 Updates</button>
-      </section>
-      <section class="devotional">
-        <img src="img/President-message.jpg" alt="President Devotional">
-      </section>
-      <section class="interest-box">
-        <figure>
-          <img src="img/CampusVideos.jpg" alt="Campus Videos">
-          <figcaption>Campus Videos<span class="icon-angle-right right"></span></figcaption>
-        </figure>
-        <figure>
-          <img src="img/PhotoGallery(0).jpg" alt="Photo Gallery">
-          <figcaption>Photo Gallery<span class="icon-angle-right right"></span></figcaption>
-        </figure>
-        <figure>
-          <img src="img/ExploreCampus.jpg" alt="Explore Campus">
-          <figcaption>Explore Campus<span class="icon-angle-right right"></span></figcaption>
-        </figure>
-      </section>
+
+      <div class="main-content">
+        <section class="covid-info">
+          <h2>Latest COVID-19 Information</h2>
+          <button>COVID-19 Updates</button>
+        </section>
+        <section class="devotional">
+          <img src="img/President-message.jpg" alt="President Devotional">
+        </section>
+        <section class="interest-box">
+          <figure>
+            <img src="img/CampusVideos.jpg" alt="Campus Videos">
+            <figcaption>Campus Videos<span class="icon-angle-right right"></span></figcaption>
+          </figure>
+          <figure>
+            <img src="img/PhotoGallery(0).jpg" alt="Photo Gallery">
+            <figcaption>Photo Gallery<span class="icon-angle-right right"></span></figcaption>
+          </figure>
+          <figure>
+            <img src="img/ExploreCampus.jpg" alt="Explore Campus">
+            <figcaption>Explore Campus<span class="icon-angle-right right"></span></figcaption>
+          </figure>
+        </section>
+      </div>
+
       <aside>
         <section class="info-dropdown">
-          <button class="bold">GET INFORMATION FOR:<span class="icon-triangle-down right"></span></button>
+          <button><label for="checkBtn2" class="bold">GET INFORMATION FOR:<span class="icon-triangle-down right"></span></label></button>
+          
+          <input type="checkbox" id="checkBtn2">
+          <ul id="info-menu">
+            <li><a href="#">Future Students</a></li>
+            <li><a href="#">Current Students</a></li>
+            <li><a href="#">Employees</a></li>
+            <li><a href="#">Parents and Family</a></li>
+            <li><a href="#">Visitors</a></li>
+          </ul>
         </section>
         <section class="resources">
           <h3>Resources</h3>
@@ -107,40 +125,58 @@
           </div>
           
         </section>
-      
-      
       </aside>
-      <section class="newsroom">
-        <div>
-          <img src="img/HYMN.jpg" alt="Organ Playing">
-          <div class="article-date bold">October 21, 2021</div>
-          <h4 class="bold">BYU-Idaho Department of Music announces a call for hymn texts</h4>
-          <p>Requests have been made to submit original hymn texts for use in the seventeenth annual BYU-Idaho Hymn Festival to be held in the spring of 2022.</p>
-        </div>
-        <div>
-          <img src="img/Radio interview Eyrings 2021.png" alt="Organ Playing">
-          <div class="article-date bold">September 13, 2021</div>
-          <h4 class="bold">BYU-Idaho Radio Interview With the Eyrings</h4>
-          <p>President and Sister Eyring discuss their Fall 2021 devotional message to students.</p>
-        </div>
-        <div>
-          <img src="img/Study.jpg" alt="Organ Playing">
-          <div class="article-date bold">August 30, 2021</div>
-          <h4 class="bold">Students Take Advantage of Summer Term Offerings</h4>
-          <p>BYU-Idaho continues to support students during the 2021 Summer Session through on-campus and online classes.</p>
-        </div>
-        <button class="right">Newsroom</button>
-      </section>
-      <section class="devotional-message">
-        <img src="img/Devo_ElderSisterSabin.jpeg" alt="Elder and Sister Sabin">
-        <div>
-          <h4>Devotional with Elder Gary B. and Sister Valerie Sabin</h4>
-          <p class="article-date bold">Tuesday, November 9, 2021 at 11:30 AM</p>
-          <p>Devotional Topic: Principles of Peace and Happiness</p>
-          <button>View Devotional</button>
-        </div>
-        
-      </section>
+
+      <div class="main-content">
+        <section class="newsroom">
+          <div class="article">
+            <div>
+              <img src="img/HYMN.jpg" alt="Organ Playing">
+            </div>
+            <div>
+              <div class="article-date bold">October 21, 2021</div>
+              <h4 class="bold">BYU-Idaho Department of Music announces a call for hymn texts</h4>
+              <p>Requests have been made to submit original hymn texts for use in the seventeenth annual BYU-Idaho Hymn Festival to be held in the spring of 2022.</p>
+            </div>
+            
+          </div>
+          <div class="article">
+            <div>
+              <img src="img/Radio interview Eyrings 2021.png" alt="Organ Playing">
+            </div>
+            <div>
+              <div class="article-date bold">September 13, 2021</div>
+              <h4 class="bold">BYU-Idaho Radio Interview With the Eyrings</h4>
+              <p>President and Sister Eyring discuss their Fall 2021 devotional message to students.</p>
+            </div>
+          </div>
+          <div class="article">
+            <div>
+              <img src="img/Study.jpg" alt="Organ Playing">
+            </div>
+            <div>
+              <div class="article-date bold">August 30, 2021</div>
+              <h4 class="bold">Students Take Advantage of Summer Term Offerings</h4>
+              <p>BYU-Idaho continues to support students during the 2021 Summer Session through on-campus and online classes.</p>
+            </div>
+          </div>
+          <button class="right">Newsroom</button>
+        </section>
+      </div>
+
+      <div>
+        <section class="devotional-message">
+          <img src="img/Devo_ElderSisterSabin.jpeg" alt="Elder and Sister Sabin">
+          <div>
+            <h4>Devotional with Elder Gary B. and Sister Valerie Sabin</h4>
+            <p class="article-date bold">Tuesday, November 9, 2021 at 11:30 AM</p>
+            <p>Devotional Topic: Principles of Peace and Happiness</p>
+            <button>View Devotional</button>
+          </div>
+        </section>
+      </div>
+      
+      
     </main>
     
     <footer>
