@@ -1017,6 +1017,29 @@
   box-sizing: border-box;
 }
 
+h1, h2 {
+  font-family: 'BYUI Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+h3, h4, figcaption, a, p {
+  font-family: 'BYUI Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.icon-angle-right {
+  font-size: 10px;
+  padding: .6em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+}
+
 img {
   max-width: 100%;
 }
@@ -1032,32 +1055,218 @@ img {
   border: 0;
 }
 
+.hide {
+  display: none;
+}
+
+.right {
+  float: right;
+}
+
+#checkBtn:checked ~ #search-bar {
+  display: block;
+}
+
+button {
+  background-color: #056cb6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+
+.article-date {
+  font-size: 11px;
+  font-family: 'BYUI Open Sans', sans-serif;
+}
+
 header .site-banner {
   background-color: #056cb6;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 72px 1fr;
-      grid-template-columns: 72px 1fr;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .site-banner form {
+  grid-column: span 2;
 }
 
 header .site-banner .site-banner__left {
   background-color: black;
-  width: 72px;
-  height: 35px;
+  padding: 10px;
 }
 
 header .site-banner .site-banner__left a {
   color: white;
   text-decoration: none;
-  width: 100%;
+  font-size: 30px;
+}
+
+header .site-banner .site-banner__right {
+  text-align: right;
+  padding: 10px;
 }
 
 header .site-banner .site-banner__right a {
   color: white;
   text-decoration: none;
+  font-size: 30px;
 }
 
-header .site-banner .site-banner__right a .icon-search {
-  width: 30px;
+header .title {
+  background-color: #eaeaea;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header .title h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+main {
+  margin: 40px 15px;
+}
+
+.covid-info {
+  background-color: black;
+  color: white;
+  margin-bottom: 36px;
+  padding: 1px 0 21px 0;
+  text-align: center;
+}
+
+.interest-box figure {
+  margin: 40px 0;
+  border: 1px solid #b4b3b5;
+}
+
+.interest-box figure img {
+  width: 100%;
+}
+
+.interest-box figure figcaption {
+  color: #056cb6;
+  padding: 10px;
+}
+
+aside .info-dropdown button {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 15px;
+  background-color: #eaeaea;
+  border: 1px solid #b4b3b5;
+  border-radius: 5px;
+  color: black;
+}
+
+aside .resources {
+  margin: 30px 0;
+}
+
+aside .resources h3 {
+  background-color: #727272;
+  color: white;
+  padding: 10px 20px;
+  margin: 0;
+  border: 1px solid #b4b3b5;
+}
+
+aside .resources a {
+  display: block;
+  text-decoration: none;
+  color: #0076b6;
+  border-bottom: 1px solid #b4b3b5;
+  border-left: 1px solid #b4b3b5;
+  border-right: 1px solid #b4b3b5;
+  padding: 10px 20px;
+}
+
+aside .important-dates h3 {
+  background-color: #056cb6;
+  color: white;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+aside .important-dates .dates {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 8fr;
+      grid-template-columns: 2fr 1fr 8fr;
+  padding: 10px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #b4b3b5;
+}
+
+aside .important-dates .dates p {
+  margin: 0;
+}
+
+.newsroom {
+  padding: 30px 0 80px 0;
+}
+
+.newsroom > div {
+  border-top: 1px solid #b4b3b5;
+  padding: 30px 0 20px 0;
+}
+
+.newsroom img {
+  display: none;
+}
+
+.newsroom h4 {
+  color: #056cb6;
+}
+
+.devotional-message {
+  border: 1px solid #b4b3b5;
+  border-radius: 10px;
+}
+
+.devotional-message img {
+  border-radius: 10px 10px 0 0;
+}
+
+.devotional-message div {
+  padding: 0 20px 30px 20px;
+}
+
+footer .footer-graphic {
+  padding-top: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+footer .footer-top {
+  background-color: #eaeaea;
+  height: 60px;
+  border-top: 1px solid #b4b3b5;
+}
+
+footer .footer-bottom {
+  background-color: black;
+  text-align: center;
+}
+
+footer .footer-bottom a {
+  color: white;
+  text-decoration: none;
+  padding: 0 20px;
+  display: inline-block;
+}
+
+footer .footer-bottom div {
+  padding: 20px 0;
 }
 /*# sourceMappingURL=styles.css.map */
