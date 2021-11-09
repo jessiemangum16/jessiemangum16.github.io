@@ -81,6 +81,8 @@ body,
   50% {
     -webkit-transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg);
             transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg);
+    -webkit-filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
+            filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
   }
   75% {
     -webkit-transform: translateZ(5px) translateY(5px) translateX(5px) skewY(5deg);
@@ -104,6 +106,8 @@ body,
   50% {
     -webkit-transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg);
             transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg);
+    -webkit-filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
+            filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
   }
   75% {
     -webkit-transform: translateZ(5px) translateY(5px) translateX(5px) skewY(5deg);
@@ -127,6 +131,8 @@ body,
   50% {
     -webkit-transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1);
             transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1);
+    -webkit-filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
+            filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
   }
   75% {
     -webkit-transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(-5deg) scaleX(-1);
@@ -150,6 +156,8 @@ body,
   50% {
     -webkit-transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1);
             transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1);
+    -webkit-filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
+            filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
   }
   75% {
     -webkit-transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(-5deg) scaleX(-1);
@@ -171,7 +179,9 @@ header,
 
 header h1::before,
 .summary h1::before {
-  content: url(icons/palm-pink.svg);
+  content: url(icons/palm-black.svg);
+  -webkit-filter: invert(74%) sepia(9%) saturate(2441%) hue-rotate(318deg) brightness(101%) contrast(94%);
+          filter: invert(74%) sepia(9%) saturate(2441%) hue-rotate(318deg) brightness(101%) contrast(94%);
   float: left;
   width: 375px;
   -webkit-animation: animatePalmLeft 10s .5s ease infinite;
@@ -180,7 +190,9 @@ header h1::before,
 
 header h1::after,
 .summary h1::after {
-  content: url(icons/palm-pink.svg);
+  content: url(icons/palm-black.svg);
+  -webkit-filter: invert(74%) sepia(9%) saturate(2441%) hue-rotate(318deg) brightness(101%) contrast(94%);
+          filter: invert(74%) sepia(9%) saturate(2441%) hue-rotate(318deg) brightness(101%) contrast(94%);
   float: right;
   width: 375px;
   -webkit-transform: scaleX(-1);
@@ -330,27 +342,43 @@ footer a {
 }
 
 footer .zen-validate-html {
-  content: url(icons/icon-01.svg);
+  content: url(icons/icons-01.svg);
 }
 
 footer .zen-validate-html:hover {
-  content: url(icons/icon-01-hover.svg);
+  content: url(icons/icons-01-hover.svg);
 }
 
 footer .zen-validate-css {
-  content: url(icons/icon-02.svg);
+  content: url(icons/icons-02.svg);
+}
+
+footer .zen-validate-css:hover {
+  content: url(icons/icons-02-hover.svg);
 }
 
 footer .zen-license {
-  content: url(icons/icon-03.svg);
+  content: url(icons/icons-03.svg);
+}
+
+footer .zen-license:hover {
+  content: url(icons/icons-03-hover.svg);
 }
 
 footer .zen-accessibility {
-  content: url(icons/icon-04.svg);
+  content: url(icons/icons-04.svg);
+}
+
+footer .zen-accessibility:hover {
+  content: url(icons/icons-04-hover.svg);
 }
 
 footer .zen-github {
-  content: url(icons/icon-05.svg);
+  content: url(icons/icons-05.svg);
+}
+
+footer .zen-github:hover {
+  content: url(icons/icons-05-hover.svg);
 }
 
 aside {

@@ -81,14 +81,14 @@ body,
 @keyframes animatePalmLeft {
 	0% { transform: translateZ(0px) translateY(0) translateX(0) skewY(0deg) ; }
 	25% { transform: translateZ(5px) translateY(5px) translateX(5px) skewY(5deg); }
-	50% { transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg); }
+	50% { transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg); filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);}
 	75% { transform: translateZ(5px) translateY(5px) translateX(5px) skewY(5deg); }
 	100% { transform: translateZ(0px) translateY(0px) translateX(0px) skewY(0deg); }
 } 
 @keyframes animatePalmRight {
 	0% { transform: translateZ(0px) translateY(0) translateX(0) skewY(0deg) scaleX(-1); }
 	25% { transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(-5deg) scaleX(-1); }
-	50% { transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1); }
+	50% { transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1); filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);}
 	75% { transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(-5deg) scaleX(-1); }
 	100% { transform: translateZ(0px) translateY(0px) translateX(0px) skewY(0deg) scaleX(-1); }
 } 
@@ -101,13 +101,15 @@ header,
   padding: 30px;
   text-align: center;
   h1::before{
-    content: url(icons/palm-pink.svg);
+    content: url(icons/palm-black.svg);
+    filter: invert(74%) sepia(9%) saturate(2441%) hue-rotate(318deg) brightness(101%) contrast(94%);
     float: left;
     width: 375px;
     animation: animatePalmLeft 10s .5s ease infinite;
   }
   h1::after{
-    content: url(icons/palm-pink.svg);
+    content: url(icons/palm-black.svg);
+    filter: invert(74%) sepia(9%) saturate(2441%) hue-rotate(318deg) brightness(101%) contrast(94%);
     float: right;
     width: 375px;
     transform: scaleX(-1);
@@ -185,26 +187,38 @@ footer {
     //filter: invert(88%) sepia(37%) saturate(1223%) hue-rotate(298deg) brightness(100%) contrast(95%);
   }
   .zen-validate-html {
-    content: url(icons/icon-01.svg);
+    content: url(icons/icons-01.svg);
     &:hover{
-      content: url(icons/icon-01-hover.svg);
+      content: url(icons/icons-01-hover.svg);
     }
   }
 
   .zen-validate-css {
-    content: url(icons/icon-02.svg);
+    content: url(icons/icons-02.svg);
+    &:hover{
+      content: url(icons/icons-02-hover.svg);
+    }
   }
 
   .zen-license {
-    content: url(icons/icon-03.svg);
+    content: url(icons/icons-03.svg);
+    &:hover{
+      content: url(icons/icons-03-hover.svg);
+    }
   }
 
   .zen-accessibility {
-    content: url(icons/icon-04.svg);
+    content: url(icons/icons-04.svg);
+    &:hover{
+      content: url(icons/icons-04-hover.svg);
+    }
   }
 
   .zen-github {
-    content: url(icons/icon-05.svg);
+    content: url(icons/icons-05.svg);
+    &:hover{
+      content: url(icons/icons-05-hover.svg);
+    }
   }
 }
 
