@@ -78,13 +78,41 @@ body,
   margin: 0;
 }
 
+@keyframes animatePalmLeft {
+	0% { transform: translateZ(0px) translateY(0) translateX(0) skewY(0deg) ; }
+	25% { transform: translateZ(5px) translateY(5px) translateX(5px) skewY(5deg); }
+	50% { transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg); }
+	75% { transform: translateZ(5px) translateY(5px) translateX(5px) skewY(5deg); }
+	100% { transform: translateZ(0px) translateY(0px) translateX(0px) skewY(0deg); }
+} 
+@keyframes animatePalmRight {
+	0% { transform: translateZ(0px) translateY(0) translateX(0) skewY(0deg) scaleX(-1); }
+	25% { transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(-5deg) scaleX(-1); }
+	50% { transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1); }
+	75% { transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(-5deg) scaleX(-1); }
+	100% { transform: translateZ(0px) translateY(0px) translateX(0px) skewY(0deg) scaleX(-1); }
+} 
 //HEADER
+
 header,
 .summary {
   background-color: $dark-blue;
   color: $white;
   padding: 30px;
   text-align: center;
+  h1::before{
+    content: url(icons/palm-pink.svg);
+    float: left;
+    width: 375px;
+    animation: animatePalmLeft 10s .5s ease infinite;
+  }
+  h1::after{
+    content: url(icons/palm-pink.svg);
+    float: right;
+    width: 375px;
+    transform: scaleX(-1);
+    animation: animatePalmRight 10s .5s ease infinite;
+  }
 }
 
 //CONTENT
@@ -154,26 +182,29 @@ footer {
     }
   }
   a:hover{
-    filter: invert(88%) sepia(37%) saturate(1223%) hue-rotate(298deg) brightness(100%) contrast(95%);
+    //filter: invert(88%) sepia(37%) saturate(1223%) hue-rotate(298deg) brightness(100%) contrast(95%);
   }
   .zen-validate-html {
-    content: url(icons/icon-1.svg);
+    content: url(icons/icon-01.svg);
+    &:hover{
+      content: url(icons/icon-01-hover.svg);
+    }
   }
 
   .zen-validate-css {
-    content: url(icons/icon-2.svg);
+    content: url(icons/icon-02.svg);
   }
 
   .zen-license {
-    content: url(icons/icon-3.svg);
+    content: url(icons/icon-03.svg);
   }
 
   .zen-accessibility {
-    content: url(icons/icon-4.svg);
+    content: url(icons/icon-04.svg);
   }
 
   .zen-github {
-    content: url(icons/icon-5.svg);
+    content: url(icons/icon-05.svg);
   }
 }
 
