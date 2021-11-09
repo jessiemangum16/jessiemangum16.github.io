@@ -81,8 +81,6 @@ body,
   50% {
     -webkit-transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg);
             transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg);
-    -webkit-filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
-            filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
   }
   75% {
     -webkit-transform: translateZ(5px) translateY(5px) translateX(5px) skewY(5deg);
@@ -106,8 +104,6 @@ body,
   50% {
     -webkit-transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg);
             transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg);
-    -webkit-filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
-            filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
   }
   75% {
     -webkit-transform: translateZ(5px) translateY(5px) translateX(5px) skewY(5deg);
@@ -131,8 +127,6 @@ body,
   50% {
     -webkit-transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1);
             transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1);
-    -webkit-filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
-            filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
   }
   75% {
     -webkit-transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(-5deg) scaleX(-1);
@@ -156,8 +150,6 @@ body,
   50% {
     -webkit-transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1);
             transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1);
-    -webkit-filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
-            filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);
   }
   75% {
     -webkit-transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(-5deg) scaleX(-1);
@@ -179,9 +171,7 @@ header,
 
 header h1::before,
 .summary h1::before {
-  content: url(icons/palm-black.svg);
-  -webkit-filter: invert(74%) sepia(9%) saturate(2441%) hue-rotate(318deg) brightness(101%) contrast(94%);
-          filter: invert(74%) sepia(9%) saturate(2441%) hue-rotate(318deg) brightness(101%) contrast(94%);
+  content: url(icons/palm-pink.svg);
   float: left;
   width: 375px;
   -webkit-animation: animatePalmLeft 10s .5s ease infinite;
@@ -190,9 +180,7 @@ header h1::before,
 
 header h1::after,
 .summary h1::after {
-  content: url(icons/palm-black.svg);
-  -webkit-filter: invert(74%) sepia(9%) saturate(2441%) hue-rotate(318deg) brightness(101%) contrast(94%);
-          filter: invert(74%) sepia(9%) saturate(2441%) hue-rotate(318deg) brightness(101%) contrast(94%);
+  content: url(icons/palm-pink.svg);
   float: right;
   width: 375px;
   -webkit-transform: scaleX(-1);

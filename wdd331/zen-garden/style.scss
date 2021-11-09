@@ -81,14 +81,14 @@ body,
 @keyframes animatePalmLeft {
 	0% { transform: translateZ(0px) translateY(0) translateX(0) skewY(0deg) ; }
 	25% { transform: translateZ(5px) translateY(5px) translateX(5px) skewY(5deg); }
-	50% { transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg); filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);}
+	50% { transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(5deg); }
 	75% { transform: translateZ(5px) translateY(5px) translateX(5px) skewY(5deg); }
 	100% { transform: translateZ(0px) translateY(0px) translateX(0px) skewY(0deg); }
 } 
 @keyframes animatePalmRight {
 	0% { transform: translateZ(0px) translateY(0) translateX(0) skewY(0deg) scaleX(-1); }
 	25% { transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(-5deg) scaleX(-1); }
-	50% { transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1); filter: invert(96%) sepia(42%) saturate(494%) hue-rotate(353deg) brightness(102%) contrast(103%);}
+	50% { transform: translateZ(5px) translateY(5px) translateX(5px) skewY(-5deg) scaleX(-1); }
 	75% { transform: translateZ(-5px) translateY(-5px) translateX(-5px) skewY(-5deg) scaleX(-1); }
 	100% { transform: translateZ(0px) translateY(0px) translateX(0px) skewY(0deg) scaleX(-1); }
 } 
@@ -101,15 +101,13 @@ header,
   padding: 30px;
   text-align: center;
   h1::before{
-    content: url(icons/palm-black.svg);
-    filter: invert(74%) sepia(9%) saturate(2441%) hue-rotate(318deg) brightness(101%) contrast(94%);
+    content: url(icons/palm-pink.svg);
     float: left;
     width: 375px;
     animation: animatePalmLeft 10s .5s ease infinite;
   }
   h1::after{
-    content: url(icons/palm-black.svg);
-    filter: invert(74%) sepia(9%) saturate(2441%) hue-rotate(318deg) brightness(101%) contrast(94%);
+    content: url(icons/palm-pink.svg);
     float: right;
     width: 375px;
     transform: scaleX(-1);
