@@ -374,6 +374,15 @@ aside {
   color: #fff;
 }
 
+aside:before {
+  content: "";
+  background-image: url(images/149662.svg);
+  background-color: #fff;
+  height: 50vw;
+  width: 100%;
+  display: block;
+}
+
 aside a {
   color: #fff;
   text-decoration: none;
