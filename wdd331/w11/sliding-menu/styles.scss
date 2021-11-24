@@ -1,0 +1,57 @@
+$transition-timing: 1s;
+
+body{
+  margin: 0;
+}
+#menu{
+  width: 200px;
+  height: 100vh;
+  background-color: rgb(41, 42, 97);
+  position: relative;
+  transition-duration: $transition-timing;
+  float: left;
+  z-index: 2;
+  padding: 20px;
+  transform: translateX(-100%);
+}
+#menu.open{
+  transform: translateX(0);
+}
+#menu-icon::before{
+  content: '\2630';
+  font-size: 30px;
+  transition: margin $transition-timing, transform $transition-timing, color .2s;
+  color: grey;
+  float: right;
+  margin:  0 -50px 0 0;
+  transform: scaleX(1);
+}
+#menu-icon:hover::before{
+  color: black;
+}
+#menu-icon.open::before{
+  content: "\2715";
+  float: right;
+  color: rgb(172, 172, 172);;
+  margin: 0;
+  transform: scaleX(-1);
+}
+#menu-icon.open:hover::before{
+  color: white;
+}
+#menu-list ul{
+  list-style-type: none;
+  padding: 20px;
+}
+#menu-list ul li{
+  color: rgb(172, 172, 172);
+  padding: 10px;
+}
+#menu-list ul li:hover{
+  color: white;
+}
+#content{
+  z-index: 1;
+  position: absolute;
+  padding: 50px;
+}
