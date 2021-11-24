@@ -1,4 +1,8 @@
 $transition-timing: 1s;
+$black: black;
+$grey: rgb(172, 172, 172);
+$white: white;
+$blue: rgb(41, 42, 97);
 
 body{
   margin: 0;
@@ -6,7 +10,7 @@ body{
 #menu{
   width: 200px;
   height: 100vh;
-  background-color: rgb(41, 42, 97);
+  background-color: $blue;
   position: relative;
   transition-duration: $transition-timing;
   float: left;
@@ -20,35 +24,35 @@ body{
 #menu-icon::before{
   content: '\2630';
   font-size: 30px;
-  transition: margin $transition-timing, transform $transition-timing, color .2s;
-  color: grey;
+  transition: margin $transition-timing, transform $transition-timing;
+  color: $grey;
   float: right;
   margin:  0 -50px 0 0;
   transform: scaleX(1);
 }
 #menu-icon:hover::before{
-  color: black;
+  color: $black;
 }
 #menu-icon.open::before{
   content: "\2715";
   float: right;
-  color: rgb(172, 172, 172);;
+  color: $grey;
   margin: 0;
   transform: scaleX(-1);
 }
 #menu-icon.open:hover::before{
-  color: white;
+  color: $white;
 }
 #menu-list ul{
   list-style-type: none;
   padding: 20px;
 }
 #menu-list ul li{
-  color: rgb(172, 172, 172);
+  color: $grey;
   padding: 10px;
 }
 #menu-list ul li:hover{
-  color: white;
+  color: $white;
 }
 #content{
   z-index: 1;
