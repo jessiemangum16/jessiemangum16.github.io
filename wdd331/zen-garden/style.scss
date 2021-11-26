@@ -100,16 +100,26 @@ header,
   color: $white;
   padding: 30px;
   text-align: center;
+  h1{
+    position: relative;
+    z-index:50;
+  }
   h1::before{
     content: url(icons/palm-pink.svg);
+    position: absolute;
+    left: 0;
+    z-index: 1;
     float: left;
-    width: 375px;
+    width: 20%;
     animation: animatePalmLeft 10s .5s ease infinite;
   }
   h1::after{
     content: url(icons/palm-pink.svg);
+    position: absolute;
+    right: 0;
+    z-index: 1;
     float: right;
-    width: 375px;
+    width: 20%;
     transform: scaleX(-1);
     animation: animatePalmRight 10s .5s ease infinite;
   }
@@ -125,42 +135,72 @@ header,
   from {transform: translateX(-100%); opacity:0}
   to {transform: translateX(0%); opacity:1}
 }
+
 .preamble,
 .explanation,
 .participation,
 .benefits,
 .requirements {
+  position: relative;
   background-color: $pink;
   max-width: 75%;
   padding: 25px;
   margin: 50px 0;
-  box-shadow: 25px 25px 0 $dark-blue;
-  animation: slide-in-left 2s;
   @include breakpoint(medium){
     max-width: 60%;
     padding: 50px;
     margin: 75px 0;
-    box-shadow: 37.5px 37.5px 0 $dark-blue;
   }
   @include breakpoint(large){
     max-width: 60%;
     padding: 75px;
     margin: 150px 0;
-    box-shadow: 75px 75px 0 $dark-blue;
+  }
+}
+.preamble::after,
+.participation::after,
+.requirements::after{
+  position: absolute;
+  z-index: -1;
+  top: 25px;
+  left: 25px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: $dark-blue;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232b5563' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  @include breakpoint(medium){
+    top: 50px;
+    left: 50px;
+  }
+  @include breakpoint(large){
+    top: 75px;
+    left: 75px;
   }
 }
 
-.main div:nth-of-type(2n-1) {
+  .main div:nth-of-type(2n-1) {
   background-color: $yellow;
   text-align: right;
   margin-left: auto;
-  box-shadow: -25px 25px 0 $blue;
-  animation: slide-in-right 2s;
-  @include breakpoint(medium){
-    box-shadow: 37.5px 37.5px 0 $blue;
-  }
-  @include breakpoint(large){
-    box-shadow: -75px 75px 0 $blue;
+  &::after{
+    position: absolute;
+    z-index: -1;
+    top: 25px;
+    right: 25px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $blue;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23437a8d' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E"); 
+    @include breakpoint(medium){
+      top: 50px;
+      right: 50px;
+    }
+    @include breakpoint(large){
+      top: 75px;
+      right: 75px;
+    }
   }
 }
 
