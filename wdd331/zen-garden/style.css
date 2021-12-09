@@ -201,58 +201,6 @@ header h1::after,
           animation: animatePalmRight 10s .5s ease infinite;
 }
 
-@-webkit-keyframes slide-in-left {
-  from {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in-left {
-  from {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes slide-in-right {
-  from {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in-right {
-  from {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
 .preamble,
 .explanation,
 .participation,

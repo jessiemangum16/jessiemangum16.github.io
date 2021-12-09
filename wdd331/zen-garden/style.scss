@@ -126,16 +126,6 @@ header,
 }
 
 //CONTENT
-@keyframes slide-in-left {
-  from {transform: translateX(100%); opacity:0}
-  to {transform: translateX(0%); opacity:1}
-}
-
-@keyframes slide-in-right {
-  from {transform: translateX(-100%); opacity:0}
-  to {transform: translateX(0%); opacity:1}
-}
-
 .preamble,
 .explanation,
 .participation,
@@ -146,6 +136,7 @@ header,
   max-width: 75%;
   padding: 25px;
   margin: 50px 0;
+  
   @include breakpoint(medium){
     max-width: 60%;
     padding: 50px;
