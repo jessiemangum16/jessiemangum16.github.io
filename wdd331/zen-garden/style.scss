@@ -260,20 +260,18 @@ footer {
       content: url(icons/icons-05-hover.svg);
     }
   }
+  &::after{
+    content: url(images/149662.svg);
+    width: 80%;
+    display: block;
+  }
 }
 
 //FOOTER
 aside {
   background-color: $dark-blue;
   color: $white;
-  &:before{
-    content: "";
-    background-image: url(images/149662.svg);
-    background-color: $white;
-    height: 50vw;
-    width: 100%;
-    display: block;
-  }
+  
   a {
     color: $white;
     text-decoration: none;

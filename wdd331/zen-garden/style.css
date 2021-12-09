@@ -416,18 +416,15 @@ footer .zen-github:hover {
   content: url(icons/icons-05-hover.svg);
 }
 
+footer::after {
+  content: url(images/149662.svg);
+  width: 80%;
+  display: block;
+}
+
 aside {
   background-color: #003547;
   color: #fff;
-}
-
-aside:before {
-  content: "";
-  background-image: url(images/149662.svg);
-  background-color: #fff;
-  height: 50vw;
-  width: 100%;
-  display: block;
 }
 
 aside a {
