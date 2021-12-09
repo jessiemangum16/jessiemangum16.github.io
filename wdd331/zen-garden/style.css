@@ -417,9 +417,25 @@ footer .zen-github:hover {
 }
 
 footer::after {
-  content: url(images/149662.svg);
-  width: 80%;
+  content: url(images/beach.svg);
+  width: 100%;
   display: block;
+  margin-bottom: -85px;
+  margin-top: 50px;
+}
+
+@media (min-width: 480px) {
+  footer::after {
+    margin-bottom: -140px;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer::after {
+    margin-bottom: -280px;
+    margin-top: 50px;
+  }
 }
 
 aside {

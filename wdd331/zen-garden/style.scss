@@ -261,9 +261,22 @@ footer {
     }
   }
   &::after{
-    content: url(images/149662.svg);
-    width: 80%;
+    content: url(images/beach.svg);
+    width: 100%;
     display: block;
+    margin-bottom: -85px;
+    margin-top: 50px;
+
+    @include breakpoint(medium){
+      margin-bottom: -140px;
+      margin-top: 50px;
+    }
+
+    @include breakpoint(large){
+      margin-bottom: -280px;
+      margin-top: 50px;
+    }
+    
   }
 }
 
