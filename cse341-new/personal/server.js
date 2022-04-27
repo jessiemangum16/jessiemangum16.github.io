@@ -1,17 +1,23 @@
 const express = require('express');
-const mongodb = require('./DB/connection');
+const bodyParser = require('body-parser');
+const mongodb = require('./db/connection');
 
-const app = express();
 const port = process.env.PORT || 3000;
+const app = express();
 
-app.use('/', require('./routes'))
-
+app
+  .use(bodyParser.json())
+  .use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  })
+  .use('/', require('./routes'));
 
 mongodb.initDb((err, mongodb) => {
-  if(err) {
+  if (err) {
     console.log(err);
-  }else{
+  } else {
     app.listen(port);
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Connected to DB and listening on ${port}`);
   }
 });
