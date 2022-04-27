@@ -13,4 +13,11 @@ GET http://localhost:3000/contacts/62689ccf2736de3a1685023d
 //production
 
 ###
-GET https://cse341-jm.herokuapp.com
+GET https://cse341-jm.herokuapp.com/contacts
+###
+GET https://cse341-jm.herokuapp.com/contacts/62689ccf2736de3a1685023b
+###
+GET https://cse341-jm.herokuapp.com/contacts/62689ccf2736de3a1685023c
+###
+GET https://cse341-jm.herokuapp.com/contacts/62689ccf2736de3a1685023d
+###
