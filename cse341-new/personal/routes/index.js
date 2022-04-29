@@ -1,6 +1,10 @@
 const express = require('express');
-const router = express.Router();
+const routes = express.Router();
 
-router.use('/contacts', require('./contacts'))
+routes.use('/contacts', require('./contacts'))
 
-module.exports = router;
+routes.get('/', (req,res) =>{
+    res.send("This is index");
+})
+
+module.exports = routes;
