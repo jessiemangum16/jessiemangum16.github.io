@@ -1,25 +1,14 @@
-const mongodb = require('../db/connection');
-const ObjectId = require('mongodb').ObjectId;
-
-const getAll = async (req, res, next) => {
-  const result = await mongodb.getDb().db('cse341').collection('contacts').find();
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists);
+const dotenv = require('dotenv');
+dotenv.config();
+  
+const MongoClient = require('mongodb').MongoClient;
+const uri = process.env.MONGODB_URI;
+MongoClient.connect(uri, function(err, db){
+  if(err) throw err;
+  var dbo = db.db("cse341");
+  dbo.collection("contacts").find().toArray(function(err, result){
+    if (err) throw err;
+    res.json(result);
+    db.close;
   });
-};
-
-const getSingle = async (req, res, next) => {
-  const userId = new ObjectId(req.params.id);
-  const result = await mongodb
-    .getDb()
-    .db('cse341')
-    .collection('contacts')
-    .find({ _id: userId });
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists[0]);
-  });
-};
-
-module.exports = { getAll, getSingle };
+});
