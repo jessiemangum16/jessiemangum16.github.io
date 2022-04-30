@@ -1,13 +1,13 @@
 //localhost
 ###
 
-GET http://localhost:3000/contacts
+GET http://localhost:8080/contacts
 ###
-GET http://localhost:3000/contacts/62689ccf2736de3a1685023b
+GET http://localhost:8080/contacts/62689ccf2736de3a1685023b
 ###
-GET http://localhost:3000/contacts/62689ccf2736de3a1685023c
+GET http://localhost:8080/contacts/62689ccf2736de3a1685023c
 ###
-GET http://localhost:3000/contacts/62689ccf2736de3a1685023d
+GET http://localhost:8080/contacts/62689ccf2736de3a1685023d
 ###
 
 //production

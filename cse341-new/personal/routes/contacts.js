@@ -1,28 +1,28 @@
 const express = require('express');
 const routes = express.Router();
+const dbConnection = require('../db/connection');
+const ObjectId = require('mongodb').ObjectId;
 
 routes.get('/', (req,res) =>{
-
-    const dotenv = require('dotenv');
-    dotenv.config();
     
-    const MongoClient = require('mongodb').MongoClient;
-    const uri = process.env.MONGODB_URI;
-    MongoClient.connect(uri, function(err, db){
-    if(err) throw err;
-    var dbo = db.db("cse341");
-    dbo.collection("contacts").find().toArray(function(err, result){
-        if (err) throw err;
-        res.json(result);
-        db.close;
+    dbConnection.getCollection().find().toArray().then((documents) => {
+        res.status(200).json(documents);
+        console.log('returned all contact');
     });
+
+});
+
+routes.get('/:id', (req,res) =>{
+
+    const contactId = new ObjectId(req.params.id);
+    const results = dbConnection.getCollection().find({_id: contactId});
+
+
+    results.toArray().then((documents) => {
+        res.status(200).json(documents[0]);
+        console.log(`returned contact ${req.params.id}`);
     });
     
-})
-
-//const contactsController = require('../controllers/contacts');
-//router.get('/', contactsController.getAll);
-
-//router.get('/:id', contactsController.getSingle);
+});
 
 module.exports = routes;
