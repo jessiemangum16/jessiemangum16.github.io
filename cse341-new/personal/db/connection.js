@@ -22,6 +22,4 @@ const getCollection = () => {
 }
 
 
-
-
 module.exports = {initDb, getCollection}
