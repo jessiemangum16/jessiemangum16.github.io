@@ -3,12 +3,35 @@
 
 GET http://localhost:8080/contacts
 ###
-GET http://localhost:8080/contacts/62689ccf2736de3a1685023b
-###
-GET http://localhost:8080/contacts/62689ccf2736de3a1685023c
-###
 GET http://localhost:8080/contacts/62689ccf2736de3a1685023d
-###
+
+
+### CREATE CONTACT
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Johnny",
+    "lastName": "Depp",
+    "email": "johnny@depp.com",
+    "favColor": "Maroon",
+    "birthday": "06/25/84"
+}
+
+### UPDATE CONTACT
+PUT http://localhost:8080/contacts/62689ccf2736de3a1685023d HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Chris",
+    "lastName": "Hemsworth",
+    "email": "Chris@thor.com",
+    "favColor": "Pink",
+    "birthday": "08/06/75"
+}
+
+### DELETE CONTACT
+DELETE http://localhost:8080/contacts/62748913ca6358eb0136b049 HTTP/1.1
 
 //production
 
@@ -17,7 +40,29 @@ GET https://cse341-jm.herokuapp.com/contacts
 ###
 GET https://cse341-jm.herokuapp.com/contacts/62689ccf2736de3a1685023b
 ###
-GET https://cse341-jm.herokuapp.com/contacts/62689ccf2736de3a1685023c
-###
-GET https://cse341-jm.herokuapp.com/contacts/62689ccf2736de3a1685023d
-###
+### CREATE CONTACT
+POST https://cse341-jm.herokuapp.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Johnny",
+    "lastName": "Depp",
+    "email": "johnny@depp.com",
+    "favColor": "Maroon",
+    "birthday": "06/25/84"
+}
+
+### UPDATE CONTACT
+PUT https://cse341-jm.herokuapp.com/contacts/62689ccf2736de3a1685023d HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Chris",
+    "lastName": "Hemsworth",
+    "email": "Chris@thor.com",
+    "favColor": "Pink",
+    "birthday": "08/06/75"
+}
+
+### DELETE CONTACT
+DELETE https://cse341-jm.herokuapp.com/contacts/62748913ca6358eb0136b049 HTTP/1.1
