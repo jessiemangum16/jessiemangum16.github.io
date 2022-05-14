@@ -1,7 +1,8 @@
 const express = require('express');
 const routes = express.Router();
 
-routes.use('/contacts', require('./contacts'))
+routes.use('/', require('./swagger'));
+routes.use('/contacts', require('./contacts'));
 
 
 routes.get('/', (req,res) =>{
