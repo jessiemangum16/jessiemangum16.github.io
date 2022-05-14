@@ -36,7 +36,7 @@ routes.post("/", (req, res) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
-    favColor: req.body.favoriteColor,
+    favColor: req.body.favColor,
     birthday: req.body.birthday,
   };
 
@@ -44,6 +44,7 @@ routes.post("/", (req, res) => {
     .getCollection()
     .insertOne(contact)
     .then((result) => {
+      res.status(200).json(result[0]);
       console.log(result);
       console.log(contact);
     })
@@ -58,7 +59,7 @@ routes.put("/:id", (req, res) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
-    favColor: req.body.favoriteColor,
+    favColor: req.body.favColor,
     birthday: req.body.birthday,
   };
 

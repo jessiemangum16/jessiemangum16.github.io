@@ -5,10 +5,10 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341-jm.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
@@ -57,7 +57,7 @@
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "favColor": {
                   "example": "any"
                 },
                 "birthday": {
@@ -67,7 +67,11 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/contacts/{id}": {
@@ -111,7 +115,7 @@
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "favColor": {
                   "example": "any"
                 },
                 "birthday": {
