@@ -5,10 +5,10 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "event-book-cse341.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
@@ -29,7 +29,7 @@
         "responses": {}
       }
     },
-    "/users/": {
+    "/events/": {
       "get": {
         "description": "",
         "parameters": [],
@@ -48,19 +48,13 @@
             "schema": {
               "type": "object",
               "properties": {
-                "username": {
-                  "example": "any"
-                },
-                "password": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
                 "eventName": {
                   "example": "any"
                 },
                 "date": {
+                  "example": "any"
+                },
+                "eventHost": {
                   "example": "any"
                 },
                 "startTime": {
@@ -86,12 +80,12 @@
         }
       }
     },
-    "/users/{username}": {
+    "/events/{eventName}": {
       "get": {
         "description": "",
         "parameters": [
           {
-            "name": "username",
+            "name": "eventName",
             "in": "path",
             "required": true,
             "type": "string"
@@ -107,7 +101,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "username",
+            "name": "eventName",
             "in": "path",
             "required": true,
             "type": "string"
@@ -118,13 +112,25 @@
             "schema": {
               "type": "object",
               "properties": {
-                "username": {
+                "eventName": {
                   "example": "any"
                 },
-                "password": {
+                "date": {
                   "example": "any"
                 },
-                "email": {
+                "eventHost": {
+                  "example": "any"
+                },
+                "startTime": {
+                  "example": "any"
+                },
+                "endTime": {
+                  "example": "any"
+                },
+                "location": {
+                  "example": "any"
+                },
+                "comments": {
                   "example": "any"
                 }
               }
@@ -141,7 +147,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "username",
+            "name": "eventName",
             "in": "path",
             "required": true,
             "type": "string"

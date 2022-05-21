@@ -11,7 +11,7 @@ const initDb = () => {
   MongoClient.connect(process.env.MONGODB_URI, (err, client) =>{
     if(err) throw err;
     _client = client;
-    _collectionEvents = client.db("eventBook").collection("eventa")
+    _collectionEvents = client.db("eventBook").collection("events")
     _collectionLocation = client.db("eventBook").collection("location")
     console.log("DB Connected");
     });

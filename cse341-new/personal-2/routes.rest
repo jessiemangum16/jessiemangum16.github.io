@@ -1,79 +1,76 @@
 //localhost
 ###
 
-GET http://localhost:8080/users
+GET http://localhost:8080/events
 ###
-GET http://localhost:8080/users/jess
+GET http://localhost:8080/events/Memorial Day Party
 
 
 ### CREATE 
-POST http://localhost:8080/users HTTP/1.1
+POST http://localhost:8080/events HTTP/1.1
 content-type: application/json
 
 {
-    "user": {
-        "username": "NewUser",
-        "password": "PassWord",
-        "email": "new@gmail.com",
-        "events": [
-            {
-                "eventName": "Memorial Day Party",
-                "date": "5/30/2022",
-                "startTime": "5:00 PM",
-                "endTime": "8:00 PM",
-                "location": "All Star Bowling",
-                "comments": "Join us for an awesome party!" 
-            }
-            
-        ]
-    }
+    "eventName": "Memorial Day Party",
+    "date": "5/30/2022",
+    "eventHost": "Jess",
+    "startTime": "5:00 PM",
+    "endTime": "8:00 PM",
+    "location": "All Star Bowling",
+    "comments": "Join us for an awesome party!"
 }
 
 ### UPDATE
-PUT http://localhost:8080/contacts/62689ccf2736de3a1685023d HTTP/1.1
+PUT http://localhost:8080/events/Memorial Day Party HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Chris",
-    "lastName": "Hemsworth",
-    "email": "Chris@thor.com",
-    "favColor": "Pink",
-    "birthday": "08/06/75"
+    "eventName": "Memorial Day Party",
+    "date": "6/3/2022",
+    "eventHost": "Tim",
+    "startTime": "5:00 PM",
+    "endTime": "8:00 PM",
+    "location": "All Star Bowling",
+    "comments": "Join us for an awesome party!"
 }
 
-### DELETE CONTACT
-DELETE http://localhost:8080/contacts/62748913ca6358eb0136b049 HTTP/1.1
+### DELETE
+DELETE http://localhost:8080/events/Memorial Day Party HTTP/1.1
 
 //production
 
 ###
-GET https://cse341-jm.herokuapp.com/contacts
+GET https://cse341-jm.herokuapp.com/events
 ###
-GET https://cse341-jm.herokuapp.com/contacts/62689ccf2736de3a1685023b
+GET https://cse341-jm.herokuapp.com/events/Memorial Day Party
 ###
 ### CREATE CONTACT
-POST https://cse341-jm.herokuapp.com/contacts HTTP/1.1
+POST https://cse341-jm.herokuapp.com/events HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Johnny",
-    "lastName": "Depp",
-    "email": "johnny@depp.com",
-    "favColor": "Maroon",
-    "birthday": "06/25/84"
+    "eventName": "Birthday Party",
+    "date": "7/21/2022",
+    "eventHost": "Jess",
+    "startTime": "5:00 PM",
+    "endTime": "8:00 PM",
+    "location": "Tim's House",
+    "comments": "Join us for an awesome party!"
 }
 
 ### UPDATE CONTACT
-PUT https://cse341-jm.herokuapp.com/contacts/62689ccf2736de3a1685023d HTTP/1.1
+PUT https://cse341-jm.herokuapp.com/events/Birthday Party HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Chris",
-    "lastName": "Hemsworth",
-    "email": "Chris@thor.com",
-    "favColor": "Green",
-    "birthday": "08/06/75"
+    "eventName": "Birthday Party",
+    "date": "7/21/2022",
+    "eventHost": "Becky",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "location": "Tim's House",
+    "comments": "Join us for an awesome party!"
 }
 
 ### DELETE CONTACT
-DELETE https://cse341-jm.herokuapp.com/contacts/62748a4dd0576c530b5b5778 HTTP/1.1
+DELETE https://cse341-jm.herokuapp.com/events/Birthday Party HTTP/1.1
