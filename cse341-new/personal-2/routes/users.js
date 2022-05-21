@@ -7,10 +7,10 @@ const ObjectId = require("mongodb").ObjectId;
 routes.use(bodyParser.urlencoded({ extended: false }));
 routes.use(bodyParser.json());
 
-//Get ALL users
+//Get ALL contacts
 routes.get("/", (req, res) => {
   dbConnection
-    .getCollection()
+    .getCollectionUsers()
     .find()
     .toArray()
     .then((documents) => {
@@ -22,7 +22,7 @@ routes.get("/", (req, res) => {
 //Get ONE contacts
 routes.get("/:id", (req, res) => {
   const contactId = new ObjectId(req.params.id);
-  const results = dbConnection.getCollection().find({ _id: contactId });
+  const results = dbConnection.getCollectionUsers().find({ _id: contactId });
 
   results.toArray().then((documents) => {
     res.status(200).json(documents[0]);
@@ -41,7 +41,7 @@ routes.post("/", (req, res) => {
   };
 
   dbConnection
-    .getCollection()
+    .getCollectionUsers()
     .insertOne(contact)
     .then((result) => {
       res.status(200).json(result[0]);
@@ -64,7 +64,7 @@ routes.put("/:id", (req, res) => {
   };
 
   const results = dbConnection
-    .getCollection()
+    .getCollectionUsers()
     .replaceOne({ _id: contactId }, contact);
 
   results.then((documents) => {
@@ -78,7 +78,7 @@ routes.delete("/:id", (req, res) => {
   console.log(req.body);
 
   const contactId = new ObjectId(req.params.id);
-  const results = dbConnection.getCollection().deleteOne({ _id: contactId });
+  const results = dbConnection.getCollectionUsers().deleteOne({ _id: contactId });
 
   results.then((documents) => {
     res.status(200).json(documents[0]);

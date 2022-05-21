@@ -1,7 +1,10 @@
 {
     "location": {
         "locationName": "All Star Bowling",
-        "address": "123 E 345 S Draper, UT 84121",
+        "streetAddress": "123 E 345 S",
+        "city": "Draper",
+        "state": "Utah",
+        "zipCode": "84121",
         "webAddress": "https://www.thislocation.com",
         "phoneNum": "888-123-4567"
     }

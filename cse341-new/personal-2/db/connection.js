@@ -12,7 +12,7 @@ const initDb = () => {
     if(err) throw err;
     _client = client;
     _collectionUsers = client.db("eventBook").collection("users")
-    _collectionEvents = client.db("eventBook").collection("events")
+    _collectionLocation = client.db("eventBook").collection("location")
     console.log("DB Connected");
     });
 
@@ -22,9 +22,9 @@ const getCollectionUsers = () => {
   return _collectionUsers
 }
 
-const getCollectionEvents = () => {
-  return _collectionEvents
+const getCollectionLocation = () => {
+  return _collectionLocation
 }
 
 
-module.exports = {initDb, getCollectionUsers, getCollectionEvents}
+module.exports = {initDb, getCollectionUsers, getCollectionLocation}
