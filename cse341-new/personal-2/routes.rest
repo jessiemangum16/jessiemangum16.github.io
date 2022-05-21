@@ -1,24 +1,35 @@
 //localhost
 ###
 
-GET http://localhost:8080/contacts
+GET http://localhost:8080/users
 ###
-GET http://localhost:8080/contacts/62689ccf2736de3a1685023d
+GET http://localhost:8080/users/jess
 
 
-### CREATE CONTACT
-POST http://localhost:8080/contacts HTTP/1.1
+### CREATE 
+POST http://localhost:8080/users HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Johnny",
-    "lastName": "Depp",
-    "email": "johnny@depp.com",
-    "favColor": "Maroon",
-    "birthday": "06/25/84"
+    "user": {
+        "username": "NewUser",
+        "password": "PassWord",
+        "email": "new@gmail.com",
+        "events": [
+            {
+                "eventName": "Memorial Day Party",
+                "date": "5/30/2022",
+                "startTime": "5:00 PM",
+                "endTime": "8:00 PM",
+                "location": "All Star Bowling",
+                "comments": "Join us for an awesome party!" 
+            }
+            
+        ]
+    }
 }
 
-### UPDATE CONTACT
+### UPDATE
 PUT http://localhost:8080/contacts/62689ccf2736de3a1685023d HTTP/1.1
 content-type: application/json
 

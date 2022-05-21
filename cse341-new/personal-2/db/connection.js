@@ -11,15 +11,15 @@ const initDb = () => {
   MongoClient.connect(process.env.MONGODB_URI, (err, client) =>{
     if(err) throw err;
     _client = client;
-    _collectionUsers = client.db("eventBook").collection("users")
+    _collectionEvents = client.db("eventBook").collection("eventa")
     _collectionLocation = client.db("eventBook").collection("location")
     console.log("DB Connected");
     });
 
 }
 
-const getCollectionUsers = () => {
-  return _collectionUsers
+const getCollectionEvents = () => {
+  return _collectionEvents
 }
 
 const getCollectionLocation = () => {
@@ -27,4 +27,4 @@ const getCollectionLocation = () => {
 }
 
 
-module.exports = {initDb, getCollectionUsers, getCollectionLocation}
+module.exports = {initDb, getCollectionEvents, getCollectionLocation}

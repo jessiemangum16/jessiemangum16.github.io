@@ -5,7 +5,7 @@
         "email": "jess@gmail.com",
         "events": [
             {
-               "name": "Memorial Day Party",
+                "eventName": "Memorial Day Party",
                 "date": "5/30/2022",
                 "startTime": "5:00 PM",
                 "endTime": "8:00 PM",
