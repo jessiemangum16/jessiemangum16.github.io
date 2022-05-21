@@ -1,0 +1,18 @@
+{
+    "user": {
+        "username": "jess",
+        "password": "PassWord",
+        "email": "jess@gmail.com",
+        "events": [
+            {
+               "name": "Memorial Day Party",
+                "date": "5/30/2022",
+                "startTime": "5:00 PM",
+                "endTime": "8:00 PM",
+                "location": "All Star Bowling",
+                "comments": "Join us for an awesome party!" 
+            }
+            
+        ]
+    }
+}

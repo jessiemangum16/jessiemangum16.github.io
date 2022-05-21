@@ -7,7 +7,7 @@ const ObjectId = require("mongodb").ObjectId;
 routes.use(bodyParser.urlencoded({ extended: false }));
 routes.use(bodyParser.json());
 
-//Get ALL contacts
+//Get ALL users
 routes.get("/", (req, res) => {
   dbConnection
     .getCollection()
