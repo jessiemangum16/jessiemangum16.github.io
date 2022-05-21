@@ -39,7 +39,7 @@ routes.post("/", (req, res) => {
     state: req.body.state,
     zipCode: req.body.zipCode,
     webAddress: req.body.webAddress,
-    phoneNum: req.body.phonenum
+    phoneNum: req.body.phoneNum
   };
 
   dbConnection
@@ -53,5 +53,39 @@ routes.post("/", (req, res) => {
     .catch((error) => console.error(error));
 });
 
+//Update
+routes.put("/:locationName", (req, res) => {
+  const locationName = req.params.locationName;
+
+  const location = {
+    locationName: req.body.locationName,
+    streetAddress: req.body.streetAddress,
+    city: req.body.city,
+    state: req.body.state,
+    zipCode: req.body.zipCode,
+    webAddress: req.body.webAddress,
+    phoneNum: req.body.phoneNum
+  };
+
+  const results = dbConnection
+    .getCollectionLocation()
+    .replaceOne({ locationName: locationName }, location);
+
+  results.then((documents) => {
+    res.status(200).json(documents[0]);
+    console.log(`Updated ${req.params.locationName}`);
+  });
+});
+
+//Delete
+routes.delete("/:locationName", (req, res) => {
+  const locationName = req.params.locationName;
+  const results = dbConnection.getCollectionLocation().deleteOne({ locationName: locationName });
+
+  results.then((documents) => {
+    res.status(200).json(documents[0]);
+    console.log(`Deleted ${req.params.locationName}`);
+  });
+});
 
 module.exports = routes;

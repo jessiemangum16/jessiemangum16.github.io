@@ -1,9 +1,16 @@
 //localhost
-###
 
+###
 GET http://localhost:8080/events
+
+###
+GET http://localhost:8080/location
+
 ###
 GET http://localhost:8080/events/Memorial Day Party
+
+###
+GET http://localhost:8080/location/All Star Bowling
 
 
 ### CREATE 
@@ -20,6 +27,20 @@ content-type: application/json
     "comments": "Join us for an awesome party!"
 }
 
+###
+POST http://localhost:8080/events HTTP/1.1
+content-type: application/json
+
+{
+    "locationName": "Chick-fil-a",
+    "streetAddress": "345 N 798 E",
+    "city": "Midvale",
+    "state": "Utah",
+    "zipCode": "84444",
+    "webAddress": "https://www.thatlocation.com",
+    "phoneNum": "888-657-9764"
+}
+
 ### UPDATE
 PUT http://localhost:8080/events/Memorial Day Party HTTP/1.1
 content-type: application/json
@@ -34,18 +55,42 @@ content-type: application/json
     "comments": "Join us for an awesome party!"
 }
 
+###
+PUT http://localhost:8080/location/Chick-fil-a HTTP/1.1
+content-type: application/json
+
+{
+    "locationName": "Chick-fil-a",
+    "streetAddress": "345 N 798 E",
+    "city": "Springville",
+    "state": "Utah",
+    "zipCode": "84444",
+    "webAddress": "https://www.thatlocation.com",
+    "phoneNum": "888-657-9764"
+}
+
 ### DELETE
 DELETE http://localhost:8080/events/Memorial Day Party HTTP/1.1
 
+###
+DELETE http://localhost:8080/location/Chick-fil-a HTTP/1.1
+
 //production
 
+### GET ALL
+GET https://event-book-cse341.herokuapp.com/events
+
 ###
-GET https://cse341-jm.herokuapp.com/events
+GET https://event-book-cse341.herokuapp.com/location
+
+### GET ONE
+GET https://event-book-cse341.herokuapp.com/location/All Star Bowling
+
 ###
-GET https://cse341-jm.herokuapp.com/events/Memorial Day Party
-###
-### CREATE CONTACT
-POST https://cse341-jm.herokuapp.com/events HTTP/1.1
+GET https://event-book-cse341.herokuapp.com/events/Memorial Day Party
+
+### CREATE
+POST https://event-book-cse341.herokuapp.com/events HTTP/1.1
 content-type: application/json
 
 {
@@ -58,8 +103,22 @@ content-type: application/json
     "comments": "Join us for an awesome party!"
 }
 
-### UPDATE CONTACT
-PUT https://cse341-jm.herokuapp.com/events/Birthday Party HTTP/1.1
+### CREATE
+POST https://event-book-cse341.herokuapp.com/location HTTP/1.1
+content-type: application/json
+
+{
+    "locationName": "Chick-fil-a",
+    "streetAddress": "345 N 798 E",
+    "city": "Midvale",
+    "state": "Utah",
+    "zipCode": "84444",
+    "webAddress": "https://www.thatlocation.com",
+    "phoneNum": "756-648-8364"
+}
+
+### UPDATE
+PUT https://event-book-cse341.herokuapp.com/events/Birthday Party HTTP/1.1
 content-type: application/json
 
 {
@@ -72,5 +131,22 @@ content-type: application/json
     "comments": "Join us for an awesome party!"
 }
 
-### DELETE CONTACT
-DELETE https://cse341-jm.herokuapp.com/events/Birthday Party HTTP/1.1
+### 
+PUT https://event-book-cse341.herokuapp.com/location/Chick-fil-a HTTP/1.1
+content-type: application/json
+
+{
+    "locationName": "Chick-fil-a",
+    "streetAddress": "345 N 798 E",
+    "city": "Springville",
+    "state": "Utah",
+    "zipCode": "84444",
+    "webAddress": "https://www.thatlocation.com",
+    "phoneNum": "888-657-9764"
+}
+
+### DELETE
+DELETE https://event-book-cse341.herokuapp.com/events/Birthday Party HTTP/1.1
+
+### 
+DELETE https://event-book-cse341.herokuapp.com/location/Chick-fil-a HTTP/1.1

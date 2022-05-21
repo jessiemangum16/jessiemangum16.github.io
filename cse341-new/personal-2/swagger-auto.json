@@ -197,7 +197,7 @@
                 "webAddress": {
                   "example": "any"
                 },
-                "phonenum": {
+                "phoneNum": {
                   "example": "any"
                 }
               }
@@ -213,6 +213,68 @@
     },
     "/location/{locationName}": {
       "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "locationName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "locationName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "locationName": {
+                  "example": "any"
+                },
+                "streetAddress": {
+                  "example": "any"
+                },
+                "city": {
+                  "example": "any"
+                },
+                "state": {
+                  "example": "any"
+                },
+                "zipCode": {
+                  "example": "any"
+                },
+                "webAddress": {
+                  "example": "any"
+                },
+                "phoneNum": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
         "description": "",
         "parameters": [
           {
