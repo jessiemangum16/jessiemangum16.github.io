@@ -5,10 +5,10 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "event-book-cse341.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -63,10 +63,10 @@
                 "startTime": {
                   "example": "any"
                 },
-                "endTime": {
+                "location": {
                   "example": "any"
                 },
-                "location": {
+                "endTime": {
                   "example": "any"
                 },
                 "comments": {
@@ -80,8 +80,8 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -101,8 +101,8 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -133,10 +133,10 @@
                 "startTime": {
                   "example": "any"
                 },
-                "endTime": {
+                "location": {
                   "example": "any"
                 },
-                "location": {
+                "endTime": {
                   "example": "any"
                 },
                 "comments": {
@@ -150,8 +150,8 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -169,8 +169,8 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -183,8 +183,8 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -226,8 +226,8 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -247,8 +247,8 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -296,8 +296,8 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -315,8 +315,8 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }

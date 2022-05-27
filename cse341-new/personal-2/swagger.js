@@ -5,10 +5,10 @@ const doc = {
     title: 'My API',
     description: 'Description',
   },
-  //host: 'event-book-cse341.herokuapp.com',
-  //schemes: ['https'],
-  host: 'localhost:8080',
-  schemes: ['http'],
+  host: 'event-book-cse341.herokuapp.com',
+  schemes: ['https'],
+  //host: 'localhost:8080',
+  //schemes: ['http'],
 };
 
 const outputFile = './swagger-auto.json';

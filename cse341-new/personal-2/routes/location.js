@@ -9,102 +9,148 @@ routes.use(bodyParser.json());
 
 //Get ALL locations
 routes.get("/", (req, res) => {
-  try{
-    dbConnection
-      .getCollectionLocation()
-      .find()
-      .toArray()
-      .then((documents) => {
-        res.status(200).json(documents);
-        console.log("returned all locations");
-      }).catch((error) => console.error(error));
-  } catch (err){
-    res.status(500).json(err);
-  }
+  dbConnection
+    .getCollectionLocation()
+    .find()
+    .toArray((err, documents) => {
+      if (err) {
+        res.status(400).json({ message: err });
+      }
+      res.status(200).json(documents);
+      console.log("returned all locations");
+    });
 });
 
 //Get ONE location by name
 routes.get("/:locationName", (req, res) => {
-  try{
-    const locationName = req.params.locationName;
-    const results = dbConnection.getCollectionLocation().find({ locationName: locationName });
+  const locationName = req.params.locationName;
 
-    results.toArray().then((documents) => {
-      res.status(200).json(documents[0]);
-      console.log(`returned location ${req.params.locationName}`);
-    }).catch((error) => console.error(error));
-  } catch (err){
-    res.status(500).json(err);
-  }
+  dbConnection
+    .getCollectionLocation()
+    .countDocuments({ locationName: locationName })
+    .then(function (num) {
+      if (num === 0) {
+        res.status(400).json("Must use a valid location name.");
+      } else {
+        dbConnection
+          .getCollectionLocation()
+          .find({ locationName: locationName })
+          .toArray((err, documents) => {
+            if (err) {
+              res.status(400).json({ message: err });
+            }
+            res.status(200).json(documents[0]);
+            console.log(`returned location ${req.params.locationName}`);
+          });
+      }
+    });
 });
 
 //Add new location
 routes.post("/", (req, res) => {
-  try{
-    const location = {
-      locationName: req.body.locationName,
-      streetAddress: req.body.streetAddress,
-      city: req.body.city,
-      state: req.body.state,
-      zipCode: req.body.zipCode,
-      webAddress: req.body.webAddress,
-      phoneNum: req.body.phoneNum
-    };
+  if (
+    !req.body.locationName ||
+    !req.body.streetAddress ||
+    !req.body.city ||
+    !req.body.state ||
+    !req.body.zipCode 
+  ) {
+    res
+      .status(400)
+      .json(
+        "Please fill in all required fields - Required Fields: locationName, streetAddress, city, state, zipCode"
+      );
+  }else{
 
-    dbConnection
-      .getCollectionLocation()
-      .insertOne(location)
-      .then((result) => {
-        res.status(200).json(result[0]);
-        console.log(result);
-        console.log(location);
-      }).catch((error) => console.error(error));
-  } catch (err){
-    res.status(500).json(err);
+  const location = {
+    locationName: req.body.locationName,
+    streetAddress: req.body.streetAddress,
+    city: req.body.city,
+    state: req.body.state,
+    zipCode: req.body.zipCode,
+    webAddress: req.body.webAddress,
+    phoneNum: req.body.phoneNum,
+  };
+
+  dbConnection
+    .getCollectionLocation()
+    .insertOne(location)
+    .then((result) => {
+      res.status(200).json(`Succesfully added ${req.body.locationName}`);
+    })
+    .catch((error) => console.error(error));
   }
 });
 
 //Update
 routes.put("/:locationName", (req, res) => {
-  try{
-    const locationName = req.params.locationName;
+  const locationName = req.params.locationName;
 
-    const location = {
-      locationName: req.body.locationName,
-      streetAddress: req.body.streetAddress,
-      city: req.body.city,
-      state: req.body.state,
-      zipCode: req.body.zipCode,
-      webAddress: req.body.webAddress,
-      phoneNum: req.body.phoneNum
-    };
+  if (
+    !req.body.locationName ||
+    !req.body.streetAddress ||
+    !req.body.city ||
+    !req.body.state ||
+    !req.body.zipCode 
+  ) {
+    res
+      .status(400)
+      .json(
+        "Please fill in all required fields - Required Fields: locationName, streetAddress, city, state, zipCode"
+      );
+  }else{
 
-    const results = dbConnection
-      .getCollectionLocation()
-      .replaceOne({ locationName: locationName }, location);
+  const location = {
+    locationName: req.body.locationName,
+    streetAddress: req.body.streetAddress,
+    city: req.body.city,
+    state: req.body.state,
+    zipCode: req.body.zipCode,
+    webAddress: req.body.webAddress,
+    phoneNum: req.body.phoneNum,
+  };
 
-    results.then((documents) => {
-      res.status(200).json(documents[0]);
-      console.log(`Updated ${req.params.locationName}`);
-    }).catch((error) => console.error(error));
-  } catch (err){
-    res.status(500).json(err);
+  dbConnection
+    .getCollectionLocation()
+    .countDocuments({ locationName: locationName })
+    .then(function (num) {
+      if (num === 0) {
+        res.status(400).json("Must use a valid location name.");
+      } else {
+        dbConnection
+          .getCollectionLocation()
+          .replaceOne({ locationName: locationName }, location)
+          .then((documents) => {
+            res.status(200).json(documents[0]);
+            console.log(`Updated ${req.params.locationName}`);
+          })
+          .catch((error) => console.error(error));
+      }
+    });
   }
 });
 
 //Delete
 routes.delete("/:locationName", (req, res) => {
-  try{
-    const locationName = req.params.locationName;
-    const results = dbConnection.getCollectionLocation().deleteOne({ locationName: locationName });
+  const locationName = req.params.locationName;
 
-    results.then((documents) => {
-      res.status(200).json(documents[0]);
-      console.log(`Deleted ${req.params.locationName}`);
-    }).catch((error) => console.error(error));
-  } catch (err){
-    res.status(500).json(err);
-  }
+  dbConnection
+    .getCollectionLocation()
+    .countDocuments({ locationName: locationName })
+    .then(function (num) {
+      if (num === 0) {
+        res.status(400).json("Must use a valid location name.");
+      } else {
+        dbConnection
+          .getCollectionLocation()
+          .deleteOne({ locationName: locationName })
+          .then((documents) => {
+            res.status(200).json(documents[0]);
+            console.log(`Deleted ${req.params.locationName}`);
+          })
+          .catch((error) => console.error(error));
+      }
+    });
 });
 
 module.exports = routes;

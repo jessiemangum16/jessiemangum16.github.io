@@ -1,0 +1,325 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "My API",
+      "description": "Description",
+      "version": "1.0.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/": {
+        "get": {
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/api-docs": {
+        "get": {
+          "description": "",
+          "parameters": [],
+          "responses": {}
+        }
+      },
+      "/events/": {
+        "get": {
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Bad Request"
+            }
+          }
+        },
+        "post": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "eventName": {
+                    "example": "This Event"
+                  },
+                  "date": {
+                    "example": "03/24/2022"
+                  },
+                  "eventHost": {
+                    "example": "Ellen"
+                  },
+                  "startTime": {
+                    "example": "5:00 pm"
+                  },
+                  "endTime": {
+                    "example": "6:00 pm"
+                  },
+                  "location": {
+                    "example": "This location"
+                  },
+                  "comments": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Bad Request"
+            }
+          }
+        }
+      },
+      "/events/{eventName}": {
+        "get": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "eventName",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Bad Request"
+            }
+          }
+        },
+        "put": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "eventName",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                    "eventName": {
+                        "example": "This Event"
+                        },
+                        "date": {
+                        "example": "03/24/2022"
+                        },
+                        "eventHost": {
+                        "example": "Ellen"
+                        },
+                        "startTime": {
+                        "example": "5:00 pm"
+                        },
+                        "endTime": {
+                        "example": "6:00 pm"
+                        },
+                        "location": {
+                        "example": "This location"
+                        },
+                        "comments": {
+                        "example": "any"
+                        }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Bad Request"
+            }
+          }
+        },
+        "delete": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "eventName",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Bad Request"
+            }
+          }
+        }
+      },
+      "/location/": {
+        "get": {
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Bad Request"
+            }
+          }
+        },
+        "post": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "locationName": {
+                    "example": "Burger King"
+                  },
+                  "streetAddress": {
+                    "example": "123 E 654 W"
+                  },
+                  "city": {
+                    "example": "Salt Lake City"
+                  },
+                  "state": {
+                    "example": "UT"
+                  },
+                  "zipCode": {
+                    "example": "84253"
+                  },
+                  "webAddress": {
+                    "example": "burgerking.com"
+                  },
+                  "phoneNum": {
+                    "example": "888-888-8888"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Bad Request"
+            }
+          }
+        }
+      },
+      "/location/{locationName}": {
+        "get": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "locationName",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Bad Request"
+            }
+          }
+        },
+        "put": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "locationName",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                    "locationName": {
+                        "example": "Burger King"
+                      },
+                      "streetAddress": {
+                        "example": "123 E 654 W"
+                      },
+                      "city": {
+                        "example": "Salt Lake City"
+                      },
+                      "state": {
+                        "example": "UT"
+                      },
+                      "zipCode": {
+                        "example": "84119"
+                      },
+                      "webAddress": {
+                        "example": "burgerking.com"
+                      },
+                      "phoneNum": {
+                        "example": "888-888-8888"
+                      }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Bad Request"
+            }
+          }
+        },
+        "delete": {
+          "description": "",
+          "parameters": [
+            {
+              "name": "locationName",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Bad Request"
+            }
+          }
+        }
+      }
+    }
+  }
