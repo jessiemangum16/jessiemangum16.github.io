@@ -1,11 +1,11 @@
 {
-    "user": {
+    "event": {
         "eventName": "Memorial Day Party",
         "date": "5/30/2022",
         "eventHost": "Jess",
         "startTime": "5:00 PM",
         "endTime": "8:00 PM",
-        "location": "All Star Bowling",
+        "locationName": "All Star Bowling",
         "comments": "Join us for an awesome party!"
     }
 

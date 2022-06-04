@@ -99,7 +99,7 @@ content-type: application/json
     "eventHost": "Jess",
     "startTime": "5:00 PM",
     "endTime": "8:00 PM",
-    "location": "Tim's House",
+    "locationName": "Tim's House",
     "comments": "Join us for an awesome party!"
 }
 

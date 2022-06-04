@@ -1,23 +1,26 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const routes = express.Router();
-const dbConnection = require("../db/connection");
-const ObjectId = require("mongodb").ObjectId;
+const mongoose = require('mongoose')
 
+const bodyParser = require("body-parser");
 routes.use(bodyParser.urlencoded({ extended: false }));
 routes.use(bodyParser.json());
 
+const events = require('../models/events');
+
+
+
 //Get ALL
 routes.get("/", (req, res) => {
-  dbConnection
-    .getCollectionEvents()
-    .find()
-    .toArray((err, documents) => {
-      if (err) {
-        res.status(400).json({ message: err });
-      }
-      res.status(200).json(documents);
+    events.find({})
+    .then((data) => {
+      res.status(200).send(data);
       console.log("returned all");
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving event.'
+      });
     });
 });
 
@@ -25,24 +28,21 @@ routes.get("/", (req, res) => {
 routes.get("/:eventName", (req, res) => {
   const eventName = req.params.eventName;
 
-  dbConnection
-    .getCollectionEvents()
-    .countDocuments({ eventName: eventName })
+  events.countDocuments({ eventName: eventName })
     .then(function (num) {
       if (num === 0) {
         res.status(400).json("Must use a valid event name.");
       } else {
-        dbConnection
-          .getCollectionEvents()
-          .find({ eventName: eventName })
-          .limit(1)
-          .toArray((err, documents) => {
-            if (err) {
-              res.status(400).json({ message: err });
-            }
-            res.status(200).json(documents[0]);
-            console.log(`returned ${req.params.eventName}`);
+        events.find({ eventName: eventName })
+        .then((data) => {
+          res.status(200).send(data);
+          console.log(`returned ${req.params.eventName}`);
+        })
+        .catch((err) => {
+          res.status(500).send({
+            message: err.message || 'Some error occurred while retrieving event.'
           });
+        });
       }
     });
 });
@@ -54,7 +54,9 @@ routes.post("/", (req, res) => {
     !req.body.date ||
     !req.body.eventHost ||
     !req.body.startTime ||
-    !req.body.location
+    !req.body.endTime ||
+    !req.body.locationName ||
+    !req.body.comments
   ) {
     res
       .status(400)
@@ -63,23 +65,17 @@ routes.post("/", (req, res) => {
       );
   }else{
 
-  const event = {
-    eventName: req.body.eventName,
-    date: req.body.date,
-    eventHost: req.body.eventHost,
-    startTime: req.body.startTime,
-    endTime: req.body.endTime,
-    location: req.body.location,
-    comments: req.body.comments,
-  };
-
-  dbConnection
-    .getCollectionEvents()
-    .insertOne(event)
-    .then((result) => {
-      res.status(200).json(`Succesfully added ${req.body.eventName}`);
+  const event = new events(req.body);
+    event.save()
+    .then((data) => {
+      console.log(data);
+      res.status(200).send(data);
     })
-    .catch((error) => console.error(error));
+    .catch((err) => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while creating the event.'
+      });
+    });
   }
 });
 
@@ -92,7 +88,9 @@ routes.put("/:eventName", (req, res) => {
     !req.body.date ||
     !req.body.eventHost ||
     !req.body.startTime ||
-    !req.body.location
+    !req.body.endTime ||
+    !req.body.locationName ||
+    !req.body.comments
   ) {
     res
       .status(400)
@@ -101,54 +99,48 @@ routes.put("/:eventName", (req, res) => {
       );
   }else{
 
-  const event = {
-    eventName: req.body.eventName,
-    date: req.body.date,
-    eventHost: req.body.eventHost,
-    startTime: req.body.startTime,
-    endTime: req.body.endTime,
-    location: req.body.location,
-    comments: req.body.comments,
-  };
-
-  dbConnection
-    .getCollectionEvents()
-    .countDocuments({ eventName: eventName })
+  events.countDocuments({ eventName: eventName })
     .then(function (num) {
       if (num === 0) {
         res.status(400).json("Must use a valid event name.");
       } else {
-        dbConnection
-          .getCollectionEvents()
-          .replaceOne({ eventName: eventName }, event)
-          .then((documents) => {
-            res.status(200).json(`Succesfully updated ${req.params.eventName}`);
-            console.log(`Updated ${req.params.eventName}`);
+        events.findOne({ eventName: eventName }, (err, event) => {
+          event.eventName = req.params.eventName;
+          event.date = req.body.date;
+          event.eventHost = req.body.eventHost;
+          event.startTime = req.body.startTime;
+          event.endTime = req.body.endTime;
+          event.locationName = req.body.locationName;
+          event.comments = req.body.comments;
+          event.save(function (err) {
+            if (err) {
+              res.status(500).json(err || 'Some error occurred while updating the event.');
+            } else {
+              res.status(200).send();
+            }
           })
-          .catch((error) => console.error(error));
+        })
       }
-    });
+    })
   }
-});
+})
 
 //Delete
 routes.delete("/:eventName", (req, res) => {
   const eventName = req.params.eventName;
 
-  dbConnection
-    .getCollectionEvents()
-    .countDocuments({ eventName: eventName })
+  events.countDocuments({ eventName: eventName })
     .then(function (num) {
       if (num === 0) {
         res.status(400).json("Must use a valid event name.");
       } else {
-        dbConnection
-          .getCollectionEvents()
-          .deleteOne({ eventName: eventName })
-          .then((documents) => {
-            res.status(200).json(`Succesfully deleted ${req.params.eventName}`);
-            console.log(`Deleted ${req.params.eventName}`);
-          })
+        events.deleteOne({ eventName: eventName }, function (err, result) {
+          if (err) {
+            res.status(500).json(err || 'Some error occurred while deleting the event.');
+          } else {
+            res.status(200).send(result);
+          }
+        })
           .catch((error) => console.error(error));
       }
     });
