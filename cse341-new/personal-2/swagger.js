@@ -5,8 +5,10 @@ const doc = {
     title: 'My API',
     description: 'Description',
   },
+
   host: 'event-book-cse341.herokuapp.com',
   schemes: ['http'],
+
 };
 
 const outputFile = './swagger-auto.json';
@@ -16,7 +18,12 @@ const endpointsFiles = ['./routes/index.js'];
    'endpointsFiles' only the root file where the route starts,
    such as index.js, app.js, routes.js, ... 
    
-   host: 'localhost:8080',
+
+  host: 'event-book-cse341.herokuapp.com',
+  schemes: ['http'],
+
+
+  host: 'localhost:8080',
   schemes: ['http'],
 */
 

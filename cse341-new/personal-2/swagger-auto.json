@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Description",
+    "description": "<a id='logout' href='http://event-book-cse341.herokuapp.com/auth/logout'>Logout</a>",
     "version": "1.0.0"
   },
   "host": "event-book-cse341.herokuapp.com",
